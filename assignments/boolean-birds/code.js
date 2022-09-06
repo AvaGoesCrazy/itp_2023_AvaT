@@ -1,7 +1,7 @@
 /*
  * Important facts about the birds of Booleana.
  *
- * Coloration and markings:
+ * Coloration and markings: isFlobbyBird
  *
  *   - Flobby Birds and Bloggy Birds are red.
  *   - Flibble Birds and Globby Birds are not red.
