@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Perimeter of a square",
+    "answer": "4*s",
+    "correct": true
+  },
+  {
+    "name": "Perimeter of a rectangle",
+    "answer": "(w*2)+(h*2)",
+    "correct": true
+  },
+  {
+    "name": "Area of a square",
+    "answer": "s^2",
+    "correct": false
+  },
+  {
+    "name": "Area of a square",
+    "answer": "s*s",
+    "correct": true
+  },
+  {
+    "name": "Area of a rectangle",
+    "answer": "w*h",
+    "correct": true
+  },
+  {
+    "name": "Area of a triangle",
+    "answer": "(b*h)/2",
+    "correct": true
+  },
+  {
+    "name": "Area of a trapezoid",
+    "answer": "((b1+b2)/2)*h",
+    "correct": true
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "(Math.PI*r)&2",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "(Math.PI*r)^2",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "(Math.PI*r)(Math.PI*r)",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "(Math.PI * r)(Math.PI * r)",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "((Math.PI)*r)*((Math.PI)*r)",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "((Math.PI)*r)^2",
+    "correct": false
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "Math.PIr^2",
+    "correct": false
+  }
+]

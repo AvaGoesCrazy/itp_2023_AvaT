@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Will we skip our trip to the store?",
+    "canonical": "!storeOpen || linesTooLong",
+    "answer": "!storeOpen||linesTooLong",
+    "correct": true,
+    "timestamp": 1661810655007
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!storeOpen||isASale",
+    "correct": false,
+    "timestamp": 1661810678031
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "storeOpen||isASale",
+    "correct": false,
+    "timestamp": 1661810680726
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "storeOpen||!isASale",
+    "correct": false,
+    "timestamp": 1661810693254
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "storeOpen&&isASale",
+    "correct": false,
+    "timestamp": 1661810705726
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!storeOpen&&!isASale",
+    "correct": false,
+    "timestamp": 1661810715342
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!storeOpen|!isASale",
+    "correct": false,
+    "timestamp": 1661810738406
+  },
+  {
+    "name": "Wait for a sale?",
+    "canonical": "!storeOpen || !isASale",
+    "answer": "!storeOpen||!isASale",
+    "correct": true,
+    "timestamp": 1661810740886
+  },
+  {
+    "name": "Coming to bookclub?",
+    "canonical": "member && !outSick",
+    "answer": "member&&!outSick",
+    "correct": true,
+    "timestamp": 1661810762654
+  },
+  {
+    "name": "Ready for some football?",
+    "canonical": "fast && strong",
+    "answer": "fast&&strong",
+    "correct": true,
+    "timestamp": 1661810790991
+  },
+  {
+    "name": "Lighting a fire?",
+    "canonical": "fireLit || !haveMatches",
+    "answer": "fireLit||!haveMatches",
+    "correct": true,
+    "timestamp": 1661810821463
+  },
+  {
+    "name": "Can pay attention?",
+    "canonical": "!hungry && interested",
+    "answer": "hungry&&interested",
+    "correct": false,
+    "timestamp": 1661810839719
+  },
+  {
+    "name": "Can pay attention?",
+    "canonical": "!hungry && interested",
+    "answer": "!hungry&&!interested",
+    "correct": false,
+    "timestamp": 1661810858431
+  },
+  {
+    "name": "Can pay attention?",
+    "canonical": "!hungry && interested",
+    "answer": "!hungry&&interested",
+    "correct": true,
+    "timestamp": 1661810876592
+  },
+  {
+    "name": "In the room where it happens?",
+    "canonical": "inTheClass || isProctor",
+    "answer": "inTheClass||isProctor",
+    "correct": true,
+    "timestamp": 1661810899912
+  },
+  {
+    "name": "Can go into creepy crawly cave?",
+    "canonical": "!afraidOfTheDark && !afraidOfSpiders",
+    "answer": "!afraidOfTheDark&&!afraidOfSpiders",
+    "correct": true,
+    "timestamp": 1661810930896
+  }
+]

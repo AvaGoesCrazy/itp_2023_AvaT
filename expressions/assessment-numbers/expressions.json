@@ -1,0 +1,93 @@
+[
+  {
+    "name": "1337 times 32",
+    "canonical": "1337 * 32",
+    "answer": "1337*32",
+    "correct": true,
+    "timestamp": 1661895710290
+  },
+  {
+    "name": "Difference",
+    "canonical": "a - b",
+    "answer": "a-b",
+    "correct": true,
+    "timestamp": 1661895723011
+  },
+  {
+    "name": "Remainder",
+    "canonical": "a % b",
+    "answer": "a%b",
+    "correct": true,
+    "timestamp": 1661895735955
+  },
+  {
+    "name": "Distance",
+    "canonical": "Math.abs(a - b)",
+    "answer": "Math.abs(a-b)",
+    "correct": true,
+    "timestamp": 1661895767436
+  },
+  {
+    "name": "Area of circle with radius 2",
+    "canonical": "Math.PI * 4",
+    "answer": "Math.PI2*2",
+    "correct": false,
+    "timestamp": 1661895788139
+  },
+  {
+    "name": "Area of circle with radius 2",
+    "canonical": "Math.PI * 4",
+    "answer": "Math.PI*2*2",
+    "correct": true,
+    "timestamp": 1661895792651
+  },
+  {
+    "name": "Average",
+    "canonical": "(a + b) / 2",
+    "answer": "(a+b)/2",
+    "correct": true,
+    "timestamp": 1661895807813
+  },
+  {
+    "name": "Seconds in a day",
+    "canonical": "24 * 60 * 60",
+    "answer": "60*60*24",
+    "correct": true,
+    "timestamp": 1661895824172
+  },
+  {
+    "name": "Ratio",
+    "canonical": "a / b",
+    "answer": "a/b",
+    "correct": true,
+    "timestamp": 1661895833133
+  },
+  {
+    "name": "Product",
+    "canonical": "a * b",
+    "answer": "a*b",
+    "correct": true,
+    "timestamp": 1661895839510
+  },
+  {
+    "name": "Manhattan distance",
+    "canonical": "Math.abs(x1 - x2) + Math.abs(y1 - y2)",
+    "answer": "Math.abs(x1-x2)+Math.abs(y1-y2)",
+    "correct": true,
+    "timestamp": 1661895909576
+  },
+  {
+    "name": "Sum",
+    "canonical": "a + b",
+    "answer": "a+b",
+    "correct": true,
+    "timestamp": 1661895917343
+  },
+  {
+    "name": "Sally's even more apples",
+    "canonical": "6432 - 4000",
+    "answer": "6432-4000",
+    "correct": true,
+    "timestamp": 1661895935294
+  }
+]
