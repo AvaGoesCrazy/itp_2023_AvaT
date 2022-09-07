@@ -1,5 +1,5 @@
-let x = 2;
-let y = 1;
+let x = any;
+let y = any;
 
 const add = (x) =>{
   return x + y
