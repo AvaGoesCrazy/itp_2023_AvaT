@@ -16,3 +16,7 @@ const multiply = (x, y) => {
 const divide = (x, y) => {
   return x / y;
 };
+
+const mod = (x, y) => {
+  return x % y;
+};
