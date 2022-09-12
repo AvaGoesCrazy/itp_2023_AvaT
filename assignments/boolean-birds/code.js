@@ -17,6 +17,9 @@
  *
  */
 
-if (isRed && eatsFish) {
-  isFlobbyBird = true
-}
+
+
+const isFlobbyBird = true;
+const isBloggyBird = true;
+const isFibbleBird = true;
+const isGlobbyBird = true;
