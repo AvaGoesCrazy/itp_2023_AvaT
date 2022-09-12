@@ -21,7 +21,7 @@ let isFlobbyBird = true;
 let isBloggyBird = true;
 let isFibbleBird = true;
 let isGlobbyBird = true;
-
+let isRed = true
 
 if (isFlobbyBird) ;{
   isRed = true
