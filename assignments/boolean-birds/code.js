@@ -17,8 +17,10 @@
  *
  */
 
-
-
+let isFlobbyBird = true;
+let isBloggyBird = true;
+let isFibbleBird = true;
+let isGlobbyBird = true;
 
 
 if (isFlobbyBird = true) ;{
