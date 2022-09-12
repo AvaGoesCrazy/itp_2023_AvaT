@@ -23,6 +23,9 @@ let isFibbleBird = true;
 let isGlobbyBird = true;
 
 
-if (isFlobbyBird = true) ;{
-
+if (isFlobbyBird) ;{
+  isRed = true
+  eatsFish = true
+  eatsNuts = true
+  eatsWorms = true
 }
