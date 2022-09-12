@@ -23,3 +23,7 @@ const isFlobbyBird = true;
 const isBloggyBird = true;
 const isFibbleBird = true;
 const isGlobbyBird = true;
+
+if (isFlobbyBird = true) ;{
+
+}
