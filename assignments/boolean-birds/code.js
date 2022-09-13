@@ -38,6 +38,6 @@ const eatsNuts = (isRed, isSpotted) => {
   return isRed || !isSpotted;
 }
 
-const eatsFishs = (isRed, isSpotted) => {
+const eatsFish = (isRed, isSpotted) => {
   return !isRed || isSpotted;
 }
