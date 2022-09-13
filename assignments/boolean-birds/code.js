@@ -19,3 +19,7 @@
 const isFlobbyBird = (isRed, isSpotted) => {
   return isRed && isSpotted;
 };
+
+const isBloggyBird = (isRed, isNotSpotted) => {
+  return isRed && isNotSpotted;
+};
