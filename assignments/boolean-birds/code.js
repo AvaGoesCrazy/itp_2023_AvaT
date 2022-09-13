@@ -14,6 +14,7 @@
  *   - Flibble Birds eat fish, mice, and worms.
  *   - Globby Birds eat fish, mice, and nuts.
  */
+
 const isFlobbyBird = (isRed, isSpotted) => {
   return isRed && isSpotted;
 };
@@ -46,6 +47,6 @@ const eatsMice = (isRed, isSpotted) => {
   return !isRed || !isSpotted;
 }
 
-const isRed = (Flobby, Bloggy) => {
-  return Flobby || Bloggy;
+const isRed = (isFlobbyBird, isBloggyBird) => {
+  return isFlobbyBird || isBloggyBird;
 }
