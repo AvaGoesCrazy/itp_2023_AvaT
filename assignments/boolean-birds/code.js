@@ -24,6 +24,6 @@ const isBloggyBird = (isRed, isSpotted) => {
   return isRed && !isSpotted;
 };
 
-const isFibbleBird = (isRed, isSpotted) => {
+const isFlibbleBird = (isRed, isSpotted) => {
   return !isRed && !isSpotted;
 };
