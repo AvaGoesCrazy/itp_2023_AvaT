@@ -22,6 +22,7 @@ let isBloggyBird = true;
 let isFibbleBird = true;
 let isGlobbyBird = true;
 let isRed = true
+let isSpotted= true;
 let eatsFish = true
 let eatsNuts = true
 let eatsWorms = true
