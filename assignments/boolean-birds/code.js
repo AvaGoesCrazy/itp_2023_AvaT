@@ -17,14 +17,14 @@
  *
  */
 
-let isFlobbyBird 
-let isBloggyBird ;
-let isFibbleBird ;
-let isGlobbyBird ;
-let isRed 
-let eatsFish 
-let eatsNuts 
-let eatsWorms 
+let isFlobbyBird; 
+let isBloggyBird;
+let isFibbleBird;
+let isGlobbyBird;
+let isRed ;
+let eatsFish; 
+let eatsNuts; 
+let eatsWorms; 
 
 if (isFlobbyBird) ;{
   isRed = true
