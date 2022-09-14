@@ -47,5 +47,3 @@ const eatsMice = (isRed, isSpotted) => {
   return !isRed || !isSpotted;
 }
 
-const isRed = (';
-}
