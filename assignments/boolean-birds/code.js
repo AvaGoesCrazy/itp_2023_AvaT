@@ -47,3 +47,6 @@ const eatsMice = (isRed, isSpotted) => {
   return !isRed || !isSpotted;
 }
 
+const isRed = ('Flobby', 'Bloggy', 'Fibble', 'Globby') => {
+  return 'Flobby' || 'Bloggy'
+}
