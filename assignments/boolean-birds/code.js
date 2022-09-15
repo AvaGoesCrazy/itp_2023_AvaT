@@ -50,3 +50,7 @@ const eatsMice = (isRed, isSpotted) => {
 const isRed = (birdType) => {
   return birdType === 'Flobby' || birdType === 'Bloggy';
 }
+
+const isSpotted = (birdType) => {
+  return birdType === 'Flobby' || birdType === 'Flibble';
+}
