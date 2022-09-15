@@ -58,3 +58,7 @@ const isSpotted = (birdType) => {
 const isNotRed = (birdType) => {
   return birdType === 'Flibble' || birdType === 'Globby';
 }
+
+const isSpotted = (birdType) => {
+  return birdType === 'Globby' || birdType === 'Bloggy';
+}
