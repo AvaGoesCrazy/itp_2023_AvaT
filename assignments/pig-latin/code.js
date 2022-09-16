@@ -31,7 +31,9 @@
 //
 // Feel free to play around in the REPL to make sure you understand how this
 // operator works.
+let s = 'burger'
 
-let s = 'happiness'
+const pigLatin = (s) => {
+  s.substring(1) + s[0] + 'ay';
+};
 
-s.substring(1) + s[0] + 'ay'
