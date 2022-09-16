@@ -34,4 +34,4 @@
 
 'happiness' = s
 
-s.substring(1) + s[0]
+s.substring(1) + s[0] + 'ay'
