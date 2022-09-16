@@ -32,6 +32,6 @@
 // Feel free to play around in the REPL to make sure you understand how this
 // operator works.
 
-'happiness' = s
+let s = 'happiness'
 
 s.substring(1) + s[0] + 'ay'
