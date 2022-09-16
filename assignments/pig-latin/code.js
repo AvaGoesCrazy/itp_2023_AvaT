@@ -32,9 +32,9 @@
 // Feel free to play around in the REPL to make sure you understand how this
 // operator works.
 
-let s = 'burger';
+const s = 'burger';
 
-const pigLatin = ('burger') => {
-  'burger'.substring('burger'.search(/aeiou/)) + 'burger'[0] + 'ay';
+const pigLatin = (s) => {
+  s.substring(s.search(/aeiou/)) + s[0] + 'ay';
 };
 
