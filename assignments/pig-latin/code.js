@@ -32,4 +32,6 @@
 // Feel free to play around in the REPL to make sure you understand how this
 // operator works.
 
-'happiness'[0]
+'happiness' = s
+
+s.substring(1) + s[0]
