@@ -34,4 +34,4 @@
 
 let s = 'burger';
 
-const pigLatin = (s) => s.substring(s.search(/[aeiou]/)) + s[0] + s[s.search(/[aeiou]/) - 1] + 'ay';
+const pigLatin = (s) => s.substring(s.search(/[aeiou]/)) + s.substring(0, s.search(/[aeiou]/) - 1) + 'ay';
