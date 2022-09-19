@@ -24,7 +24,7 @@
 // And it evaluates to value1 is booleanValue is true and value2 if it is false.
 //
 // For example:
-//
+//  NOTE TO SELF IMPORTANT  \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \ /\ / \/ \/ \/ \ /\ / \/ \/ \/ 
 //  x === 0 ? "Zero" : "Not zero"
 //
 // will evaluate to either "Zero" or "Not zero" depending on whether x === 0.
@@ -36,4 +36,7 @@ let s = 'burger';
 
 const pigLatin = (s) => s.substring(s.search(/[aeiou]/)) + s.substring(0, s.search(/[aeiou]/)) + 'ay';
 
-const advancedPigLatin = (s) => s.substring(s.search(/[aeiou]/)) + 'way';
+const advancedPigLatin = (s) => {
+  const i = s.search(/[aeiou]/)
+  return 
+}
