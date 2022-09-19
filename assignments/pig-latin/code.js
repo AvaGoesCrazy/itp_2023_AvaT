@@ -38,4 +38,3 @@ const pigLatin = (s) => s.substring(s.search(/[aeiou]/)) + s.substring(0, s.sear
 
 if (s.search(/[aeiou]/)) ()=> 0
   s.substring(s.search(/[aeiou]/)) + s.substring(0, s.search(/[aeiou]/)) + 'way';
-}
