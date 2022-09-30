@@ -22,5 +22,5 @@ const maxRadius = (x, y) => {
 };
 
 const numCircles = (x, y) => {
-  return y/(x*2)
-}
+  return y/(x*2);
+};
