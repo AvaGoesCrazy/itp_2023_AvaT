@@ -5,6 +5,8 @@ const emit = (a, b, product) => {
 };
 
 // Write your code here ...
+let isWeekday;
+let isVacation;
 
 const averageWeight = (x, y) => {
   return (x / y);
@@ -27,4 +29,14 @@ const numCircles = (x, y) => {
 
 const offset = (x, y) => {
   return ((x - y) / 2);
+};
+
+const canSleepIn = (isWeekday) => {
+  if (isWeekday)
+    return false;
+  else
+    if (isVacation)
+      return true;
+    else
+      return false;
 };
