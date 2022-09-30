@@ -38,5 +38,5 @@ const canSleepIn = (isWeekday) => {
     if (isVacation)
       return true;
     else
-      return false;
+      return true;
 };
