@@ -57,14 +57,28 @@ const canGoToProm = (isSenior, invitedBySenior, isOnList) => {
 
 // not 100% sure this is right but its not giving me any errors anymore so i guess its fine
 const getsSpeedingTicket = (x, isGrouchy) => {
-  if (isGrouchy + (x>65))
+  if (isGrouchy + (x > 65))
     return true;
   else
-    if (!isGrouchy + (x>65))
+    if (!isGrouchy + (x > 65))
       return false;
     else
-      if (!isGrouchy + (x>70))
+      if (!isGrouchy + (x > 70))
         return true;
       else
         return true;
 };
+
+const moreThanTwiceAsLong = (s1, s2) => {
+  if (s1.substring() > (s2.substring() * 2))
+    return true;
+  else
+    return false;
+}
+
+const aFartherThanB = (a, b, c) => {
+  if (Math.abs(a - c) > Math.abs(b - c))
+    return true;
+  else
+    return false;
+}
