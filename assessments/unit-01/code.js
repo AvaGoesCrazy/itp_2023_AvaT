@@ -55,9 +55,16 @@ const canGoToProm = (isSenior, invitedBySenior, isOnList) => {
         return false;
 }
 
-// says error declaration or statement expected, not sure why. didnt get that beforehand
+// not 100% sure this is right but its not giving me any errors anymore so i guess its fine
 const getsSpeedingTicket = (x, isGrouchy) => {
-  if (isGrouchy) + (x > 65)
+  if (isGrouchy + (x>65))
     return true;
   else
-}
+    if (!isGrouchy + (x>65))
+      return false;
+    else
+      if (!isGrouchy + (x>70))
+        return true;
+      else
+        return true;
+};
