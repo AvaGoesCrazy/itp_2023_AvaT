@@ -20,3 +20,7 @@ const maxRadius = (x, y) => {
   else
     return (x/2);
 };
+
+const numCircles = (x, y) => {
+  return y/(x*2)
+}
