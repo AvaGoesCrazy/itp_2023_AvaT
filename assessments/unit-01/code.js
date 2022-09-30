@@ -16,11 +16,15 @@ const hypotenuse = (a, b) => {
 
 const maxRadius = (x, y) => {
   if (x > y)
-    return (y/2);
+    return (y / 2);
   else
-    return (x/2);
+    return (x / 2);
 };
 
 const numCircles = (x, y) => {
-  return y/(x*2);
+  return y / (x * 2);
+};
+
+const offset = (x, y) => {
+  return ((x - y) / 2);
 };
