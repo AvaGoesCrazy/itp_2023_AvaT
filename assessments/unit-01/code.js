@@ -11,3 +11,7 @@ let y = 20
 const averageWeight = (x, y) => {
   return x / y 
 }
+
+const hypotenuse = (a, b) => {
+  return a**2 + b**2
+}
