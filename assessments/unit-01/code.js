@@ -31,7 +31,7 @@ const offset = (x, y) => {
   return ((x - y) / 2);
 };
 
-const canSleepIn = (isWeekday) => {
+const canSleepIn = (isWeekday, isVacation) => {
   if (isWeekday)
     return false;
   else
@@ -40,3 +40,24 @@ const canSleepIn = (isWeekday) => {
     else
       return true;
 };
+
+// this ones a lil messy but I think I got it right... I used a lot of elseifs
+const canGoToProm = (isSenior, invitedBySenior, isOnList) => {
+  if (isOnList)
+    return false;
+  else
+    if (invitedBySenior)
+      return true;
+    else
+      if (isSenior)
+        return true;
+      else
+        return false;
+}
+
+// says error declaration or statement expected, not sure why. didnt get that beforehand
+const getsSpeedingTicket = (x, isGrouchy) => {
+  if (isGrouchy) + (x > 65)
+    return true;
+  else
+}
