@@ -5,8 +5,8 @@ const emit = (a, b, product) => {
 };
 
 // Write your code here ...
-x = 1000
-y = 20
+let x = 1000
+let y = 20
 
 const averageWeight = (x, y) => {
   return x / y 
