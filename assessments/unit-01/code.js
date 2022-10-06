@@ -31,14 +31,11 @@ const offset = (x, y) => {
   return ((x - y) / 2);
 };
 
-const canSleepIn = (isWeekday, isVacation) => {
-  if (isWeekday)
-    return false;
+const canSleepIn = (isVacation) => {
+  if (isVacation)
+    return true;
   else
-    if (isVacation)
-      return true;
-    else
-      return true;
+    return false;
 };
 
 // this ones a lil messy but I think I got it right... I used a lot of elseifs
