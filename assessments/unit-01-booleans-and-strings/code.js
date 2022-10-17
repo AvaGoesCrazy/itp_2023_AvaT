@@ -37,3 +37,7 @@ const evenGreaterThanZero = (num) => {
   else
     return false
 }
+
+const isLeapYear = (yearNum) => {
+  if (yearNum)
+}
