@@ -33,3 +33,7 @@ const isLeapYear = (yearNum) => {
 const firstAndLast = (s) => {
   return s[0] + s.substring(s.length - 1)
 }
+
+const swapFrontAndBack = (s) => {
+  return s.substring(s.length / 2)
+}
