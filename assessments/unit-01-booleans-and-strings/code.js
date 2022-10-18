@@ -11,31 +11,19 @@ const rand = (n) => Math.floor(Math.random() * n);
 // credit for a clear and simple working function.
 
 const fireAlarm = (alarmPulled, smokeDetected, plannedDrill) => {
-  if (alarmPulled || smokeDetected || plannedDrill)
-    return true
-  else
-    return false
+  return (alarmPulled || smokeDetected || plannedDrill)
 }
 
 const canBePresident = (age, isNatCitizen, yearsOfRes) => {
-  if (age > 30 && isNatCitizen && yearsOfRes > 14)
-    return true
-  else
-    return false
+  return (age > 30 && isNatCitizen && yearsOfRes > 14)
 }
 
 const willSeeTweet = (followsTweeter, followsRetweeter, isBlocked) => {
-  if (followsTweeter || followsRetweeter && !isBlocked)
-    return true
-  else 
-    return false
+  return (followsTweeter || followsRetweeter) && !isBlocked
 }
 
 const evenGreaterThanZero = (num) => {
-  if (num > 0)
-    return true
-  else
-    return false
+  return (num % 2 === 0) && (num > 0)
 }
 
 const isLeapYear = (yearNum) => {
