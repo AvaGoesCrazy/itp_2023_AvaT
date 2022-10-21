@@ -19,5 +19,5 @@
   "true",
   "The sum of the numbers from 0 to numbers.length.",
   "Produces a new array containing all the words in words in uppercase.",
-  "produces a new array, result, that replaces the array, words, with the array, xs, but it does it all backwards."
+  "Reverses the order of the "
 ]
