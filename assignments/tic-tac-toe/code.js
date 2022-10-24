@@ -5,6 +5,16 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
+let i = 0
+
+const turn = (i) => {
+  if (i = 0);
+    registerOnClick((i) => {
+      return i = i + 1
+    })
+    
+}
+
 registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
