@@ -11,8 +11,10 @@ registerOnclick((x, y, i) => {
   if (i = 0){
     drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
     i = i + 1
+    console.log(i)
   } else {
     drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
     i = i - 1
+    console.log(i)
   }
 });
