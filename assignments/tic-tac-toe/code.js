@@ -16,6 +16,6 @@ registerOnclick((x, y, i) => {
 registerOnclick((x, y, i) => {
   if (i = 1)
     drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
-    return i = i - 1
+    i = i - 1
 });
 
