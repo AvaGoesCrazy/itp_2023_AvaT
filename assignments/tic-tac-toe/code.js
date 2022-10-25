@@ -10,7 +10,7 @@ let i = 0
 registerOnclick((x, y, i) => {
   if (i = 0)
     drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
-    return i = i + 1
+    i = i + 1
 });
 
 registerOnclick((x, y, i) => {
