@@ -5,8 +5,8 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-drawLine(200, 0, 200, 300, 'black', 10)
-drawLine(400, 0, 400, 300, 'black', 10)
+drawLine(300, 0, 300, 300, 'black', 10)
+drawLine(600, 0, 600, 300, 'black', 10)
 
 let i = 0
 
