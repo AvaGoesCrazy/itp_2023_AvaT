@@ -6,7 +6,7 @@
 // weeks but for now you can just adapt this code.
 
 drawLine(250, 0, 250, 300, 'black', 10)
-drawLine(600, 0, 600, 300, 'black', 10)
+drawLine(500, 0, 500, 300, 'black', 10)
 
 let i = 0
 
