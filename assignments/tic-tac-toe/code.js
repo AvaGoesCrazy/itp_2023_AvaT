@@ -14,11 +14,11 @@ let i = 0
 
 registerOnclick((x, y) => {
   if (i === 0){
-    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
+    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
     i = i + 1
     console.log(i)
   } else {
-    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
+    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
     i = i - 1
     console.log(i)
   }
