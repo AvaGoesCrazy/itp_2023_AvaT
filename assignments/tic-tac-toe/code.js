@@ -7,17 +7,15 @@
 
 let i = 0
 
-const turn = (i) => {
-  if (i = 0);
-    registerOnClick((i) => {
-      registerOnclick((x, y) => {
-        drawText('X', x - 30, y - 30, 'black', Math.min(width, height) * 0.3);
-      });
-      return i = i + 1
-    })
-    
-}
-
-registerOnclick((x, y) => {
-  drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
+registerOnclick((x, y, i) => {
+  if (i = 0)
+    drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
+    return i = i + 1
 });
+
+registerOnclick((x, y, i) => {
+  if (i = 1)
+    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
+    return i = i - 1
+});
+
