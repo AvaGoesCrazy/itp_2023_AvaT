@@ -10,7 +10,7 @@ drawLine(500, 0, 500, 300, 'black', 10)
 
 let i = 0
 
-registerOnclick((x, y, i) => {
+registerOnclick((x, y) => {
   if (i === 0){
     drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
     i = i + 1
