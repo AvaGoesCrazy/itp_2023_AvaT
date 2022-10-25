@@ -11,7 +11,7 @@ const turn = (i) => {
   if (i = 0);
     registerOnClick((i) => {
       registerOnclick((x, y) => {
-        drawText('X', x - 50, y - 50, 'black', Math.min(width, height) * 0.3);
+        drawText('X', x - 30, y - 30, 'black', Math.min(width, height) * 0.3);
       });
       return i = i + 1
     })
