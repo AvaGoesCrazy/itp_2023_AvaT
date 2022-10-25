@@ -7,8 +7,8 @@
 
 drawLine(250, 0, 250, 300, 'black', 10)
 drawLine(500, 0, 500, 300, 'black', 10)
-drawLine(0, 100, 800, 100, 'black', 10)
-drawLine(0, 200, 800, 200, 'black', 10)
+drawLine(0, 100, 500, 100, 'black', 10)
+drawLine(0, 200, 500, 200, 'black', 10)
 
 let i = 0
 
