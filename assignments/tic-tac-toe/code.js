@@ -8,14 +8,11 @@
 let i = 0
 
 registerOnclick((x, y, i) => {
-  if (i = 0)
+  if (i = 0){
     drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
     i = i + 1
-});
-
-registerOnclick((x, y, i) => {
-  if (i = 1)
+  } else {
     drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
     i = i - 1
+  }
 });
-
