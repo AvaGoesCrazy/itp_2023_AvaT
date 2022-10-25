@@ -12,14 +12,27 @@ drawLine(0, 200, 300, 200, 'black', 10)
 
 let i = 0
 
-registerOnclick((x, y) => {
-  if (i === 0){
-    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-    i = i + 1
-    console.log(i)
-  } else {
-    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-    i = i - 1
-    console.log(i)
-  }
+const ticTacToe = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
+];
+
+registerOnclick((x, y)) => {
+  if (x > 0 && x < 100 && y > 0 && y < 100)
+    if (i === 0){
+      drawText('O', 30, 30, 'black', Math.min(width, height) * 0.2);
+    }
 });
+
+//registerOnclick((x, y) => {
+//  if (i === 0){
+//    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
+//    i = i + 1
+//    console.log(i)
+//  } else {
+//    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
+//    i = i - 1
+//    console.log(i)
+//  }
+//});
