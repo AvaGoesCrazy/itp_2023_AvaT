@@ -5,7 +5,7 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-drawLine(250, 0, 250, 300, 'black', 10)
+drawLine(100, 0, 100, 300, 'black', 10)
 drawLine(500, 0, 500, 300, 'black', 10)
 drawLine(0, 100, 400, 100, 'black', 10)
 drawLine(0, 200, 400, 200, 'black', 10)
