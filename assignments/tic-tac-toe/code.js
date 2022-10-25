@@ -5,16 +5,16 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-let i = 1
+let i = 0
 
 registerOnclick((x, y, i) => {
   if (i = 0){
     drawText('Y', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
-    i = i + 1
+    let i = i + 1
     console.log(i)
   } else {
     drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.3);
-    i = i - 1
+    let i = i - 1
     console.log(i)
   }
 });
