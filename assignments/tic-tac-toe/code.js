@@ -7,7 +7,7 @@
 
 drawLine(250, 0, 250, 300, 'black', 10)
 drawLine(500, 0, 500, 300, 'black', 10)
-drawLine(0, 100, 600, 200, 'black', 10)
+drawLine(0, 100, 800, 100, 'black', 10)
 
 
 let i = 0
