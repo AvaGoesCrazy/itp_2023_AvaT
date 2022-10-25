@@ -21,9 +21,9 @@ const ticTacToe = [
 registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
     if (i === 0){
-      drawText('X', 25, 20, 'black', Math.min(width, height) * 0.2);
+      drawText('X', 25, 60, 'black', Math.min(width, height) * 0.2);
     } else {
-      drawText('O', 25, 20, 'black', Math.min(width, height) * 0.2);
+      drawText('O', 25, 60, 'black', Math.min(width, height) * 0.2);
     }
 });
 
