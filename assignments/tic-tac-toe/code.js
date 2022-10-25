@@ -5,7 +5,7 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 
-drawLine(10,10,10,10,10,'black')
+drawLine(100, 100, 100, 100, 'black', 10)
 
 let i = 0
 
