@@ -51,13 +51,13 @@ registerOnclick((x, y) => {
     if (i === 0) {
       drawText('X', 225, 60, 'black', Math.min(width, height) * 0.2);
       i = i + 1
-      ticTacToe[0][1] = 'x'
+      ticTacToe[0][2] = 'x'
       console.log(i)
       console.log(ticTacToe)
     } else {
       drawText('O', 225, 60, 'black', Math.min(width, height) * 0.2);
       i = i - 1
-      ticTacToe[0][1] = 'o'
+      ticTacToe[0][2] = 'o'
       console.log(i)
       console.log(ticTacToe)
     }
@@ -65,13 +65,13 @@ registerOnclick((x, y) => {
     if (i === 0) {
       drawText('X', 25, 160, 'black', Math.min(width, height) * 0.2);
       i = i + 1
-      ticTacToe[0][1] = 'x'
+      ticTacToe[1][0] = 'x'
       console.log(i)
       console.log(ticTacToe)
     } else {
       drawText('O', 25, 160, 'black', Math.min(width, height) * 0.2);
       i = i - 1
-      ticTacToe[0][1] = 'o'
+      ticTacToe[1][0] = 'o'
       console.log(i)
       console.log(ticTacToe)
     }
