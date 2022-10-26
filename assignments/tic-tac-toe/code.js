@@ -28,6 +28,15 @@ registerOnclick((x, y) => {
     } else {
       drawText('O', 25, 60, 'black', Math.min(width, height) * 0.2);
     }
+  if (x > 100 && x < 200 && y > 100 && y < 200)
+    if (i === 0){
+      drawText('X', 25, 60, 'black', Math.min(width, height) * 0.2);
+      ticTacToe [0] [0] = 'x'
+      console.log(i)
+      console.log(ticTacToe)
+    } else {
+      drawText('O', 25, 60, 'black', Math.min(width, height) * 0.2);
+    }
 });
 
 //registerOnclick((x, y) => {
