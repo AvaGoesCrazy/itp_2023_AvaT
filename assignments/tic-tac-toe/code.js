@@ -102,6 +102,7 @@ registerOnclick((x, y) => {
       ticTacToe[1][2] = 'o'
       console.log(i)
       console.log(ticTacToe)
+    }
   if (x > 0 && x < 100 && y > 200 && y < 300)
     if (i === 0) {
       drawText('X', 25, 260, 'black', Math.min(width, height) * 0.2);
