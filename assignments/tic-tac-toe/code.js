@@ -89,6 +89,20 @@ registerOnclick((x, y) => {
       console.log(i)
       console.log(ticTacToe)
     }
+  if (x > 200 && x < 300 && y > 100 && y < 200)
+    if (i === 0) {
+      drawText('X', 225, 160, 'black', Math.min(width, height) * 0.2);
+      i = i + 1
+      ticTacToe[1][2] = 'x'
+      console.log(i)
+      console.log(ticTacToe)
+    } else {
+      drawText('O', 225, 160, 'black', Math.min(width, height) * 0.2);
+      i = i - 1
+      ticTacToe[1][2] = 'o'
+      console.log(i)
+      console.log(ticTacToe)
+    }
 });
 
 //registerOnclick((x, y) => {
