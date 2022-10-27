@@ -19,7 +19,7 @@ const ticTacToe = [
 ];
 
 const threeInARow = (ticTacToe) => {
-  if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2]) === ('x' || 'o'))
+  if (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x')
     drawLine (50, 50, 250, 50 ,'black' , 10)
 }
 
@@ -32,7 +32,6 @@ registerOnclick((x, y) => {
         ticTacToe[0][0] = 'x'
         console.log(i)
         console.log(ticTacToe)
-        return threeInARow
       } else {
         drawText('O', 25, 60, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
