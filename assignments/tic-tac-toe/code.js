@@ -32,6 +32,7 @@ registerOnclick((x, y) => {
         ticTacToe[0][0] = 'x'
         console.log(i)
         console.log(ticTacToe)
+        return threeInARow
       } else {
         drawText('O', 25, 60, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
