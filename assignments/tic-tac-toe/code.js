@@ -20,7 +20,7 @@ const ticTacToe = [
 
 const threeInARow = (ticTacToe) => {
   if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2]) === ('x' || 'o'))
-    drawLine (50, 50, 250, 250 ,'black' , 10)
+    drawLine (50, 50, 250, 50 ,'black' , 10)
 }
 
 registerOnclick((x, y) => {
