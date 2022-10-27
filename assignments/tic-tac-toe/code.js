@@ -36,8 +36,8 @@ registerOnclick((x, y) => {
       }
     }
   if (x > 100 && x < 200 && y > 0 && y < 100)
-    if (ticTacToe [0] [1] !== 'x' || ticTacToe [0] [1] !== 'o')
-     if (i === 0) {
+    if (ticTacToe [0] [1] !== 'x' || ticTacToe [0] [1] !== 'o'){
+      if (i === 0) {
         drawText('X', 125, 60, 'black', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[0][1] = 'x'
@@ -50,9 +50,10 @@ registerOnclick((x, y) => {
         console.log(i)
         console.log(ticTacToe)
       }
+    }
   if (x > 200 && x < 300 && y > 0 && y < 100)
-    if (ticTacToe [0] [2] !== 'x' || ticTacToe [0] [2] !== 'o')
-     if (i === 0) {
+    if (ticTacToe [0] [2] !== 'x' || ticTacToe [0] [2] !== 'o'){
+      if (i === 0) {
         drawText('X', 225, 60, 'black', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[0][2] = 'x'
@@ -65,6 +66,7 @@ registerOnclick((x, y) => {
         console.log(i)
         console.log(ticTacToe)
       }
+    }
   if (x > 0 && x < 100 && y > 100 && y < 200)
     if (i === 0) {
       drawText('X', 25, 160, 'black', Math.min(width, height) * 0.2);
