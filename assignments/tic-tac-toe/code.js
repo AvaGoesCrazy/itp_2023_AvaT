@@ -18,17 +18,22 @@ const ticTacToe = [
   ['', '', ''],
 ];
 
+const threeInARow = (ticTacToe) => {
+  if (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x' || 'o')
+    drawLine (50, 50, 250, 250 ,'grey' , 10)
+}
+
 registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
     if (ticTacToe [0] [0] !== 'x' && ticTacToe [0] [0] !== 'o'){
       if (i === 0) {
-        drawText('X', 25, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 25, 60, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[0][0] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 25, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 25, 60, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[0][0] = 'o'
         console.log(i)
@@ -38,13 +43,13 @@ registerOnclick((x, y) => {
   if (x > 100 && x < 200 && y > 0 && y < 100)
     if (ticTacToe [0] [1] !== 'x' && ticTacToe [0] [1] !== 'o'){
       if (i === 0) {
-        drawText('X', 125, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 125, 60, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[0][1] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 125, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 125, 60, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[0][1] = 'o'
         console.log(i)
@@ -54,13 +59,13 @@ registerOnclick((x, y) => {
   if (x > 200 && x < 300 && y > 0 && y < 100)
     if (ticTacToe [0] [2] !== 'x' && ticTacToe [0] [2] !== 'o'){
       if (i === 0) {
-        drawText('X', 225, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 225, 60, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[0][2] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 225, 60, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 225, 60, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[0][2] = 'o'
         console.log(i)
@@ -70,13 +75,13 @@ registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 100 && y < 200)
     if (ticTacToe [1] [0] !== 'x' && ticTacToe [1] [0] !== 'o'){
       if (i === 0) {
-        drawText('X', 25, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 25, 160, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[1][0] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 25, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 25, 160, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[1][0] = 'o'
         console.log(i)
@@ -86,13 +91,13 @@ registerOnclick((x, y) => {
   if (x > 100 && x < 200 && y > 100 && y < 200)
     if (ticTacToe [1] [1] !== 'x' && ticTacToe [1] [1] !== 'o'){
       if (i === 0) {
-        drawText('X', 125, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 125, 160, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[1][1] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 125, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 125, 160, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[1][1] = 'o'
         console.log(i)
@@ -102,13 +107,13 @@ registerOnclick((x, y) => {
   if (x > 200 && x < 300 && y > 100 && y < 200)
     if (ticTacToe [1] [2] !== 'x' && ticTacToe [1] [2] !== 'o'){
       if (i === 0) {
-        drawText('X', 225, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 225, 160, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[1][2] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 225, 160, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 225, 160, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[1][2] = 'o'
         console.log(i)
@@ -118,13 +123,13 @@ registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 200 && y < 300)
     if (ticTacToe [2] [0] !== 'x' && ticTacToe [2] [0] !== 'o'){
       if (i === 0) {
-        drawText('X', 25, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 25, 260, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[2][0] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 25, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 25, 260, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[2][0] = 'o'
         console.log(i)
@@ -134,13 +139,13 @@ registerOnclick((x, y) => {
   if (x > 100 && x < 200 && y > 200 && y < 300)
     if (ticTacToe [2] [1] !== 'x' && ticTacToe [2] [1] !== 'o'){
       if (i === 0) {
-        drawText('X', 125, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 125, 260, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[2][1] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 125, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 125, 260, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[2][1] = 'o'
         console.log(i)
@@ -150,13 +155,13 @@ registerOnclick((x, y) => {
   if (x > 200 && x < 300 && y > 200 && y < 300)
     if (ticTacToe [2] [2] !== 'x' && ticTacToe [2] [2] !== 'o'){
       if (i === 0) {
-        drawText('X', 225, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('X', 225, 260, 'red', Math.min(width, height) * 0.2);
         i = i + 1
         ticTacToe[2][2] = 'x'
         console.log(i)
         console.log(ticTacToe)
       } else {
-        drawText('O', 225, 260, 'black', Math.min(width, height) * 0.2);
+        drawText('O', 225, 260, 'blue', Math.min(width, height) * 0.2);
         i = i - 1
         ticTacToe[2][2] = 'o'
         console.log(i)
