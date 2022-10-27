@@ -165,6 +165,10 @@ registerOnclick((x, y) => {
     }
 });
 
+
+
+
+//OLD CODE NO LONGER BEING USED!!!
 //registerOnclick((x, y) => {
 //  if (i === 0){
 //    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
