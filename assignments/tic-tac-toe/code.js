@@ -19,8 +19,13 @@ const ticTacToe = [
 ];
 
 const threeInARow = (ticTacToe) => {
-  if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x') || (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'o'))
+  if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x') || (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'o')){
     drawLine (50, 50, 250, 50 ,'black' , 10)
+  } else
+      if ((ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'x') || (ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'o')){
+      drawLine (50, 150, 250, 150 ,'black' , 10)
+      } else
+        if
 }
 
 registerOnclick((x, y) => {
