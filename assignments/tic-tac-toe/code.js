@@ -168,7 +168,7 @@ registerOnclick((x, y) => {
         console.log(ticTacToe)
       }
     }
-  return threeInARow
+   threeInARow (ticTacToe)
 });
 
 
