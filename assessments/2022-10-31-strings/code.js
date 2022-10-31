@@ -51,4 +51,10 @@ const randonCharacter = (s) => {
   return s[rand(s.length + 1)];
 };
 
-const 
+const randomCharacterUpDown = (s) => {
+    return s[rand(s.length + 1)].toUppercase + s[rand(s.length + 1)].toLowerCase;
+};
+
+const isAllUpperCase = (s) => {
+  for
+}
