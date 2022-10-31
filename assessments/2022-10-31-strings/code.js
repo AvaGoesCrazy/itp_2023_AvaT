@@ -22,3 +22,7 @@ const firstHalf = (s, x) => {
 const secondHalf = (s, x) => {
   return s.substring(x);
 };
+
+const upDown = (s) => {
+  return s.toUpperCase + s.toLowerCase
+}
