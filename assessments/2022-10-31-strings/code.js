@@ -36,9 +36,19 @@ const upDownLastCharacter = (s) => {
 };
 
 const firstAndLast = (s) => {
-  return s[0] + s.substring(s.length - 1)
-}
+  return s[0] + s.substring(s.length - 1);
+};
 
 const swapFrontAndBack = (s, x) => {
-  return s.substring(x) + (s - s.substring(x))
-}
+  return s.substring(x) + (s - s.substring(x));
+};
+
+const simplePigLatin = (s) => {
+  return s.substring(1) + s[0] + 'ay';
+};
+
+const randonCharacter = (s) => {
+  return s[rand(s.length + 1)];
+};
+
+const 
