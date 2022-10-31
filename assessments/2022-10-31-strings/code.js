@@ -35,4 +35,10 @@ const upDownLastCharacter = (s) => {
   return s.substring(s.length - 1).toUpperCase + s.substring(s.length - 1).toLowerCase;
 };
 
-const 
+const firstAndLast = (s) => {
+  return s[0] + s.substring(s.length - 1)
+}
+
+const swapFrontAndBack = (s, x) => {
+  return s.substring(x) + (s - s.substring(x))
+}
