@@ -24,5 +24,11 @@ const secondHalf = (s, x) => {
 };
 
 const upDown = (s) => {
-  return s.toUpperCase + s.toLowerCase
-}
+  return s.toUpperCase + s.toLowerCase;
+};
+
+const firstFewEveryOther = (y) => {
+  return s[0] + s[2] + s[5];
+};
+
+const
