@@ -11,8 +11,8 @@ const rand = (n) => Math.floor(Math.random() * n);
 // function but you can get partial credit for a function that is basically
 // correct even if contains small mistakes.
 
-const x = (s, x) => {
-  return ((s.length / 2) - (s.length % 2)) = x;
+const x = (s) => {
+  return ((s.length / 2) - (s.length % 2));
 };
 
 const firstHalf = (s, x) => {
