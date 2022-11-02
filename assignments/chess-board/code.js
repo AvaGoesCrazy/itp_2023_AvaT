@@ -73,5 +73,5 @@ const drawBoard = () => {
   }
 }
 
-registerOnClick(any, any)
+registerOnclick(any, any)
   drawBoard
