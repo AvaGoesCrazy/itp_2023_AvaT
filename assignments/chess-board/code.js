@@ -20,6 +20,13 @@ drawFilledRect(50, 50, 50, 50, 'black')
 drawFilledRect(150, 50, 50, 50, 'black')
 drawFilledRect(250, 50, 50, 50, 'black')
 drawFilledRect(350, 50, 50, 50, 'black')
-
+drawFilledRect(0, 100, 50, 50, 'black')
+drawFilledRect(100, 100, 50, 50, 'black')
+drawFilledRect(200, 100, 50, 50, 'black')
+drawFilledRect(300, 100, 50, 50, 'black')
+drawFilledRect(50, 150, 50, 50, 'black')
+drawFilledRect(150, 150, 50, 50, 'black')
+drawFilledRect(250, 150, 50, 50, 'black')
+drawFilledRect(350, 150, 50, 50, 'black')
 
 drawText(WHITE_KING, width/2, height/2, 'black', 64);
