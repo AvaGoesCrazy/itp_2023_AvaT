@@ -16,7 +16,7 @@ drawFilledRect(0, 0, 50, 50, 'black')
 drawFilledRect(100, 0, 50, 50, 'black')
 drawFilledRect(200, 0, 50, 50, 'black')
 drawFilledRect(300, 0, 50, 50, 'black')
-
+drawFilledRect(50, 50, 50, 50, 'black')
 
 
 drawText(WHITE_KING, width/2, height/2, 'black', 64);
