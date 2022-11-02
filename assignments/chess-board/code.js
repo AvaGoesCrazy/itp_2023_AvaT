@@ -28,7 +28,8 @@ const board = [
 ]
 
 //SECTION 1
-drawFilledRect(0, 0, 50, 50, 'lightGrey')
+drawFilledRect(0, 0, 400, 400, 'lightGrey')
+drawFilledRect(0, 0, 50, 50, 'grey')
 drawFilledRect(100, 0, 50, 50, 'grey')
 drawFilledRect(200, 0, 50, 50, 'grey')
 drawFilledRect(300, 0, 50, 50, 'grey')
