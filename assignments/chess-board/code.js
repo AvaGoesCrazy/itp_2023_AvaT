@@ -65,3 +65,4 @@ drawFilledRect(250, 350, 50, 50, 'black')
 drawFilledRect(350, 350, 50, 50, 'black')
 
 
+drawText(WHITE_KING, width/2, height/2, 'black', 64);
