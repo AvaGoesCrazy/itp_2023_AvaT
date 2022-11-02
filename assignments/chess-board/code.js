@@ -65,5 +65,10 @@ drawFilledRect(150, 350, 50, 50, 'grey')
 drawFilledRect(250, 350, 50, 50, 'grey')
 drawFilledRect(350, 350, 50, 50, 'grey')
 
-
-drawText(WHITE_KING, width/2, height/2, 'white', 64);
+const drawBoard = () => {
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+      drawtext (board[j] [i], i*50, j*50, 'black', 64)
+    }
+  }
+}
