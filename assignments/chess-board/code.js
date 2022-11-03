@@ -75,7 +75,7 @@ drawFilledRect(350, 350, 50, 50, 'grey')
 const drawBoard = () => {
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
-      drawText(board[j][i], ((i)*50)+5, ((j + 1)*50)+10, 'black', 64)
+      drawText(board[j][i], ((i)*50)+5, ((j + 1)*50)-10, 'black', 64)
     }
   }
 }
