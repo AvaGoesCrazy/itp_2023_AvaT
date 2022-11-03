@@ -27,39 +27,44 @@ const board = [
   [WHITE_ROOK,WHITE_KNIGHT,WHITE_BISHOP,WHITE_KING,WHITE_QUEEN,WHITE_BISHOP,WHITE_KNIGHT,WHITE_ROOK],
 ]
 
-//SECTION 1
+//BACKGROUND
 drawFilledRect(0, 0, 400, 400, 'lightGrey')
+//ROW 1
 drawFilledRect(0, 0, 50, 50, 'grey')
 drawFilledRect(100, 0, 50, 50, 'grey')
 drawFilledRect(200, 0, 50, 50, 'grey')
 drawFilledRect(300, 0, 50, 50, 'grey')
+//ROW 2
 drawFilledRect(50, 50, 50, 50, 'grey')
 drawFilledRect(150, 50, 50, 50, 'grey')
 drawFilledRect(250, 50, 50, 50, 'grey')
 drawFilledRect(350, 50, 50, 50, 'grey')
-//SECTION 2
+//ROW 3
 drawFilledRect(0, 100, 50, 50, 'grey')
 drawFilledRect(100, 100, 50, 50, 'grey')
 drawFilledRect(200, 100, 50, 50, 'grey')
 drawFilledRect(300, 100, 50, 50, 'grey')
+//ROW 4
 drawFilledRect(50, 150, 50, 50, 'grey')
 drawFilledRect(150, 150, 50, 50, 'grey')
 drawFilledRect(250, 150, 50, 50, 'grey')
 drawFilledRect(350, 150, 50, 50, 'grey')
-//SECTION 3
+//ROW 5
 drawFilledRect(0, 200, 50, 50, 'grey')
 drawFilledRect(100, 200, 50, 50, 'grey')
 drawFilledRect(200, 200, 50, 50, 'grey')
 drawFilledRect(300, 200, 50, 50, 'grey')
+//ROW 6
 drawFilledRect(50, 250, 50, 50, 'grey')
 drawFilledRect(150, 250, 50, 50, 'grey')
 drawFilledRect(250, 250, 50, 50, 'grey')
 drawFilledRect(350, 250, 50, 50, 'grey')
-//SECTION 4
+//ROW 7
 drawFilledRect(0, 300, 50, 50, 'grey')
 drawFilledRect(100, 300, 50, 50, 'grey')
 drawFilledRect(200, 300, 50, 50, 'grey')
 drawFilledRect(300, 300, 50, 50, 'grey')
+//ROW 8
 drawFilledRect(50, 350, 50, 50, 'grey')
 drawFilledRect(150, 350, 50, 50, 'grey')
 drawFilledRect(250, 350, 50, 50, 'grey')
@@ -68,14 +73,14 @@ drawFilledRect(350, 350, 50, 50, 'grey')
 
 
 const drawBoard = () => {
-  for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
       drawtext (board[j] [i], (i+1)*50, (j+1)*50, 'black', 64)
     }
   }
 }
 
-drawBoard
+drawBoard()
 
 registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
