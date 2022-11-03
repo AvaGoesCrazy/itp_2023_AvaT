@@ -65,7 +65,7 @@ drawFilledRect(150, 350, 50, 50, 'grey')
 drawFilledRect(250, 350, 50, 50, 'grey')
 drawFilledRect(350, 350, 50, 50, 'grey')
 
-drawBoard
+
 
 const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
@@ -76,7 +76,7 @@ const drawBoard = () => {
 }
 
 
-registerOnclick((x, y) => {
+registerOnclick((x, y, drawBoard) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
     drawBoard
 });
