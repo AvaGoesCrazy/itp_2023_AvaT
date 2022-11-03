@@ -70,7 +70,7 @@ drawBoard
 const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
     for (let j = 0; j < 10; j++) {
-      drawtext (board[j] [i], (i+1)*50, (j+1)*50, 'black', 64)
+      drawtext (board[j - 1] [i - 1], (i+1)*50, (j+1)*50, 'black', 64)
     }
   }
 }
