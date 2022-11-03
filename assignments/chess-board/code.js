@@ -1,15 +1,15 @@
-const WHITE_KING   = '♔';
-const WHITE_QUEEN  = '♕';
-const WHITE_ROOK   = '♖';
+const WHITE_KING = '♔';
+const WHITE_QUEEN = '♕';
+const WHITE_ROOK = '♖';
 const WHITE_BISHOP = '♗';
 const WHITE_KNIGHT = '♘';
-const WHITE_PAWN   = '♙';
-const BLACK_KING   = '♚';
-const BLACK_QUEEN  = '♛';
-const BLACK_ROOK   = '♜';
+const WHITE_PAWN = '♙';
+const BLACK_KING = '♚';
+const BLACK_QUEEN = '♛';
+const BLACK_ROOK = '♜';
 const BLACK_BISHOP = '♝';
 const BLACK_KNIGHT = '♞';
-const BLACK_PAWN   = '♟';
+const BLACK_PAWN = '♟';
 
 
 // Example of drawing one of the pieces
@@ -17,14 +17,14 @@ const BLACK_PAWN   = '♟';
 
 
 const board = [
-  [BLACK_ROOK,BLACK_KNIGHT,BLACK_BISHOP,BLACK_QUEEN,BLACK_KING,BLACK_BISHOP,BLACK_KNIGHT,BLACK_ROOK],
-  [BLACK_PAWN,BLACK_PAWN,BLACK_PAWN,BLACK_PAWN,BLACK_PAWN,BLACK_PAWN,BLACK_PAWN,BLACK_PAWN],
-  ['','','','','','','',''],
-  ['','','','','','','',''],
-  ['','','','','','','',''],
-  ['','','','','','','',''],
-  [WHITE_PAWN,WHITE_PAWN,WHITE_PAWN,WHITE_PAWN,WHITE_PAWN,WHITE_PAWN,WHITE_PAWN,WHITE_PAWN],
-  [WHITE_ROOK,WHITE_KNIGHT,WHITE_BISHOP,WHITE_KING,WHITE_QUEEN,WHITE_BISHOP,WHITE_KNIGHT,WHITE_ROOK],
+  [BLACK_ROOK, BLACK_KNIGHT, BLACK_BISHOP, BLACK_QUEEN, BLACK_KING, BLACK_BISHOP, BLACK_KNIGHT, BLACK_ROOK],
+  [BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', ''],
+  [WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN],
+  [WHITE_ROOK, WHITE_KNIGHT, WHITE_BISHOP, WHITE_KING, WHITE_QUEEN, WHITE_BISHOP, WHITE_KNIGHT, WHITE_ROOK],
 ]
 
 //BACKGROUND
@@ -75,7 +75,7 @@ drawFilledRect(350, 350, 50, 50, 'grey')
 const drawBoard = () => {
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
-      drawText(board[j][i], ((i)*50)+5, ((j + 1)*50)-5, 'black', 64)
+      drawText(board[j][i], ((i) * 50) + 5, ((j + 1) * 50) - 5, 'black', 64)
     }
   }
 }
