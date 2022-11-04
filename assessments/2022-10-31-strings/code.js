@@ -55,21 +55,25 @@ const randomCharacterUpDown = (s) => {
   return s[rand(s.length + 1)].toUppercase + s[rand(s.length + 1)].toLowerCase;
 };
 
-//NOTE TO SELF: COME BACK TO THIS...
-//const isAllUpperCase = (s) => {
-//  if (s - s.toUpperCase.length === 0)
-//    return true
-//}
+//this is the only one im unsure about. i think it works but the repl wasnt really giving me a straight answer
+const isAllUpperCase = (s) => {
+  if (s - s.toUpperCase() === '')
+    return true
+}
 
-const sameIgnoringCase = (s, i) =>{
+const sameIgnoringCase = (s, i) => {
   if (s.toUpperCase() - i.toUpperCase() === 0)
     return true
 }
 
-const firstName = (s) =>{
+const firstName = (s) => {
   return s.substring(0, s.indexOf(' '))
 }
 
-const lastName = (s) =>{
+const lastName = (s) => {
   return s.substring(s.indexOf(' '))
+}
+
+const initials = (s) => {
+  return (s[0] + '. ' + s[s.indexOf(' ')+1]).toUpperCase()
 }
