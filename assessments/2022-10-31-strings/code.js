@@ -52,9 +52,21 @@ const randonCharacter = (s) => {
 };
 
 const randomCharacterUpDown = (s) => {
-    return s[rand(s.length + 1)].toUppercase + s[rand(s.length + 1)].toLowerCase;
+  return s[rand(s.length + 1)].toUppercase + s[rand(s.length + 1)].toLowerCase;
 };
 
-const isAllUpperCase = (s) => {
-  for
+//NOTE TO SELF: COME BACK TO THIS...
+//const isAllUpperCase = (s) => {
+//  if (s - s.toUpperCase.length === 0)
+//    return true
+//}
+
+const sameIgnoringCase = (s, i) =>{
+  if (s.toUpperCase() - i.toUpperCase() === 0)
+    return true
 }
+
+const firstName = (s) =>{
+  return s.substring(0, s.indexOf(' '))
+}
+
