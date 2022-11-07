@@ -88,6 +88,8 @@ registerOnclick((x, y) => {
     drawFilledRect(0, 0, 400, 50, 'blue')
     drawFilledRect(50, 0, 50, 50, 'lightBlue')
     drawFilledRect(0, 50, 50, 50, 'lightBlue')
+    drawFilledRect(150, 0, 50, 50, 'lightBlue')
+    drawFilledRect(250, 0, 50, 50, 'lightBlue')
 
     drawBoard()
 });
