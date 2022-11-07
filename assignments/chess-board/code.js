@@ -86,14 +86,16 @@ registerOnclick((x, y) => {
   if (x > 0 && x < 50 && y > 0 && y < 50)
     drawFilledRect(0, 0, 50, 400, 'blue')
     drawFilledRect(0, 0, 400, 50, 'blue')
-    drawFilledRect(50, 0, 50, 50, 'lightBlue')
+    drawFilledRect(050, 0, 50, 50, 'lightBlue')
     drawFilledRect(150, 0, 50, 50, 'lightBlue')
     drawFilledRect(250, 0, 50, 50, 'lightBlue')
     drawFilledRect(350, 0, 50, 50, 'lightBlue')
-    drawFilledRect(0, 50, 50, 50, 'lightBlue')
+    drawFilledRect(0, 050, 50, 50, 'lightBlue')
     drawFilledRect(0, 150, 50, 50, 'lightBlue')
     drawFilledRect(0, 250, 50, 50, 'lightBlue')
     drawFilledRect(0, 350, 50, 50, 'lightBlue')
 
     drawBoard()
 });
+
+
