@@ -78,7 +78,6 @@ const drawBoard = () => {
   }
 }
 
-drawBackground()
 drawBoard()
 
 
