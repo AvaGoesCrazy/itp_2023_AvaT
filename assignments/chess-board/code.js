@@ -81,6 +81,12 @@ const drawBoard = () => {
 drawBackground()
 drawBoard()
 
+registerOnclick((x, y) => {
+  if (x > 0 && x < 400 && y > 100 && y < 300)
+    drawBackground()
+    drawBoard()
+});
+
 
 registerOnclick((x, y) => {
   if (x > 0 && x < 50 && y > 0 && y < 50)
