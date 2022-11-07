@@ -85,5 +85,6 @@ drawBoard()
 registerOnclick((x, y) => {
   if (x > 0 && x < 50 && y > 0 && y < 50)
     drawFilledRect(0, 0, 50, 400, 'blue')
+    drawFilledRect(0, 0, 400, 50, 'blue')
     drawBoard()
 });
