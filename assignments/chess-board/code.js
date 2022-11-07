@@ -79,6 +79,6 @@ const drawBoard = () => {
 drawBoard()
 
 registerOnclick((x, y) => {
-  if (x > 0 && x < 100 && y > 0 && y < 100)
-    drawBoard()
+  if (x > 0 && x < 50 && y > 0 && y < 50)
+    drawFilledRect(50, 350, 50, 50, 'blue')
 });
