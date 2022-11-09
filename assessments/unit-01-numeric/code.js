@@ -7,19 +7,19 @@ const G = 6.6743e-11;
 // syntactically correct function skeleton, more credit for a skeleton with a
 // reasonable argument list, yet more credit for a working function, and full
 // credit for a clear and simple working function.
-const itemsLeftOver = (numPeople, numItems) => numItems - numPeople;
+const itemsLeftOver = (numPeople, numItems) => numItems % numPeople;
 
-const areaOfCircle = (radius) => Math.pi(radius) ** 2;
+const areaOfCircle = (radius) => Math.PI(radius) ** 2;
 
 const volumeOfCube = (edge) => edge ** 3;
 
-const populationGrowth = (popSize, growthRate) => popSize * (growthRate + 1);
+const populationGrowth = (popSize, growthRate) => popSize * growthRate;
 
-const earnedRunAverage = (earnedRuns, innings) => earnedRuns * innings * 9;
+const earnedRunAverage = (earnedRuns, innings) => (earnedRuns / innings) * 9;
 
 const valueOfJewels = (numDiam, numEmer, diamInGold, emerInGold) => (numDiam * diamInGold) + (numEmer * emerInGold);
 
-const payWithOvertime = (hrsWorked, normalRate, overtimeRate) => (8 * normalRate) + ((hrsWorked - 8) * overtimeRate);
+const payWithOvertime = (hrsWorked, normalRate, overtimeRate) => (hrsWorked * normalRate) + ((hrsWorked * overtimeRate) - (overtimeRate * 8));
 
 const firstClassPostage = (weight) => (((Math.ceil(weight)) - 1) * .24) + .60;
 
