@@ -6,6 +6,10 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
+  if ((higherPaid.e1 - higherPaid.e2) < (higherPaid.e2 - higherPaid.e1)) {
+    return higherPaid.e1
+  } else
+  return higherPaid.e2
 };
 
 const isSamePoint = (p1, p2) => {
