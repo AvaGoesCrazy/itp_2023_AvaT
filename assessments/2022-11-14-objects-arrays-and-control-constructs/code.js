@@ -6,22 +6,32 @@ const area = (rect) => {
 };
 
 const higherPaid = (e1, e2) => {
-  if ((higherPaid.e1 - higherPaid.e2) < (higherPaid.e2 - higherPaid.e1)) {
-    return higherPaid.e1
+  if ((e1.salery - e2.salery) < (e2.salery - e1.salery)) {
+    return e1.salery
   } else
-  return higherPaid.e2
+    return e2.salery
 };
 
 const isSamePoint = (p1, p2) => {
+  if ((p1.x === p2.x) && (p1.y === p2.y)) {
+    return true
+  }
 };
 
 const totalWithTip = (bill, tipPercentage) => {
+  let total.subtotal = bill.subtotal
 };
 
 const isWinner = (player) => {
+  if (player.score > 100) {
+    return true
+  } else
+    return false
 };
 
 const updateWins = (players) => {
+  if (isWinner(players) === true)
+    return players.wins ++
 };
 
 const bigWinners = (players) => {
