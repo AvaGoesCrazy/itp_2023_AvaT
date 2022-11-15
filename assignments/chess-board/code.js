@@ -90,7 +90,7 @@ drawBoard()
 
 //ROOK LEGAL MOVES
 registerOnclick((x, y) => {
-  if (x > 0 && x < 50 && y > 0 && y < 50)
+  if (x > 0 && x < 50 && y > 0 && y < 50) {
     drawBackground()
     drawBoard()
     drawFilledRect(0, 0, 50, 400, '#86c4ff')
@@ -105,9 +105,7 @@ registerOnclick((x, y) => {
     drawFilledRect(0, 350, 50, 50, '#cae5ff')
 
     drawBoard()
-});
-
-registerOnclick((x, y) => {
+  } else
   if (x > 350 && x < 400 && y > 0 && y < 50)
     drawBackground()
     drawBoard()
