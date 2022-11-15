@@ -88,7 +88,7 @@ drawBoard()
 //    drawBoard()
 //});
 
-
+//ROOK LEGAL MOVES
 registerOnclick((x, y) => {
   if (x > 0 && x < 50 && y > 0 && y < 50)
     drawBackground()
@@ -107,4 +107,20 @@ registerOnclick((x, y) => {
     drawBoard()
 });
 
+registerOnclick((x, y) => {
+  if (x > 350 && x < 400 && y > 0 && y < 50)
+    drawBackground()
+    drawBoard()
+    drawFilledRect(0, 0, 50, 400, '#86c4ff')
+    drawFilledRect(0, 0, 400, 50, '#86c4ff')
+    drawFilledRect(50, 0, 50, 50, '#cae5ff')
+    drawFilledRect(150, 0, 50, 50, '#cae5ff')
+    drawFilledRect(250, 0, 50, 50, '#cae5ff')
+    drawFilledRect(350, 0, 50, 50, '#cae5ff')
+    drawFilledRect(0, 50, 50, 50, '#cae5ff')
+    drawFilledRect(0, 150, 50, 50, '#cae5ff')
+    drawFilledRect(0, 250, 50, 50, '#cae5ff')
+    drawFilledRect(0, 350, 50, 50, '#cae5ff')
 
+    drawBoard()
+});
