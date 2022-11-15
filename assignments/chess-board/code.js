@@ -116,9 +116,9 @@ registerOnclick((x, y) => {
     drawFilledRect(250, 0, 50, 50, '#cae5ff')
     drawFilledRect(350, 0, 50, 50, '#cae5ff')
     drawFilledRect(350, 0, 50, 50, '#cae5ff')
-    drawFilledRect(350, 100, 400, 150, '#cae5ff')
-    drawFilledRect(350, 200, 400, 250, '#cae5ff')
-    drawFilledRect(350, 300, 400, 350, '#cae5ff')
+    drawFilledRect(350, 100, 50, 150, '#cae5ff')
+    drawFilledRect(350, 200, 50, 250, '#cae5ff')
+    drawFilledRect(350, 300, 50, 350, '#cae5ff')
 
     drawBoard()
 });
