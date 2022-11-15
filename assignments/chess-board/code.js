@@ -112,7 +112,7 @@ registerOnclick((x, y) => {
     drawBackground()
     drawBoard()
     drawFilledRect(0, 0, 50, 400, '#86c4ff')
-    drawFilledRect(0, 0, 400, 50, '#86c4ff')
+    drawFilledRect(350, 0, 400, 400, '#86c4ff')
     drawFilledRect(50, 0, 50, 50, '#cae5ff')
     drawFilledRect(150, 0, 50, 50, '#cae5ff')
     drawFilledRect(250, 0, 50, 50, '#cae5ff')
