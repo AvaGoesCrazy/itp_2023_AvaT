@@ -115,7 +115,7 @@ registerOnclick((x, y) => {
     drawFilledRect(150, 0, 50, 50, '#cae5ff')
     drawFilledRect(250, 0, 50, 50, '#cae5ff')
     drawFilledRect(350, 0, 50, 50, '#cae5ff')
-    drawFilledRect(350, 50, 50, 400, '#cae5ff')
+    drawFilledRect(350, 50, 50, 200, '#cae5ff')
     drawFilledRect(350, 150, 50, 400, '#cae5ff')
     drawFilledRect(350, 250, 50, 400, '#cae5ff')
     drawFilledRect(350, 350, 50, 400, '#cae5ff')
