@@ -35,6 +35,7 @@ const drawBackground= () => {
       drawFilledRect(x1, y1, x2, y2, background[j] [i])
     }
   }
+  //draw the black border...
   drawFilledRect(400, 0, 800, 800, 'black')
   drawFilledRect(0, 400, 400, 800, 'black')
 }
@@ -104,49 +105,3 @@ drawBoard()
 //
 //    drawBoard()
 //});
-
-//const drawBackground = () => {
-//  //BACKGROUND
-//  drawFilledRect(0, 0, 400, 400, 'lightGrey')
-//  //ROW 1
-//  drawFilledRect(0, 0, 50, 50, 'grey')
-//  drawFilledRect(100, 0, 50, 50, 'grey')
-//  drawFilledRect(200, 0, 50, 50, 'grey')
-//  drawFilledRect(300, 0, 50, 50, 'grey')
-//  //ROW 2
-//  drawFilledRect(50, 50, 50, 50, 'grey')
-//  drawFilledRect(150, 50, 50, 50, 'grey')
-//  drawFilledRect(250, 50, 50, 50, 'grey')
-//  drawFilledRect(350, 50, 50, 50, 'grey')
-//  //ROW 3
-//  drawFilledRect(0, 100, 50, 50, 'grey')
-//  drawFilledRect(100, 100, 50, 50, 'grey')
-//  drawFilledRect(200, 100, 50, 50, 'grey')
-//  drawFilledRect(300, 100, 50, 50, 'grey')
-//  //ROW 4
-//  drawFilledRect(50, 150, 50, 50, 'grey')
-//  drawFilledRect(150, 150, 50, 50, 'grey')
-//  drawFilledRect(250, 150, 50, 50, 'grey')
-//  drawFilledRect(350, 150, 50, 50, 'grey')
-//  //ROW 5
-//  drawFilledRect(0, 200, 50, 50, 'grey')
-//  drawFilledRect(100, 200, 50, 50, 'grey')
-//  drawFilledRect(200, 200, 50, 50, 'grey')
-//  drawFilledRect(300, 200, 50, 50, 'grey')
-//  //ROW 6
-//  drawFilledRect(50, 250, 50, 50, 'grey')
-//  drawFilledRect(150, 250, 50, 50, 'grey')
-//  drawFilledRect(250, 250, 50, 50, 'grey')
-//  drawFilledRect(350, 250, 50, 50, 'grey')
-//  //ROW 7
-//  drawFilledRect(0, 300, 50, 50, 'grey')
-//  drawFilledRect(100, 300, 50, 50, 'grey')
-//  drawFilledRect(200, 300, 50, 50, 'grey')
-//  drawFilledRect(300, 300, 50, 50, 'grey')
-//  //ROW 8
-//  drawFilledRect(50, 350, 50, 50, 'grey')
-//  drawFilledRect(150, 350, 50, 50, 'grey')
-//  drawFilledRect(250, 350, 50, 50, 'grey')
-//  drawFilledRect(350, 350, 50, 50, 'grey')
-//}
-//
