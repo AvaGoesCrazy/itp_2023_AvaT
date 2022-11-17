@@ -28,14 +28,15 @@ const background = [
 const drawBackground= () => {
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
+      let x1 = (j * 50)
+      let x2 = ((j+1)* 50)
+      let y1 = (i * 50)
+      let y2 = ((i+1)* 50)
       drawFilledRect(x1, y1, x2, y2, background[j] [i])
     }
   }
 }
-let x1 = (j * 50)
-let x2 = ((j+1)* 50)
-let y1 = (i * 50)
-let y2 = ((i+1)* 50)
+
 
 const board = [
   [BLACK_ROOK, BLACK_KNIGHT, BLACK_BISHOP, BLACK_QUEEN, BLACK_KING, BLACK_BISHOP, BLACK_KNIGHT, BLACK_ROOK],
