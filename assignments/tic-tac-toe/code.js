@@ -19,18 +19,18 @@ const ticTacToe = [
 ];
 
 //WIN DETECTION DOES NOT WORK YET
-//const threeInARow = (ticTacToe) => {
-//  if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x') || (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'o')){
-//    drawLine (50, 50, 250, 50 ,'black' , 10)
-//  } else
-//      if ((ticTacToe [1] [0] && ticTacToe [1] [1] && ticTacToe [1] [2] === 'x') || (ticTacToe [1] [0] && ticTacToe [1] [1] && ticTacToe [1] [2] === 'o')){
-//      drawLine (50, 150, 250, 150 ,'black' , 10)
-//      } else
-//          if((ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'x') || (ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'o')){
-//          drawLine (50, 250, 250, 250 ,'black' , 10)
-//         }
-//              
-//}
+const threeInARow = (ticTacToe) => {
+  if ((ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'x') || (ticTacToe [0] [0] && ticTacToe [0] [1] && ticTacToe [0] [2] === 'o')){
+    drawLine (50, 50, 250, 50 ,'black' , 10)
+  } else
+      if ((ticTacToe [1] [0] && ticTacToe [1] [1] && ticTacToe [1] [2] === 'x') || (ticTacToe [1] [0] && ticTacToe [1] [1] && ticTacToe [1] [2] === 'o')){
+      drawLine (50, 150, 250, 150 ,'black' , 10)
+      } else
+          if((ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'x') || (ticTacToe [2] [0] && ticTacToe [2] [1] && ticTacToe [2] [2] === 'o')){
+          drawLine (50, 250, 250, 250 ,'black' , 10)
+         }
+              
+}
 
 registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
@@ -180,18 +180,3 @@ registerOnclick((x, y) => {
   threeInARow (ticTacToe)
 });
 
-
-
-
-//OLD CODE NO LONGER BEING USED!!!
-//registerOnclick((x, y) => {
-//  if (pTurn === 0){
-//    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-//    pTurn = pTurn + 1
-//    console.log(pTurn)
-//  } else {
-//    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-//    pTurn = pTurn - 1
-//    console.log(pTurn)
-//  }
-//});
