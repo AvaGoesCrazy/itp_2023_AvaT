@@ -36,6 +36,7 @@ const drawBackground= () => {
     }
   }
   drawFilledRect(400, 0, 800, 800, 'black')
+  drawFilledRect(0, 400, 400, 800, 'black')
 }
 
 
