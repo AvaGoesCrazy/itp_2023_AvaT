@@ -10,7 +10,7 @@ drawLine(200, 0, 200, 300, 'black', 10)
 drawLine(0, 100, 300, 100, 'black', 10)
 drawLine(0, 200, 300, 200, 'black', 10)
 
-let i = 0
+let pTurn = 0
 
 const ticTacToe = [
   ['', '', ''],
@@ -35,145 +35,145 @@ const ticTacToe = [
 registerOnclick((x, y) => {
   if (x > 0 && x < 100 && y > 0 && y < 100)
     if (ticTacToe [0] [0] !== 'x' && ticTacToe [0] [0] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 25, 60, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[0][0] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 25, 60, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[0][0] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 100 && x < 200 && y > 0 && y < 100)
     if (ticTacToe [0] [1] !== 'x' && ticTacToe [0] [1] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 125, 60, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[0][1] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 125, 60, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[0][1] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 200 && x < 300 && y > 0 && y < 100)
     if (ticTacToe [0] [2] !== 'x' && ticTacToe [0] [2] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 225, 60, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[0][2] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 225, 60, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[0][2] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 0 && x < 100 && y > 100 && y < 200)
     if (ticTacToe [1] [0] !== 'x' && ticTacToe [1] [0] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 25, 160, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[1][0] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 25, 160, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[1][0] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 100 && x < 200 && y > 100 && y < 200)
     if (ticTacToe [1] [1] !== 'x' && ticTacToe [1] [1] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 125, 160, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[1][1] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 125, 160, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[1][1] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 200 && x < 300 && y > 100 && y < 200)
     if (ticTacToe [1] [2] !== 'x' && ticTacToe [1] [2] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 225, 160, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[1][2] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 225, 160, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[1][2] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 0 && x < 100 && y > 200 && y < 300)
     if (ticTacToe [2] [0] !== 'x' && ticTacToe [2] [0] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 25, 260, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[2][0] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 25, 260, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[2][0] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 100 && x < 200 && y > 200 && y < 300)
     if (ticTacToe [2] [1] !== 'x' && ticTacToe [2] [1] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 125, 260, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[2][1] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 125, 260, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[2][1] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
   if (x > 200 && x < 300 && y > 200 && y < 300)
     if (ticTacToe [2] [2] !== 'x' && ticTacToe [2] [2] !== 'o'){
-      if (i === 0) {
+      if (pTurn === 0) {
         drawText('X', 225, 260, 'red', Math.min(width, height) * 0.2);
-        i = i + 1
+        pTurn = pTurn + 1
         ticTacToe[2][2] = 'x'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       } else {
         drawText('O', 225, 260, 'blue', Math.min(width, height) * 0.2);
-        i = i - 1
+        pTurn = pTurn - 1
         ticTacToe[2][2] = 'o'
-        console.log(i)
+        console.log(pTurn)
         console.log(ticTacToe)
       }
     }
@@ -185,13 +185,13 @@ registerOnclick((x, y) => {
 
 //OLD CODE NO LONGER BEING USED!!!
 //registerOnclick((x, y) => {
-//  if (i === 0){
+//  if (pTurn === 0){
 //    drawText('O', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-//    i = i + 1
-//    console.log(i)
+//    pTurn = pTurn + 1
+//    console.log(pTurn)
 //  } else {
 //    drawText('X', x - 30, y + 30, 'black', Math.min(width, height) * 0.2);
-//    i = i - 1
-//    console.log(i)
+//    pTurn = pTurn - 1
+//    console.log(pTurn)
 //  }
 //});
