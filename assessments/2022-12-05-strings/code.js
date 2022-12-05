@@ -9,7 +9,7 @@ const middle = (s) => s.substring(s.length / 4, s.length - (s.length / 4));
 const pair = (s, i) => s + ' and ' + i
 
 const containsX = (s) => {
-  if (s.lndexOf('x' === -1)) {
+  if (s.indexOf('x' === -1)) {
     return false
   } else
     return true
