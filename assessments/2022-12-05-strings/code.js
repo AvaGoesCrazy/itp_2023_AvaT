@@ -14,3 +14,5 @@ const containsX = (s) => {
 };
 
 const slug = (x, y, z) => x.toLowerCase() + '-' + y.toLowerCase() + '-' + z.toLowerCase()
+
+const capitalize = (s) => s[0].toUpperCase() + s.substring(1).toLowerCase()
