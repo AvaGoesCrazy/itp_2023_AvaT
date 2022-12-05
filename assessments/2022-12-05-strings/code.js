@@ -1,4 +1,4 @@
-const upToX = (s) => s.substring(0, s.indexFf('x'));
+const upToX = (s) => s.substring(0, s.indexOf('x'));
 
 const charactersAround = (s, i) => s[i - 1] + s[i + 1];
 
