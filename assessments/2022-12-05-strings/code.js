@@ -17,4 +17,4 @@ const slug = (x, y, z) => x.toLowerCase() + '-' + y.toLowerCase() + '-' + z.toLo
 
 const capitalize = (s) => s[0].toUpperCase() + s.substring(1).toLowerCase()
 
-const capitalizeName = (s) => capitalize(s.substring(s[0], s.indexOf(' '))) + capitalize(s.substring(s.indexOf(' ')))
+const capitalizeName = (s) => capitalize(s.substring(s[0], s.indexOf(' '))) + capitalize(s.substring(s.indexOf(' ') + 1))
