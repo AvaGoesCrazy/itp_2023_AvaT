@@ -13,4 +13,4 @@ const containsX = (s) => {
     return true
 };
 
-const slug = (x, y, z) => x.toLowerCase() + '-' + y.toLowerCase() + '-' + z.toLowerCase
+const slug = (x, y, z) => x.toLowerCase() + '-' + y.toLowerCase() + '-' + z.toLowerCase()
