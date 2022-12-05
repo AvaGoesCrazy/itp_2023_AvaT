@@ -1,1 +1,1 @@
-const upTOx = (s) => s.substring(0, s.indexof('x'))
+const upTOx = (s) => s.substring(0, s.indexFf('x')) 
