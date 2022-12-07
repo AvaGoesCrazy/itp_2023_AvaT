@@ -84,25 +84,37 @@ const logIfOk = (x) => {
   }
 }
 
-//const firstOk = (x) => {
-//  for (let i = 0, x > i, i++)
-//    if (isOk(i) === true) {
-//      return i
-//    }
-//}
-//
-//const timeToLeet = () => {
-//  for (let i = 0, x > i, i++)
-//    isLeet(random10k())
-//    if (isLeet(random10k) === true){
-//      return i - 1
-//    }
-//}
+const firstOk = (x) => {
+  for (let i = 0, x > i, i++)
+    if (isOk(i) === true) {
+      return i
+    }
+}
+
+const timeToLeet = () => {
+  for (let i = 0, x > i, i++)
+    isLeet(random10k())
+    if (isLeet(random10k) === true){
+      return i - 1
+    }
+}
 
 const classify = (x) => {
   if (isOk(x) === true) {
     return recordOk(x)
   } else {
     return recordNotOk(x)
+  }
+}
+
+const threewayClassify = (x) => {
+  if (isOk(x) === true) {
+    return recordOk(x)
+  } else {
+    if (isMeh(x) === true) {
+      return recordMeh(x)
+    } else {
+      return recordNotOk(x)
+    }
   }
 }
