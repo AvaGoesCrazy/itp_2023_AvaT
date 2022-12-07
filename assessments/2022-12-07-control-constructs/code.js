@@ -85,14 +85,14 @@ const logIfOk = (x) => {
 }
 
 const firstOk = (x) => {
-  for (let i = 0, x > i, i++)
+  for (let i = 0; x > i; i++)
     if (isOk(i) === true) {
       return i
     }
 }
 
 const timeToLeet = () => {
-  for (let i = 0, x > i, i++)
+  for (let i = 0,; x > i; i++)
     isLeet(random10k())
     if (isLeet(random10k) === true){
       return i - 1
@@ -117,4 +117,9 @@ const threewayClassify = (x) => {
       return recordNotOk(x)
     }
   }
+}
+
+const sumOfSquares = (x) => {
+  for (let i = x; i > 0; i = i - 1)
+    
 }
