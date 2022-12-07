@@ -85,7 +85,16 @@ const logIfOk = (x) => {
 }
 
 const firstOk = (x) => {
-  if (isOk(x - 1 > 0) === true || isOk(x - 1 === 0) === true){
-    return x
-  }
+  for (let i = 0, x > i, i++)
+    if (isOk(i) === true) {
+      return i
+    }
+}
+
+const timeToLeet = () =>{
+  for (let i = 0, x > i, i++)
+    isLeet(random10k())
+    if (isLeet(random10k) === true){
+      return i - 1
+    }
 }
