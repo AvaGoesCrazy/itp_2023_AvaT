@@ -75,12 +75,17 @@ const pair = (a, b) => {
   log(`pair: ${a},${b}`);
 };
 
-
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
 
 const logIfOk = (x) => {
   if (isOk(x) === true){
     log(x)
+  }
+}
+
+const firstOk = (x) => {
+  if (isOk(x) - 1 > 0 || isOk(x) - 1 === 0){
+    return isOk(x)
   }
 }
