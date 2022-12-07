@@ -98,3 +98,11 @@ const timeToLeet = () => {
       return i - 1
     }
 }
+
+const classify = (x) => {
+  if (isOk(x) === true) {
+    return recordOk(x)
+  } else {
+    return recordNotOk(x)
+  }
+}
