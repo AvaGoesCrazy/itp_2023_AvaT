@@ -93,7 +93,7 @@ const firstOk = (x) => {
 
 const timeToLeet = (x) => {
   for (let i = 0; x > i; i++)
-    if (isLeet(random10k) === true){
+    if (isLeet(random10k()) === true){
       return i - 1
     }
 }
