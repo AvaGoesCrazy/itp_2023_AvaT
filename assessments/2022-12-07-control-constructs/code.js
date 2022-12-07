@@ -118,7 +118,13 @@ const threewayClassify = (x) => {
   }
 }
 
-//const sumOfSquares = (x) => {
-//  for (let i = x; i > 0; i = i - 1)
-//    
-//}
+const sumOfSquares = (x) => {
+  for (let i = x; i > 0; i = i - 1)
+    
+}
+
+const pairs = (x) => {
+  
+}
+
+//I NEED MORE TIME
