@@ -91,7 +91,7 @@ const firstOk = (x) => {
     }
 }
 
-const timeToLeet = () => {
+const timeToLeet = (x) => {
   for (let i = 0; x > i; i++)
     isLeet(random10k())
     if (isLeet(random10k) === true){
