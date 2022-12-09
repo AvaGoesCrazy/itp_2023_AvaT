@@ -5,6 +5,7 @@ let numLetter = {'1':'a', '2':'b', '3':'c', '4':'d', '5':'e', '6':'f', '7':'g', 
 
 
 const makeCeasar = (str, cNum) =>{
+  let str2 = ''
   for (let sNum = 0; sNum < str.length; sNum++)
     if (letterNum[str[sNum]] + cNum > 24) {
       return str2 = str2 + numLetter[letterNum[str[sNum]] + cNum - 24]
