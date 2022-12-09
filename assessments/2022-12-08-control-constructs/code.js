@@ -7,8 +7,9 @@ const yesIfEven = (x) => {
 }
 
 const countXs = (s) => {
+  let n = 0
   for (let i = 0; i < s.length; i++)
-    if (s.substring(i) === 'x') {
+    if (s[i] === 'x') {
       n++
     }
   return n
