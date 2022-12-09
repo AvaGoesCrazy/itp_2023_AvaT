@@ -20,3 +20,12 @@ const timesTable = (n) => {
     for (let y = 0; y < n; y++)
       emit(x, y, x * y)
 }
+//I THINK THIS WOULD BE CORRECT IF I HAD EMIT SO HOPEFULLY ITS GOOD :)
+
+const containsX = (s) => {
+  if (s.indexOf('x') !== -1) {
+    return true
+  } else {
+    return false
+  }
+}
