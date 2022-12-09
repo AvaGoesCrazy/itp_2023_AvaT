@@ -29,3 +29,8 @@ const containsX = (s) => {
     return false
   }
 }
+
+const sumSquares = (n) => {
+  for (i = 0; i < n; i++)
+    i = i + (i**2)
+}
