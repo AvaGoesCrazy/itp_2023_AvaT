@@ -34,4 +34,5 @@ const containsX = (s) => {
 const sumSquares = (n) => {
   for (let i = 0; i < n; i++)
     i = i + (i**2)
+  return i
 }
