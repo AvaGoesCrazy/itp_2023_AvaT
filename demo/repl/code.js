@@ -8,7 +8,7 @@ const makeCeasar = (str, cNum) =>{
   let str2 = ''
   for (let sNum = 0; sNum < str.length; sNum++)
     if (letterNum[str[sNum]] + cNum > 24) {
-      str2 = str2 + numLetter[letterNum[str[sNum]] + cNum - 24]
+      str2 = str2 + numLetter[(letterNum[str[sNum]] + cNum) - 24]
     } else {
       str2 = str2 + numLetter[letterNum[str[sNum] + cNum]]
     }
