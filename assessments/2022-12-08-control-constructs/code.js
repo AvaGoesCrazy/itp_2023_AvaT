@@ -5,3 +5,11 @@ const yesIfEven = (x) => {
     return 'no'
   }
 }
+
+const countXs = (s, n) => {
+  for (let i = 0; i < s.length; i++)
+    if (s.substring(i) === 'x') {
+      n++
+    }
+  return n
+}
