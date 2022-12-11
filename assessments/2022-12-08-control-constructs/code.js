@@ -1,3 +1,6 @@
+const emit = (a, b) => console.log(a + ', ' + b);
+
+
 const yesIfEven = (x) => {
   if ((x % 2) === 0) {
     return 'yes'
@@ -24,11 +27,7 @@ const timesTable = (n) => {
 //I THINK THIS WOULD BE CORRECT IF I HAD EMIT SO HOPEFULLY ITS GOOD :)
 
 const containsX = (s) => {
-  if (s.indexOf('x') !== -1) {
-    return true
-  } else {
-    return false
-  }
+  return s.indexOf('x') !== -1
 }
 
 const sumSquares = (n) => {
