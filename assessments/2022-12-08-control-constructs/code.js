@@ -2,11 +2,7 @@ const emit = (a, b) => console.log(a + ', ' + b);
 
 
 const yesIfEven = (x) => {
-  if ((x % 2) === 0) {
-    return 'yes'
-  } else {
-    return 'no'
-  }
+  return (x % 2) === 0
 }
 
 const countXs = (s) => {
