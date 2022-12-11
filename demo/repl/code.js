@@ -1,9 +1,9 @@
 let alpha = 'abcdefghijklmnopqrstuvwxyz'
 
-//NOTE TO SELF str = string | cNum = ceasar cipher number | sNum is the number point into the string
-//str2 = new string
+//NOTE TO SELF str = string | cNum = caesar cipher number | sNum is the number point into 
+//the string | str2 = new string
 
-const makeCeasar = (str, cNum) => {
+const makeCaesar = (str, cNum) => {
   let str2 = ''
   for (let sNum = 0; sNum < str.length; sNum++)
     if (alpha.indexOf(str[sNum - 1]) + cNum > 26) {
@@ -13,3 +13,8 @@ const makeCeasar = (str, cNum) => {
     }
   return str2
 }
+
+//I DID IT YEEEEAHHHH
+
+//Intrstructions: this function takes two arguments, a string and the key you want to use
+//for your caesar cipher and then returns the first sring as a caesar cipher!
