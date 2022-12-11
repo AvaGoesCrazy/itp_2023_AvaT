@@ -75,6 +75,56 @@ const pair = (a, b) => {
   log(`pair: ${a},${b}`);
 };
 
-
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
+
+const logIfOk = (x) => {
+  if (isOk(x) === true){
+    log(x)
+  }
+}
+
+const firstOk = (x) => {
+  for (let i = 0; x > i; i++)
+    if (isOk(i) === true) {
+      return i
+    }
+}
+
+const timeToLeet = (x) => {
+  for (let i = 0; x > i; i++)
+    if (isLeet(random10k()) === true){
+      return i - 1
+    }
+}
+
+const classify = (x) => {
+  if (isOk(x) === true) {
+    return recordOk(x)
+  } else {
+    return recordNotOk(x)
+  }
+}
+
+const threewayClassify = (x) => {
+  if (isOk(x) === true) {
+    return recordOk(x)
+  } else {
+    if (isMeh(x) === true) {
+      return recordMeh(x)
+    } else {
+      return recordNotOk(x)
+    }
+  }
+}
+
+const sumOfSquares = (x) => {
+  for (let i = x; i > 0; i = i - 1)
+    
+}
+
+const pairs = (x) => {
+  
+}
+
+//I NEED MORE TIME
