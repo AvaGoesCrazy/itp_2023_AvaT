@@ -27,4 +27,10 @@ const allTheSame = (ary) => {
   }
 }
 
-const 
+const extractColumn = (ary3x3, i) => {
+  let ary = ['', '', '']
+  ary[0] = ary3x3[0] [i]
+  ary[1] = ary3x3[1] [i]
+  ary[2] = ary3x3[2] [i]
+  return ary
+}
