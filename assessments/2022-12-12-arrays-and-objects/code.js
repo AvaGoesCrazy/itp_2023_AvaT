@@ -17,5 +17,4 @@ let move = makeMove('X', 1, 1)
 
 const placeMark = (board, move) => {
   board[move.row] [move.column] = move.mark
-  return board[y] [x]
 }
