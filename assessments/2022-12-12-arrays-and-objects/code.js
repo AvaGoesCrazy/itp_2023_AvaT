@@ -22,6 +22,7 @@ const placeMark = (board, move) => {
 let ary = ['x', 'x', 'x']
 
 const allTheSame = (ary) => {
-  if (ary[0] === ary[1] && ary[0] === ary[2])
-    return ary;
+  if (ary[0] === ary[1] && ary[0] === ary[2]) {
+    return true;
+  }
 }
