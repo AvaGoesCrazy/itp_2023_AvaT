@@ -12,7 +12,7 @@ const makeMove = (xo, y, x) => {
 }
 
 let board = makeBoard
-let move = makeMove()
+let move = makeMove('x', 1, 1)
 
 
 const placeMark = (board, move) => {
