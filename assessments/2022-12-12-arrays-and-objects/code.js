@@ -11,7 +11,7 @@ const makeMove = (xo, y, x) => {
   return move
 }
 
-let board = makeBoard()
+let board = makeBoard
 let move = makeMove()
 
 
