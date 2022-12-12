@@ -34,3 +34,4 @@ const extractColumn = (ary3x3, i) => {
   ary[2] = ary3x3[2] [i]
   return ary
 }
+
