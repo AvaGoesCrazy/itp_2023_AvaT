@@ -7,9 +7,9 @@ const makeCaesar = (str, key) => {
   let str2 = ''
   for (let sNum = -1; sNum < str.length; sNum++)
     if (alpha.indexOf(str[sNum]) + key > 26) {
-      str2 = str2 + alpha[((alpha.indexOf(str[sNum]) + key) - 26) - 1]
+      str2 = str2 + alpha[((alpha.indexOf(str[sNum]) + key) - 26)]
     } else {
-      str2 = str2 + alpha[(alpha.indexOf(str[sNum]) + key) -1]
+      str2 = str2 + alpha[(alpha.indexOf(str[sNum]) + key)]
     }
   return str2
 }
