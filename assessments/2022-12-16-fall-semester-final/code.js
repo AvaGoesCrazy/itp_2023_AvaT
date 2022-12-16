@@ -78,9 +78,9 @@ const isMeh = (x) => !isOk(x) && hash(JSON.stringify(x)) % 3 == 0;
 /*
  * Record a pair.
  */
-const pair = (a, b) => {
-  log(`pair: ${a},${b}`);
-};
+//const pair = (a, b) => {
+//  log(`pair: ${a},${b}`);
+//};
 
 ////////////////////////////////////////////////////////////////////////
 // For your reference, here are some functions and constants from Math
@@ -179,4 +179,4 @@ const extractColumn = (ary, i) => {
 
 //OBJECTS 
 
-const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y
+const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y;
