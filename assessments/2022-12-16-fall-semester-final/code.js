@@ -166,4 +166,5 @@ const sums = (n) => {
   for (let i = 0; i < n; i++)
     x = x + i
     ary.push(x)
+  return ary
 }
