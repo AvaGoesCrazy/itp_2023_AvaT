@@ -129,4 +129,4 @@ const firstName = (s) => s.substring(0, s.indexOf(' '));
 
 const lastName = (s) => s.substring(s.indexOf(' ') + 1);
 
-const intials = (s) => s[0] + s[s.indexOf(' ') + 1]
+const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
