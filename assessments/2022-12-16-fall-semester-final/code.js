@@ -121,4 +121,4 @@ const randomCharacterUpDown = (s) => {
   return s[n].toUpperCase() + s[n].toLowerCase();
 }
 
-const isAllUpperCase = (s) => s.toUppercase === s;
+const isAllUpperCase = (s) => s.toUpperCase() === s;
