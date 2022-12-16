@@ -21,4 +21,4 @@ const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
 
 const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
 
-const 
+const firstAndLast = (s) => s[0] + s[s.length - 1];
