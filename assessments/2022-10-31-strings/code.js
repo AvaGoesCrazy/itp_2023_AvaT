@@ -23,4 +23,4 @@ const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 
 
 const firstAndLast = (s) => s[0] + s[s.length - 1];
 
-const
+const swapFrontAndBack = (s) => s.substring(s.length / 2) + s.substring(0, (s.length / 2));
