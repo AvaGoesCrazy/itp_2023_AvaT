@@ -126,3 +126,5 @@ const isAllUpperCase = (s) => s.toUpperCase() === s;
 const sameIgnoringCase = (s, i) => s.toLowerCase() === i.toLowerCase();
 
 const firstName = (s) => s.substring(0, s.indexOf(' '));
+
+const lastName = (s) => s.substring(s.indexOf(' ') + 1);
