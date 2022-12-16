@@ -137,7 +137,7 @@ const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
 
 const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
 
-const ary = [
+let ary = [
    ['X', '', ''],
    ['O', '', ''],
    ['', 'X', '']
