@@ -150,13 +150,13 @@ let ary = [[0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0]]
 const fillTimesTable = (ary) => {
   for (let i = 0; i < ary.length; i++)
     for (let n = 0; n < ary.length; n++)
-      if (i === 0) {
-        ary[i] [n] = i
+      if (i - 1 === 0) {
+        ary[i - 1] [n - 1] = i - 1
       } else {
-        if (n === 0) {
-          ary[i] [n] = n
+        if (n - 1 === 0) {
+          ary[i - 1] [n = 1] = n - 1
         } else {
-          ary[i] [n] = ary[i - 1] [n] * ary [i] [n - 1]
+          ary[i - 1] [n - 1] = ary[i - 1] [n] * ary [i] [n - 1]
         }
       }
   return ary
