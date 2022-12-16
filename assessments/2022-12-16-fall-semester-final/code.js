@@ -133,6 +133,9 @@ const lastName = (s) => s.substring(s.indexOf(' ') + 1);
 
 const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
 
+const upToX = (s) => s.substring(0, s.indexOf('x'))
+
+
 //ARRAYS
 
 const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
