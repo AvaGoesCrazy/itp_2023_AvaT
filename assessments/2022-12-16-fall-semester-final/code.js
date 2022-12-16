@@ -114,7 +114,7 @@ const firstAndLast = (s) => s[0] + s[s.length - 1];
 
 const simplePigLatin = (s, x) => s.substring(x - 1) + s.substring(0, x - 1) + 'ay';
 
-const randomCharacter = (s) => s[rand(s.length)]
+const randomCharacter = (s) => s[rand(s.length)];
 
-const randomCharacterUpDown = (s) => s[rand(s.length)].toUpperCase + s[rand(s.length)].toLowerCase
+const randomCharacterUpDown = (s) => s[rand(s.length)].toUpperCase() + s[rand(s.length)].toLowerCase();
 
