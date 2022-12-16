@@ -137,6 +137,12 @@ const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
 
 const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
 
+const ary = [
+   ['X', '', ''],
+   ['O', '', ''],
+   ['', 'X', '']
+  ]
+
 const extractColumn = (ary, i) => {
   ary2 = ['', '', '']
   ary2 = ary[0] [i]
