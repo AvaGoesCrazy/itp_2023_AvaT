@@ -145,8 +145,6 @@ const extractColumn = (ary, i) => {
   return ary;
 }
 
-let ary = [[0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0]]
-
 const fillTimesTable = (ary) => {
   for (let i = 0; i < ary.length; i++)
     for (let n = 0; n < ary.length; n++)
@@ -160,4 +158,12 @@ const fillTimesTable = (ary) => {
         }
       }
   return ary
+}
+
+const sums = (n) => {
+  let ary = []
+  let x = 0
+  for (let i = 0; i < n; i++)
+    x = x + i
+    ary.push(x)
 }
