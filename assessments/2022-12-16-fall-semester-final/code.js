@@ -184,8 +184,16 @@ const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y;
 const area = (obj) => obj.width * obj.height;
 
 const totalWithTip = (obj, n) => {
-  let obj2 = {subtotal:0, tip:0, total:0}
-  obj2.subtotal = obj.subtotal
-  obj2.tip = obj.subtotal * n
-  obj2.total = obj.subtotal * (n + 1)
-}
+  let obj2 = {subtotal:0, tip:0, total:0};
+  obj2.subtotal = obj.subtotal;
+  obj2.tip = obj.subtotal * n;
+  obj2.total = obj.subtotal * (n + 1);
+};
+
+const higherPaid = (obj1, obj2) => {
+  if (obj1.salary - obj2.salary < 0){
+    return obj1;
+  } else {
+    return obj2;
+  };
+};
