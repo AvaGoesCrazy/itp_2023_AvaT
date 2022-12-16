@@ -144,9 +144,9 @@ const ary = [
   ]
 
 const extractColumn = (ary, i) => {
-  ary2 = ['', '', '']
-  ary2 = ary[0] [i]
-  ary2 = ary[1] [i]
-  ary2 = ary[2] [i]
+  let ary2 = ['', '', '']
+  ary2[0] = ary[0] [i]
+  ary2[1] = ary[1] [i]
+  ary2[2] = ary[2] [i]
   return ary;
 }
