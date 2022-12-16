@@ -176,3 +176,7 @@ const extractColumn = (ary, i) => {
 //    ary.push(x)
 //  return ary
 //}
+
+//OBJECTS 
+
+const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y
