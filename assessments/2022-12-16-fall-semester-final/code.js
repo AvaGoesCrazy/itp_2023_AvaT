@@ -135,6 +135,11 @@ const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
 
 const upToX = (s) => s.substring(0, s.indexOf('x'))
 
+const charactersAround = (s, i) => s[i - 1] + s[i + 1]
+
+
+
+
 
 //ARRAYS
 
