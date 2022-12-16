@@ -98,6 +98,8 @@ const pair = (a, b) => {
 // Write your code here ...
 
 
+//STRINGS
+
 const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
 
 const firstHalf = (s) => s.substring(0, (s.length / 2));
@@ -130,3 +132,7 @@ const firstName = (s) => s.substring(0, s.indexOf(' '));
 const lastName = (s) => s.substring(s.indexOf(' ') + 1);
 
 const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
+
+//ARRAYS
+
+const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
