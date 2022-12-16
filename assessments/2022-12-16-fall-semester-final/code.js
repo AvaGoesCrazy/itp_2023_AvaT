@@ -96,3 +96,22 @@ const pair = (a, b) => {
 
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
+
+
+const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
+
+const firstHalf = (s) => s.substring(0, (s.length / 2));
+
+const secondHalf = (s) => s.substring(s.length / 2);
+
+const swapFrontAndBack = (s) => s.substring(s.length / 2) + s.substring(0, (s.length / 2));
+
+const upDown = (s) => s.toUpperCase() + s.toLowerCase();
+
+const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
+
+const firstAndLast = (s) => s[0] + s[s.length - 1];
+
+const simplePigLatin = (s, x) => s.substring(x - 1) + s.substring(0, x - 1) + 'ay';
+
+const randomCharacter = (s) => s[rand(s.length)]
