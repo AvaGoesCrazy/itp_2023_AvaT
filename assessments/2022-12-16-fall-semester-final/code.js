@@ -180,3 +180,7 @@ const extractColumn = (ary, i) => {
 //OBJECTS 
 
 const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y;
+
+const area = (obj) => obj.width * obj.height;
+
+const 
