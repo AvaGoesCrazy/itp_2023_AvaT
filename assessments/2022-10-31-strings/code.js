@@ -18,3 +18,5 @@ const secondHalf = (s) => s.substring(s.length / 2);
 const upDown = (s) => s.toUpperCase() + s.toLowerCase();
 
 const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
+
+const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
