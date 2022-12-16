@@ -139,7 +139,7 @@ const charactersAround = (s, i) => s[i - 1] + s[i + 1]
 
 const middle = (s) => s.substring(s.length / 4, (s.length / 4) * 3)
 
-
+const pair = (s1, s2) => s1 + 'and' + s2
 
 //ARRAYS
 
