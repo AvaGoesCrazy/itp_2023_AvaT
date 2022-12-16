@@ -145,8 +145,10 @@ const extractColumn = (ary, i) => {
   return ary;
 }
 
+let ary = [[0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0], [0, 0, 0 ,0]]
+
 const fillTimesTable = (ary) => {
-  for (let i = -1, i < ary.length, i++)
-    for (let n = -1, n < ary.length, n++)
-      ary[i] [n] = 
+  for (let i = -1; i < ary.length; i++)
+    for (let n = -1; n < ary.length; n++)
+      ary[i] [n] = ary[i - 1] [n] * ary[i] [n - 1]
 }
