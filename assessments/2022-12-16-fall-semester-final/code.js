@@ -138,9 +138,9 @@ const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
 const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
 
 const extractColumn = (ary, i) => {
-  let ary2 = [], [], []
+  ary2 = ['', '', '']
   ary2 = ary[0] [i]
   ary2 = ary[1] [i]
   ary2 = ary[2] [i]
-  return ary
+  return ary;
 }
