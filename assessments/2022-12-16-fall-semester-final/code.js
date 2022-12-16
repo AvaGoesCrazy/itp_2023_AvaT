@@ -145,6 +145,8 @@ const extractColumn = (ary, i) => {
   return ary;
 }
 
-const fillTimesTable = [ary] => {
-  for (let i = 0, i)
+const fillTimesTable = (ary) => {
+  for (let i = -1, i < ary.length, i++)
+    for (let n = -1, n < ary.length, n++)
+      ary[i] [n] = 
 }
