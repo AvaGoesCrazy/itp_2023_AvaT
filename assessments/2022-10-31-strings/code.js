@@ -16,3 +16,5 @@ const firstHalf = (s) => s.substring(0, (s.length / 2));
 const secondHalf = (s) => s.substring(s.length / 2);
 
 const upDown = (s) => s.toUpperCase() + s.toLowerCase();
+
+const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
