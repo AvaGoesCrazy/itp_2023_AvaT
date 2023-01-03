@@ -78,9 +78,9 @@ const isMeh = (x) => !isOk(x) && hash(JSON.stringify(x)) % 3 == 0;
 /*
  * Record a pair.
  */
-const pair = (a, b) => {
-  log(`pair: ${a},${b}`);
-};
+//const pair = (a, b) => {
+//  log(`pair: ${a},${b}`);
+//};
 
 ////////////////////////////////////////////////////////////////////////
 // For your reference, here are some functions and constants from Math
@@ -96,3 +96,104 @@ const pair = (a, b) => {
 
 ////////////////////////////////////////////////////////////////////////
 // Write your code here ...
+
+
+//STRINGS
+
+const firstFewEveryOther = (s) => s[0] + s[2] + s[4];
+
+const firstHalf = (s) => s.substring(0, (s.length / 2));
+
+const secondHalf = (s) => s.substring(s.length / 2);
+
+const swapFrontAndBack = (s) => s.substring(s.length / 2) + s.substring(0, (s.length / 2));
+
+const upDown = (s) => s.toUpperCase() + s.toLowerCase();
+
+const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
+
+const firstAndLast = (s) => s[0] + s[s.length - 1];
+
+const simplePigLatin = (s, x) => s.substring(x - 1) + s.substring(0, x - 1) + 'ay';
+
+const randomCharacter = (s) => s[rand(s.length)];
+
+const randomCharacterUpDown = (s) => {
+  let n = rand(s.length);
+  return s[n].toUpperCase() + s[n].toLowerCase();
+}
+
+const isAllUpperCase = (s) => s.toUpperCase() === s;
+
+const sameIgnoringCase = (s, i) => s.toLowerCase() === i.toLowerCase();
+
+const firstName = (s) => s.substring(0, s.indexOf(' '));
+
+const lastName = (s) => s.substring(s.indexOf(' ') + 1);
+
+const initials = (s) => s[0] + s[s.indexOf(' ') + 1]
+
+const upToX = (s) => s.substring(0, s.indexOf('x'))
+
+const charactersAround = (s, i) => s[i - 1] + s[i + 1]
+
+const middle = (s) => s.substring(s.length / 4, (s.length / 4) * 3)
+
+const pair = (s1, s2) => s1 + 'and' + s2
+
+//ARRAYS
+
+const allTheSame = (ary) => (ary[0] === ary[1] && ary[0] === ary[2]);
+
+const extractColumn = (ary, i) => {
+  let ary2 = ['', '', '']
+  ary2[0] = ary[0] [i]
+  ary2[1] = ary[1] [i]
+  ary2[2] = ary[2] [i]
+  return ary;
+}
+
+//const fillTimesTable = (ary) => {
+//  for (let i = 0; i < ary.length; i++)
+//    for (let n = 0; n < ary.length; n++)
+//      if (i - 1 === 0) {
+//        ary[i - 1] [n - 1] = i - 1
+//      } else {
+//        if (n - 1 === 0) {
+//          ary[i - 1] [n = 1] = n - 1
+//        } else {
+//          ary[i - 1] [n - 1] = ary[i - 1] [n] * ary [i] [n - 1]
+//        }
+//      }
+//  return ary
+//}
+//
+//const sums = (n) => {
+//  let ary = [0]
+//  let x = 0
+//  for (let i = 0; i < n; i++)
+//    x = x + (i - 1)
+//    ary.push(x)
+//  return ary
+//}
+
+//OBJECTS 
+
+const isSamePoint = (obj1, obj2) => obj1.x === obj2.x && obj1.y === obj2.y;
+
+const area = (obj) => obj.width * obj.height;
+
+const totalWithTip = (obj, n) => {
+  let obj2 = {subtotal:0, tip:0, total:0};
+  obj2.subtotal = obj.subtotal;
+  obj2.tip = obj.subtotal * n;
+  obj2.total = obj.subtotal * (n + 1);
+};
+
+const higherPaid = (obj1, obj2) => {
+  if (obj1.salary - obj2.salary < 0){
+    return obj1;
+  } else {
+    return obj2;
+  };
+};
