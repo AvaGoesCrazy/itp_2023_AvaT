@@ -1,18 +1,20 @@
-// Warning! Do not call this function with numbers much bigger than 40 unless
-// you want to kill this tab.
-const fib = (n) => (n < 2 ? n : fib(n - 2) + fib(n - 1));
+let alpha = 'abcdefghijklmnopqrstuvwxyz'
 
-// This one you can safely call with as big numbers as you want though after
-// MAX_FIB_N it will return Infinity.
-const fib2 = (n) => {
-  let [a, b] = [0, 1];
-  for (let i = 0; i < n; i++) {
-    [a, b] = [b, a + b];
-    if (!isFinite(a)) break;
-  }
-  return a;
-};
+//NOTE TO SELF str = string | cNum = caesar cipher number | sNum is the number point into 
+//the string | str2 = new string
 
-const MAX_FIB_N = 1476;
+const makeCaesar = (str, key) => {
+  let str2 = ''
+  for (let sNum = 0; sNum < str.length; sNum++)
+    if (alpha.indexOf(str[sNum - 1]) + key > 26) {
+      str2 = str2 + alpha[((alpha.indexOf(str[sNum - 1]) + key) - 26) - 1]
+    } else {
+      str2 = str2 + alpha[(alpha.indexOf(str[sNum - 1]) + key) -1]
+    }
+  return str2
+}
 
-const MAX_FIB = fib2(MAX_FIB_N);
+//I DID IT YEEEEAHHHH
+
+//Intrstructions: this function takes two arguments, a string and the key you want to use
+//for your caesar cipher and then returns the first sring as a caesar cipher!
