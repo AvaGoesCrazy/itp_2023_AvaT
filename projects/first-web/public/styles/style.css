@@ -1,9 +1,50 @@
-p,
-li,
-h1 {
-  color: rgb(30, 0, 255);
-  width: 500px;
-  border: 1px solid black;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Quicksand:wght@300;600&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
- 
+
+html {
+  background-color: rgb(31, 30, 45);
+}
+
+h2,
+h1 {
+  color: rgb(12, 11, 17);
+  background-color: #FF0059;
+  font-family: 'Oswald', sans-serif;
+  margin: 18px;
+  margin-left: 0;
+  padding: 10px;
+  font-size: 50px;
+  font-style: italic;
+}
+
+ul {
+  color: rgb(31, 30, 45);
+  background-color: #FF0059;
+  font-family: 'Quicksand', sans-serif;
+  text-align: right;
+  padding: 10px;
+  font-size: 35px;
+;}
+
+div.links {
+  color: rgb(31, 30, 45);
+  background-color: #FF0059;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  padding: 10px;
+  font-size: 35px;
+}
+
+p {
+  color: rgb(234, 234, 234);
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  background-color: rgb(19, 19, 28);
+}
