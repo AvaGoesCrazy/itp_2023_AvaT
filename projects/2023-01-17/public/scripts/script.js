@@ -5,44 +5,40 @@ const body = document.querySelector('body');
 const q1 = document.createElement('h1');
 const q2 = document.createElement('h1');
 const q3 = document.createElement('h1');
+const q4 = document.createElement('h1');
 
 // Create a new P element.
 const a1 = document.createElement('p');
 const a2 = document.createElement('p');
 const a3 = document.createElement('p');
+const a4 = document.createElement('p');
+const a5 = document.createElement('p');
 
 const list = document.createElement('ol');
-const le1a = document.createElement('li');
-const le2a = document.createElement('li');
-const le3a = document.createElement('li');
-const le4a = document.createElement('li');
-const le5a = document.createElement('li');
-const le6a = document.createElement('li');
-const le7a = document.createElement('li');
-const le8a = document.createElement('li');
-const le9a = document.createElement('li');
-const le10a = document.createElement('li');
-const le1b = document.createElement('li');
-const le2b = document.createElement('li');
-const le3b = document.createElement('li');
-const le4b = document.createElement('li');
-const le5b = document.createElement('li');
-const le6b = document.createElement('li');
-const le7b = document.createElement('li');
-const le8b = document.createElement('li');
-const le9b = document.createElement('li');
-const le10b = document.createElement('li');
 
-const co1 = document.createElement('code');
-const co2 = document.createElement('code');
-const co3 = document.createElement('code');
-const co4 = document.createElement('code');
-const co5 = document.createElement('code');
-const co6 = document.createElement('code');
-const co7 = document.createElement('code');
-const co8 = document.createElement('code');
-const co9 = document.createElement('code');
-const co10 = document.createElement('code');
+const le1 = document.createElement('li');
+const le2 = document.createElement('li');
+const le3 = document.createElement('li');
+const le4 = document.createElement('li');
+const le5 = document.createElement('li');
+const le6 = document.createElement('li');
+const le7 = document.createElement('li');
+const le8 = document.createElement('li');
+const le9 = document.createElement('li');
+const le0 = document.createElement('li');
+
+const code1 = document.createElement('code');
+const code2 = document.createElement('code');
+const code3 = document.createElement('code');
+const code4 = document.createElement('code');
+const code5 = document.createElement('code');
+const code6 = document.createElement('code');
+const code7 = document.createElement('code');
+const code8 = document.createElement('code');
+const code9 = document.createElement('code');
+const code0 = document.createElement('code');
+
+const code11 = document.createElement('code');
 
 // Create a text node and add it to the H1
 q1.append(document.createTextNode('Can you tell me why HTML was developed?'));
@@ -50,6 +46,8 @@ q1.append(document.createTextNode('Can you tell me why HTML was developed?'));
 q2.append(document.createTextNode(`What about using HTML for GUIs?`));
 
 q3.append(document.createTextNode(`What are some of the main elements of HTML?`));
+
+q4.append(document.createTextNode(`Can you find a picture of the inventor of the web?`));
 
 // Create a text node and add it to the P element. Note the use of `` rather
 // than '' which allows us to break the string across lines.
@@ -85,26 +83,74 @@ a3.append(
 `),
 );
 
-le1a.append(document.createTextNode(`1.`),);
-le1b.append(document.createTextNode(``),);
-le2a.append(document.createTextNode(`2.`),);
-le2b.append(document.createTextNode(``),);
-le3a.append(document.createTextNode(`3.`),);
-le3b.append(document.createTextNode(``),);
-le4a.append(document.createTextNode(`4.`),);
-le4b.append(document.createTextNode(``),);
-le5a.append(document.createTextNode(`5.`),);
-le5b.append(document.createTextNode(``),);
-le6a.append(document.createTextNode(`6.`),);
-le6b.append(document.createTextNode(``),);
-le7a.append(document.createTextNode(`7.`),);
-le7b.append(document.createTextNode(``),);
-le8a.append(document.createTextNode(`8.`),);
-le8b.append(document.createTextNode(``),);
-le9a.append(document.createTextNode(`9.`),);
-le9b.append(document.createTextNode(``),);
-le10a.append(document.createTextNode(`10.`),);
-le10b.append(document.createTextNode(``),);
+a4.append(
+  document.createTextNode(`
+ These are some of the main elements, but there are many more available, like 
+`),
+);
+
+a5.append(
+  document.createTextNode(`
+  I'm sorry, I am a text based model and I am not able to find or show images. 
+  However, I can tell you that the inventor of the World Wide Web (WWW) is Sir 
+  Tim Berners-Lee. He is a British computer scientist and is considered to be 
+  the inventor of the World Wide Web. He proposed and developed the first 
+  successful communication between a Hypertext Transfer Protocol (HTTP) client 
+  and server via the Internet in 1989. He also created the first web browser, 
+  called WorldWideWeb, and the first web server, called httpd. He also wrote 
+  the first version of the HTML language, which provided the structure for 
+  web pages. He is currently working on a decentralized web project called Solid.
+`),
+);
+
+//adding in the proper semicolins would take like 7 bajillion years i do not wanna do that its 3:26 i gottta make a PR before class is over.
+code11.append(document.createTextNode(`<header>, <nav>, <main>, <footer>, <form>, <input>, <select>,`))
+a4.append(code11);
+a4.append(document.createTextNode(` etc.`))
+
+code1.append(document.createTextNode(`<html>`));
+code2.append(document.createTextNode(`<head>`));
+code3.append(document.createTextNode(`<body>`));
+code4.append(document.createTextNode(`<h1> to <h6>`));
+code5.append(document.createTextNode(`<p>`));
+code6.append(document.createTextNode(`<a>`));
+code7.append(document.createTextNode(`<img>`));
+code8.append(document.createTextNode(`<ul> and <ol>`));
+code9.append(document.createTextNode(`<li>`));
+code0.append(document.createTextNode(`<div> and <span>`));
+
+le1.append(code1);
+le2.append(code2);
+le3.append(code3);
+le4.append(code4);
+le5.append(code5);
+le6.append(code6);
+le7.append(code7);
+le8.append(code8);
+le9.append(code9);
+le0.append(code0);
+
+le1.append(document.createTextNode(`: This is the root element of an HTML document, and it contains all of the other elements.`),);
+le2.append(document.createTextNode(`: This element contains information about the document, such as the title of the page, which is displayed in the browser's title bar or tab.`),);
+le3.append(document.createTextNode(`: This element contains the content of the document that is displayed in the browser window.`),);
+le4.append(document.createTextNode(`: These elements are used for headings and subheadings. <h1> is the highest level heading, while <h6> is the lowest.`),);
+le5.append(document.createTextNode(`: This element is used for paragraphs of text.`),);
+le6.append(document.createTextNode(`: This element is used for hyperlinks, which allow users to navigate between pages on the web.`),);
+le7.append(document.createTextNode(`: This element is used to embed images in a web page.`),);
+le8.append(document.createTextNode(`: These elements are used for unordered and ordered lists, respectively.`),);
+le9.append(document.createTextNode(`: This element is used for list items.`),);
+le0.append(document.createTextNode(`: These elements are used for grouping and applying styles to elements on a web page.`),);
+
+list.append(le1);
+list.append(le2);
+list.append(le3);
+list.append(le4);
+list.append(le5);
+list.append(le6);
+list.append(le7);
+list.append(le8);
+list.append(le9);
+list.append(le0);
 
 // Add the new P element to the body.
 // Add the new H1 element to the body.
@@ -120,17 +166,10 @@ body.append(q3);
 
 body.append(a3);
 
-body.append(le1a);
-body.append(le1b);
-body.append(le2a);
-body.append(le2b);
-body.append(le3a);
-body.append(le3b);
-body.append(le4a);
-body.append(le4b);
-body.append(le5a);
-body.append(le5b);
-body.append(le6a);
-body.append(le6b);
-body.append(le7a);
-body.append(le7b);
+body.append(list);
+
+body.append(a4);
+
+body.append(q4);
+
+body.append(a5);
