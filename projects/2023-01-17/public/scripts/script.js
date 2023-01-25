@@ -2,57 +2,97 @@ const cel = (tag, txt) =>{
   const e = document.createElement(tag);
   e.append(document.createTextNode(txt));
   return e;
-}
+};
+
+const list = document.createElement('ol');
+
+const lstElm = (code, regTxt) =>{
+  const codeElm = document.createElement('code');
+  const le = document.createElement('li');
+  codeElm.append(document.createTextNode(code));
+  le.append(codeElm);
+  le.append(regTxt);
+  list.append(le);
+};
 
 const body = document.querySelector('body');
 
 body.append(
-cel('h1', 'Can you tell me why HTML was developed?')
+  cel(
+    'h1', 'Can you tell me why HTML was developed?'
+  )
 );
 
 body.append(
-  cel('p', 'Can you tell me why HTML was developed?')
-  );
+  cel(
+    'p', `HTML (Hypertext Markup Language) was developed 
+    to create a standard way to create and structure documents 
+    on the World Wide Web. It allows developers to create 
+    structured documents, including headings, paragraphs, 
+    images and links, that can be displayed in a web browser. 
+    It was created to simplify the process of creating and 
+    sharing documents online, so that anyone can create and 
+    view web pages with a consistent look and feel.`
+  )
+);
   
+body.append(
+  cel(
+    'h1', 'What about using HTML for GUIs?'
+  )
+);
 
-//const q1 = document.createElement('h1');
-//const q2 = document.createElement('h1');
-//const q3 = document.createElement('h1');
-//const q4 = document.createElement('h1');
-//
-//// Create a new P element.
-//const a1 = document.createElement('p');
-//const a2 = document.createElement('p');
-//const a3 = document.createElement('p');
-//const a4 = document.createElement('p');
-//const a5 = document.createElement('p');
-//
-//const list = document.createElement('ol');
-//
-//const le1 = document.createElement('li');
-//const le2 = document.createElement('li');
-//const le3 = document.createElement('li');
-//const le4 = document.createElement('li');
-//const le5 = document.createElement('li');
-//const le6 = document.createElement('li');
-//const le7 = document.createElement('li');
-//const le8 = document.createElement('li');
-//const le9 = document.createElement('li');
-//const le0 = document.createElement('li');
-//
-//const code1 = document.createElement('code');
-//const code2 = document.createElement('code');
-//const code3 = document.createElement('code');
-//const code4 = document.createElement('code');
-//const code5 = document.createElement('code');
-//const code6 = document.createElement('code');
-//const code7 = document.createElement('code');
-//const code8 = document.createElement('code');
-//const code9 = document.createElement('code');
-//const code0 = document.createElement('code');
-//
-//const code11 = document.createElement('code');
-//
+body.append(
+  cel(
+    'p', `HTML can be used to create user interfaces for web 
+    applications, but it is primarily designed as a markup 
+    language for creating structured documents to be displayed 
+    in web browsers. While it can be used to create basic user 
+    interfaces, it is not typically considered a good choice 
+    for creating complex, interactive user interfaces. Other 
+    technologies such as JavaScript and CSS are typically used 
+    in conjunction with HTML to create more advanced user 
+    interfaces for web applications. Additionally, there are 
+    other technologies such as Electron, React Native and 
+    NativeScript that allow to create cross-platform desktop 
+    and mobile apps using web technologies such as HTML, CSS, 
+    and JavaScript.`
+  )
+);
+
+body.append(
+  cel(
+    'h1', 'What are some of the main elements of HTML?'
+  )
+);
+
+body.append(
+  cel(
+    'p', `Some of the main elements of HTML include:`
+  )
+);
+
+//USE THIS TO ADD A LIST ELEMENT
+//lstElm('', ``);
+
+lstElm('<html>', ': This is the root element of an HTML document, and it contains all of the other elements.');
+lstElm('<head>', `: This element contains information about the document, such as the title of the page, which is displayed in the browser's title bar or tab.`);
+lstElm('<body>', `: This element contains the content of the document that is displayed in the browser window.`);
+lstElm('<h1> to <h6>', `: These elements are used for headings and subheadings. <h1> is the highest level heading, while <h6> is the lowest.`);
+lstElm('<p>', `: This element is used for paragraphs of text.`);
+lstElm('<a>', `: This element is used for hyperlinks, which allow users to navigate between pages on the web.`);
+lstElm('<img>', `: This element is used to embed images in a web page.`);
+lstElm('<ul> and <ol>', `: These elements are used for unordered and ordered lists, respectively.`);
+lstElm('<li>', `: This element is used for list items.`);
+lstElm('<div> and <span>', `: These elements are used for grouping and applying styles to elements on a web page.`);
+body.append(list);
+
+body.append(
+  cel(
+    'p', `These are some of the main elements, but there are many more available, like `
+  )
+);
+
 //const image = document.createElement('img')
 //
 //const chat = document.createElement('a')
