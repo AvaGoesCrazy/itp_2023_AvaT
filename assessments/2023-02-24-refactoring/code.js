@@ -32,7 +32,7 @@ const drawPicture = (horizon, base, size) => {
   // Draw the head
   const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
-  drawFilledCircle(x, headY, 12, 'white', 3);
+  drawFilledCircle(x, headY, 50, 'white', 3);
 
   // Draw the eyes
   const eyeSpacing = headRadius * 0.25;
