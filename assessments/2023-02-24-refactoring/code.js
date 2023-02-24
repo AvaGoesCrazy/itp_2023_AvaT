@@ -6,6 +6,10 @@ const drawPicture = (horizon, base, size) => {
   drawLine(0, horizon, width, horizon, '#bbb');
 
   // Draw the snowman
+  const drawBody = (x, y, radius, color, what) => {
+
+  }
+
   const x = width / 2;
   const proportions = [3, 4, 5];
   const [headP, torsoP, buttP] = proportions;
@@ -21,7 +25,7 @@ const drawPicture = (horizon, base, size) => {
 
   // Draw the head
   const headRadius = headSize / 2;
-  drawCircle(x, headY, headRadius + 2, 'black', 3);
+  drawCircle(x, headY, headRadius + 2, 'black', 5);
   drawFilledCircle(x, headY, headRadius, 'white', 3);
 
   // Draw the eyes
