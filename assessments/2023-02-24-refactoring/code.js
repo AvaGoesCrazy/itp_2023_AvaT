@@ -16,8 +16,8 @@ const drawPicture = (horizon, base, size) => {
 
     }
     const drawEyes = (x, y) =>{
-      drawFilledCircle(x - 10, y - 180, 4, 'black', 1)
-      drawFilledCircle(x + 10, y - 180, 4, 'black', 1)
+      drawFilledCircle(x - 10, y - 190, 4, 'black', 1)
+      drawFilledCircle(x + 10, y - 190, 4, 'black', 1)
     }
     drawEyes(x, y)
   }
