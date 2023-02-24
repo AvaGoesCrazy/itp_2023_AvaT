@@ -54,10 +54,10 @@ const drawPicture = (horizon, base, size) => {
   //drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
 
   // Draw the mouth
-  for (let i = 0; i < 5; i++) {
-    const dy = -2 * (2.1 ** Math.abs(i - 2));
-    drawFilledCircle(x - (i - 2.3) * headRadius * 0.21, headY + headRadius * 0.65 + dy, 4, 'black');
-  }
+ //for (let i = 0; i < 5; i++) {
+ //  const dy = -2 * (2.1 ** Math.abs(i - 2));
+ //  drawFilledCircle(x - (i - 2.3) * headRadius * 0.21, headY + headRadius * 0.65 + dy, 4, 'black');
+ //}
 
   // Draw the hat
   const brimTop = headY - headRadius * 0.9;
