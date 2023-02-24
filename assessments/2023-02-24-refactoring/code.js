@@ -16,7 +16,7 @@ const drawPicture = (horizon, base, size) => {
     }
   }
 
-  drawBody(width / 2, 50, 60, 'white', 'black', 3, 3)
+  drawBody(width / 2, 500, 60, 'white', 'black', 3, 3)
 
   //const x = width / 2;
   //const proportions = [3, 4, 5];
