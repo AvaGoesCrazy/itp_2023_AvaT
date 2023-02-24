@@ -18,19 +18,6 @@ const drawPicture = (horizon, base, size) => {
 
   drawBody(width / 2, 50, 60, 'white', 'black', 3, 3)
 
-  //const x = width / 2;
-  //const proportions = [3, 4, 5];
-  //const [headP, torsoP, buttP] = proportions;
-  //const total = proportions.reduce((tot, p) => tot + p, 0);
-//
-  //const headSize = size * (headP / total);
-  //const torsoSize = size * (torsoP / total)
-  //const buttSize = size * (buttP / total);
-//
-  //const headY = (base - size) + headSize / 2;
-  //const torsoY = headY + headSize / 2 + torsoSize / 2;
-  //const buttY = torsoY + torsoSize / 2 + buttSize / 2;
-
   // Draw the head
   const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
