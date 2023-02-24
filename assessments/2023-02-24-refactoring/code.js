@@ -6,15 +6,17 @@ const drawPicture = (horizon, base, size) => {
   drawLine(0, horizon, width, horizon, '#bbb');
 
   // Draw the snowman
-  const drawBody = (x, y, rad, color, lThick, numSeg) => {
-    const drawTwoO = (x, y, rad, color, lThick) => {
-      drawCircle(x, y, rad, color, lThick)
-      drawFilledCircle(x, y, rad, color, lThick)
+  const drawBody = (x, y, rad, colorIn, colorOut, lThick, numSeg) => {
+    const drawTwoO = (x, y, rad, colorIn, colorOut, lThick) => {
+      drawCircle(x, y, rad, colorOut, lThick)
+      drawFilledCircle(x, y, rad, colorIn, lThick)
     }
     for (let i = 0; i < numSeg - 1; i++){
-      drawTwoO(x, y * rad)
+      drawTwoO(x, y + rad + (rad * .75), rad, colorIn, colorOut, lThick)
     }
   }
+
+  drawBody(width / 2, 50, 60, 'white', 'black', )
 
   const x = width / 2;
   const proportions = [3, 4, 5];
@@ -32,7 +34,7 @@ const drawPicture = (horizon, base, size) => {
   // Draw the head
   const headRadius = headSize / 2;
   drawCircle(x, headY, headRadius + 2, 'black', 3);
-  drawFilledCircle(x, headY, 50, 'white', 3);
+  drawFilledCircle(x, headY, headRadius, 'white', 5);
 
   // Draw the eyes
   const eyeSpacing = headRadius * 0.25;
