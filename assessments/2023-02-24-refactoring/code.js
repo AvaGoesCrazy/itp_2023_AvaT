@@ -13,7 +13,13 @@ const drawPicture = (horizon, base, size) => {
     }
     for (let i = 0; i < numSeg; i++){
       drawTwoO(x, y - (i*rad + rad-(rad*(i*-.35))), rad-(rad*(i*.15)), colorIn, colorOut, lThick)
+
     }
+    const drawEyes = (x, y) =>{
+      drawFilledCircle(x - 10, y - 100, 2, 'black', 1)
+      drawFilledCircle(x + 10, y - 100, 2, 'black', 1)
+    }
+    drawEyes(x, y)
   }
 
   drawBody(width / 2, 350, 50, 'white', 'black', 3, 3)
@@ -37,9 +43,6 @@ const drawPicture = (horizon, base, size) => {
   //drawFilledCircle(x, headY, headRadius, 'white', 3);
 
   // Draw the eyes
-  const eyeSpacing = rad * 2;
-  drawFilledCircle(x - eyeSpacing, headY - eyeSpacing, 4, 'black');
-  drawFilledCircle(x + eyeSpacing, headY - eyeSpacing, 4, 'black');
 
   // Draw the nose
   const noseLength = headRadius * 0.8;
