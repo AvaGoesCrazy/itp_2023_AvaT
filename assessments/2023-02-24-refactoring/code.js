@@ -17,7 +17,7 @@ const drawPicture = (horizon, base, size) => {
   }
 
   drawBody(width / 2, 350, 50, 'white', 'black', 3, 3)
-  drawBody(400, 350, 50, 'white', 'black', 3, 3)
+
   //const x = width / 2;
   //const proportions = [3, 4, 5];
   //const [headP, torsoP, buttP] = proportions;
@@ -32,12 +32,12 @@ const drawPicture = (horizon, base, size) => {
   //const buttY = torsoY + torsoSize / 2 + buttSize / 2;
 
   // Draw the head
-  const headRadius = headSize / 2;
-  drawCircle(x, headY, headRadius + 2, 'black', 3);
-  drawFilledCircle(x, headY, headRadius, 'white', 3);
+  //const headRadius = headSize / 2;
+  //drawCircle(x, headY, headRadius + 2, 'black', 3);
+  //drawFilledCircle(x, headY, headRadius, 'white', 3);
 
   // Draw the eyes
-  const eyeSpacing = headRadius * 0.25;
+  const eyeSpacing = rad * 2;
   drawFilledCircle(x - eyeSpacing, headY - eyeSpacing, 4, 'black');
   drawFilledCircle(x + eyeSpacing, headY - eyeSpacing, 4, 'black');
 
