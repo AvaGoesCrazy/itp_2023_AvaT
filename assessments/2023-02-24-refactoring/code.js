@@ -17,7 +17,7 @@ const drawPicture = (horizon, base, size) => {
   }
 
   drawBody(width / 2, 350, 50, 'white', 'black', 3, 3)
-
+  drawBody(400, 350, 50, 'white', 'black', 3, 3)
   //const x = width / 2;
   //const proportions = [3, 4, 5];
   //const [headP, torsoP, buttP] = proportions;
