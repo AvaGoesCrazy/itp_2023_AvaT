@@ -50,8 +50,8 @@ const drawPicture = (horizon, base, size) => {
   // Draw the eyes
 
   // Draw the nose
-  const noseLength = headRadius * 0.8;
-  drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
+  //const noseLength = headRadius * 0.8;
+  //drawFilledTriangle(x, headY, x + noseLength, headY + noseLength * 0.2, x, headY + noseLength * 0.3, 'orange');
 
   // Draw the mouth
   for (let i = 0; i < 5; i++) {
