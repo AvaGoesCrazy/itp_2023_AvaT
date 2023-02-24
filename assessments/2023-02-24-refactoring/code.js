@@ -12,7 +12,7 @@ const drawPicture = (horizon, base, size) => {
       drawFilledCircle(x, y, rad, colorIn, lThick)
     }
     for (let i = 0; i < numSeg; i++){
-      drawTwoO(x, y - (i*rad + rad-(rad*(i*.25))), rad-(rad*(i*.15)), colorIn, colorOut, lThick)
+      drawTwoO(x, y - (i*rad + rad-(rad*(i*.75))), rad-(rad*(i*.15)), colorIn, colorOut, lThick)
     }
   }
 
