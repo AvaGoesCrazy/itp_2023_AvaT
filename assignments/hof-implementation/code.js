@@ -1,7 +1,7 @@
 // N.B. Do not use the array methods of the same name to implement these functions!
 
 const filter = (pre, ary) => {
-  ary.every(pre => pre == ary);
+  ary.filter = ((n) => pre == n)
 };
 
 const map = (fn, array) => {
