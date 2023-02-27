@@ -1,7 +1,12 @@
 // N.B. Do not use the array methods of the same name to implement these functions!
 
 const filter = (pre, ary) => {
-  return ary.filter = (pre);
+  let ary2 = ['']
+  for (let i = 0; i > ary.length; i++){
+    if (pre(ary[i - 1])){
+      ary2.push(ary[i])
+    }
+  }
 };
 
 const map = (fn, array) => {
