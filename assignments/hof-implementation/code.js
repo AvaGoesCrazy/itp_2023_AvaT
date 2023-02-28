@@ -4,8 +4,9 @@ let testAry = ['a', 1, 'c', 2, 'e', 'f', 'g']
 
 const filter = (pre, ary) => {
   let ary2 = []
+  let ary = n
   for (let i = 0; i > ary.length; i++){
-    if ((ary[i - 1]) % 2 === 0){
+    if (pre){
       ary2.push(ary[i - 1])
     }
     console.log(ary2)
