@@ -7,7 +7,7 @@ const filter = (pre, ary) => {
       ary2.push(ary[i - 1])
     }
   }
-  return ary2
+  return ary
 };
 
 const map = (fn, array) => {
