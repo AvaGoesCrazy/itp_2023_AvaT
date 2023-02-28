@@ -25,6 +25,7 @@ const flatMap = (fn, ary) => {
   for (let i = 0; i < ary.length; i++){
     ary2.push(fn(ary[i]))
   }
+  return ary2
 };
 
 const reduce = (fn, initVal, ary) => {
