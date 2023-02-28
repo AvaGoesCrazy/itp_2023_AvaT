@@ -6,8 +6,9 @@ const filter = (pre, ary) => {
     if (pre(ary[i - 1])){
       ary2.push(ary[i - 1])
     }
+    console.log(ary2)
   }
-  return ary
+  return ary2
 };
 
 const map = (fn, array) => {
