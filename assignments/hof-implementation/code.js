@@ -15,9 +15,7 @@ const filter = (pre, ary) => {
 const map = (fn, ary) => {
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
-    if (fn(ary[i])){
-      ary2.push(ary[i])
-    }
+    ary2.push(fn(ary[i]))
   }
   return ary2
 };
