@@ -20,10 +20,15 @@ const map = (fn, ary) => {
   return ary2
 };
 
-const flatMap = (fn, array) => {
+const flatMap = (fn, ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    ary2.push(fn(ary[i]))
+  }
 };
 
-const reduce = (fn, initialValue, array) => {
+const reduce = (fn, initVal, ary) => {
+  fn
 };
 
 const every = (predicate, array) => {
