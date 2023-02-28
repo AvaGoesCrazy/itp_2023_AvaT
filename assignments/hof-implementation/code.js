@@ -3,7 +3,7 @@
 const filter = (pre, ary) => {
   let ary2 = []
   for (let i = 0; i > ary.length; i++){
-    if (pre(ary[i - 1])){
+    if ((ary[i - 1]) % 2 === 0){
       ary2.push(ary[i - 1])
     }
     console.log(ary2)
