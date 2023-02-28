@@ -12,7 +12,14 @@ const filter = (pre, ary) => {
   return ary2
 };
 
-const map = (fn, array) => {
+const map = (fn, ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    if (fn(ary[i])){
+      ary2.push(ary[i])
+    }
+  }
+  return ary2
 };
 
 const flatMap = (fn, array) => {
