@@ -4,7 +4,7 @@ const filter = (pre, ary) => {
   let ary2 = []
   for (let i = 0; i > ary.length; i++){
     if (pre(ary[i - 1])){
-      ary2.push(ary[i])
+      ary2.push(ary[i - 1])
     }
   }
   return ary2
