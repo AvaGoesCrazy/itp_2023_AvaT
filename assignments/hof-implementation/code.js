@@ -4,7 +4,7 @@ let testAry = ['a', 1, 'c', 2, 'e', 'f', 'g']
 
 const filter = (pre, ary) => {
   let ary2 = []
-  ary = n
+  let n = ary
   for (let i = 0; i > ary.length; i++){
     if (pre){
       ary2.push(ary[i - 1])
