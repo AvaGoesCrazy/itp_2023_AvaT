@@ -27,7 +27,7 @@ const flatMap = (fn, ary) => {
     if(fn(ary[i]) !== []){
       tempAry.push(fn(ary[i]))
       for (let i = 0; i < tempAry.length; i++){
-        ary2.push(tempAry[i-1])
+        ary2.push(tempAry[i])
       }
     }
   }
