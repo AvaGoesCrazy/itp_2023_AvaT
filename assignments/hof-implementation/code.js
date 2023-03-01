@@ -28,6 +28,7 @@ const flatMap = (fn, ary) => {
       console.log('temp:' + ary2)
     }
   }
+  console.log('returned!')
   return ary2
 };
 
