@@ -21,6 +21,7 @@ const map = (fn, ary) => {
 };
 
 const flatMap = (fn, ary) => {
+  console.log('taking new array...')
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
     if(fn(ary[i]) !== []){
@@ -28,7 +29,7 @@ const flatMap = (fn, ary) => {
       console.log('temp:' + ary2)
     }
   }
-  console.log('---')
+  console.log('finished!')
   return ary2
 };
 
