@@ -24,7 +24,7 @@ const flatMap = (fn, ary) => {
   console.log('taking new array...')
   let ary2 = []
   for (let i = 1; i < ary.length + 1; i++){
-    console.long('i = ' + i)
+    console.log('i = ' + i)
     for (let n = 0; n < fn(i).length; n++){
       console.log('n = ' + n)
       ary2.push(fn(i)[n])
