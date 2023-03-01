@@ -24,11 +24,8 @@ const flatMap = (fn, ary) => {
   console.log('taking new array...')
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
-    if(fn(ary[i]) !== []){
-      ary2.push(fn(ary[i]))
-      console.log('temp:' + ary2)
-    } else{
-      console.log('cant be put')
+    for (let n = 0; n < fn(ary); n++){
+      ary2.push(fn(i) (n))
     }
   }
   console.log('finished!')
