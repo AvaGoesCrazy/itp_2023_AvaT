@@ -23,7 +23,7 @@ const map = (fn, ary) => {
 const flatMap = (fn, ary) => {
   console.log('taking new array...')
   let ary2 = []
-  for (let i = 0; i < ary.length; i++){
+  for (let i = 1; i < ary.length + 1; i++){
     for (let n = 0; n < fn(i).length; n++){
       ary2.push(fn(i)[n])
     }
