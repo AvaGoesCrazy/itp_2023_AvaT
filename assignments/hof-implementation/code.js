@@ -29,6 +29,7 @@ const flatMap = (fn, ary) => {
       console.log('temp:' + tempAry)
       for (let i = 0; i < tempAry.length; i++){
         ary2.push(tempAry[i])
+        console.log('final:' + ary2)
       }
     }
   }
