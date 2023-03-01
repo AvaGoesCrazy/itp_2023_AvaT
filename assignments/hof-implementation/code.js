@@ -23,14 +23,9 @@ const map = (fn, ary) => {
 const flatMap = (fn, ary) => {
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
-    let tempAry = []
     if(fn(ary[i]) !== []){
-      tempAry.push(fn(ary[i]))
-      console.log('temp:' + tempAry)
-      for (let i = 0; i < tempAry.length; i++){
-        ary2.push(tempAry[i])
-        console.log('final: [' + ary2 + ']')
-      }
+      ary2.push(fn(ary[i]))
+      console.log('temp:' + ary2)
     }
   }
   return ary2
