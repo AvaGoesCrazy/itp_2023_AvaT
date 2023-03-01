@@ -27,6 +27,8 @@ const flatMap = (fn, ary) => {
     if(fn(ary[i]) !== []){
       ary2.push(fn(ary[i]))
       console.log('temp:' + ary2)
+    } else{
+      console.log('cant be put')
     }
   }
   console.log('finished!')
