@@ -40,7 +40,7 @@ const reduce = (fn, initVal, ary) => {
 };
 
 const every = (pred, ary) => {
-  for (let i = 0; i < ary.length; i++)
+  for (let i = 0; i < ary.length + 1; i++)
    return pred(ary[i])
 };
 
