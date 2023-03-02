@@ -37,7 +37,9 @@ const flatMap = (fn, ary) => {
 };
 
 const reduce = (fn, initVal, ary) => {
-  return fn(initVal, ary)
+  for (let i = 0; i < ary.length; i++){
+      return fn(initVal, ary[i])
+  }
 };
 
 const every = (predicate, array) => {
