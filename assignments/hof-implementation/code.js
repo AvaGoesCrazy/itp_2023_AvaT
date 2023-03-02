@@ -22,17 +22,12 @@ const map = (fn, ary) => {
 
 // I worked with my table partner on this one, we got it to work but neither of us could figure out why.
 const flatMap = (fn, ary) => {
-  console.log('taking new array...')
   let ary2 = []
   for (let i = 1; i < ary.length + 1; i++){
-    console.log('i = ' + i)
     for (let n = 0; n < fn(i).length; n++){
-      console.log('n = ' + n)
       ary2.push(fn(i)[n])
-      console.log('ary2 = ' + ary2)
     }
   }
-  console.log('finished!')
   return ary2
 };
 
