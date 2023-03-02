@@ -20,6 +20,7 @@ const map = (fn, ary) => {
   return ary2
 };
 
+// I worked with my table partner on this one, we got it to work but neither of us could figure out why.
 const flatMap = (fn, ary) => {
   console.log('taking new array...')
   let ary2 = []
@@ -36,7 +37,7 @@ const flatMap = (fn, ary) => {
 };
 
 const reduce = (fn, initVal, ary) => {
-  fn
+  fn(initVal, ary)
 };
 
 const every = (predicate, array) => {
