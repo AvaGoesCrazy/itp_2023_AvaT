@@ -35,6 +35,7 @@ const reduce = (fn, initVal, ary) => {
   let lastVal = 0
   for (let i = 0; i < ary.length; i++){
     lastVal = lastVal + fn(initVal, ary[i])
+    console.log(lastVal)
   }
   return lastVal
 };
