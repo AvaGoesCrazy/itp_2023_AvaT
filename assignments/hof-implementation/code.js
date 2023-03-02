@@ -32,6 +32,7 @@ const flatMap = (fn, ary) => {
 };
 
 const reduce = (fn, initVal, ary) => {
+  console.log('---')
   let lastNum = 0
   for (let i = 0; i < ary.length; i++){
     lastNum = fn(fn(initVal, ary[i - 1]), ary[i])
