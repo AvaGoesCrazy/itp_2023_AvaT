@@ -32,9 +32,11 @@ const flatMap = (fn, ary) => {
 };
 
 const reduce = (fn, initVal, ary) => {
+  let lastVal = 0
   for (let i = 0; i < ary.length; i++){
-      return fn(initVal, ary[i])
+    lastVal = lastVal + fn(initVal, ary[i])
   }
+  return lastVal
 };
 
 const every = (predicate, array) => {
