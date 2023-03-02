@@ -41,7 +41,7 @@ const reduce = (fn, initVal, ary) => {
 
 const every = (pred, ary) => {
   for (let i = 0; i < ary.length; i++)
-   return pred(ary[i])
+   return pred(ary[i - 1])
 };
 
 const some = (predicate, array) => {
