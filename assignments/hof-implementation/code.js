@@ -1,7 +1,5 @@
 // N.B. Do not use the array methods of the same name to implement these functions!
 
-let testAry = ['a', 1, 'c', 2, 'e', 'f', 'g']
-
 const filter = (pre, ary) => {
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
