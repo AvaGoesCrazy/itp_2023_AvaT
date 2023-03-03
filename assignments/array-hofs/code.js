@@ -89,8 +89,8 @@ const flatpairs = (ary) =>{
   return flatMap((n) => [n, n], ary)
 };
 
-const allEven = () =>{
-
+const allEven = (ary) =>{
+  return every((n) => n % 2 === 0, ary)
 };
 
 const someEven = () =>{
