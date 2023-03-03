@@ -58,4 +58,8 @@ const some = (pred, ary) => {
 
 const evens = (ary) =>{
   return filter((n) => n % 2 === 0, ary)
+};
+
+const odds = (ary) =>{
+  return filter((n) => n % 2 !== 0, ary)
 }
