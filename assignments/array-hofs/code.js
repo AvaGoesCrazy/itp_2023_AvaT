@@ -68,34 +68,34 @@ const big = (ary) =>{
   return filter((n) => n > 100, ary)
 };
 
-const  = () =>{
+const names = () =>{
 
 };
 
-const  = () =>{
+const grades = () =>{
 
 };
 
-const  = () =>{
+const pairs = () =>{
 
 };
 
-const  = () =>{
+const averageGrade = () =>{
 
 };
 
-const  = () =>{
+const flatpairs = () =>{
 
 };
 
-const  = () =>{
+const allEven = () =>{
 
 };
 
-const  = () =>{
+const someEven = () =>{
 
 };
 
-const  = () =>{
+const lengthOfNames = () =>{
 
 };
