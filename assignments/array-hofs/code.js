@@ -76,8 +76,8 @@ const grades = (ary) =>{
   return map((n) => n["grade"], ary)
 };
 
-const pairs = () =>{
-
+const pairs = (ary) =>{
+  return flatmap((n) => [n, n], ary)
 };
 
 const averageGrade = () =>{
