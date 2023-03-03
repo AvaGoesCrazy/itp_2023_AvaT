@@ -68,7 +68,7 @@ const big = (ary) =>{
   return filter((n) => n > 100, ary)
 };
 
-const names = () =>{
+const names = (ary) =>{
   return map((n) => n["name"], ary)
 };
 
