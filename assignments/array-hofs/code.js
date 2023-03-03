@@ -72,8 +72,8 @@ const names = (ary) =>{
   return map((n) => n["name"], ary)
 };
 
-const grades = () =>{
-
+const grades = (ary) =>{
+  return map((n) => n["grade"], ary)
 };
 
 const pairs = () =>{
