@@ -94,7 +94,7 @@ const allEven = (ary) =>{
 };
 
 const someEven = () =>{
-
+  return some((n) => n % 2 === 0, ary)
 };
 
 const lengthOfNames = () =>{
