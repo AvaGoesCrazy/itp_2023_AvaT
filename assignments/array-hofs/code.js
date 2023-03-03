@@ -86,7 +86,7 @@ const averageGrade = (ary) =>{
 };
 
 const flatpairs = () =>{
-
+  return flatMap((n) => [[n, n]], ary)
 };
 
 const allEven = () =>{
