@@ -49,5 +49,12 @@ const every = (pred, ary) => {
   return trueCount === ary.length
 };
 
-const some = (predicate, array) => {
+const some = (pred, ary) => {
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if (pred(ary[i])){
+      trueCount ++
+    }
+  }
+  return trueCount !== 0
 };
