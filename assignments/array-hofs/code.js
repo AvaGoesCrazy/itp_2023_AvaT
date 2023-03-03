@@ -97,6 +97,6 @@ const someEven = (ary) =>{
   return some((n) => n % 2 === 0, ary)
 };
 
-const lengthOfNames = () =>{
-
+const lengthOfNames = (ary) =>{
+  return filter((n) => n[0], ary)
 };
