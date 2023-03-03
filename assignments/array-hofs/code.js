@@ -93,7 +93,7 @@ const allEven = (ary) =>{
   return every((n) => n % 2 === 0, ary)
 };
 
-const someEven = () =>{
+const someEven = (ary) =>{
   return some((n) => n % 2 === 0, ary)
 };
 
