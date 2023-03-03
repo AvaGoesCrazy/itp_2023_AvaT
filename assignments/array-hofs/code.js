@@ -98,5 +98,5 @@ const someEven = (ary) =>{
 };
 
 const lengthOfNames = (ary) =>{
-  return filter((n) => n[0].isUpperCase(), ary)
+  return filter((n) => n[0].toUpperCase() === n[0], ary)
 };
