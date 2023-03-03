@@ -69,7 +69,7 @@ const big = (ary) =>{
 };
 
 const names = () =>{
-
+  return map((n) => n["name"], ary)
 };
 
 const grades = () =>{
