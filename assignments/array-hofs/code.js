@@ -62,4 +62,40 @@ const evens = (ary) =>{
 
 const odds = (ary) =>{
   return filter((n) => n % 2 !== 0, ary)
-}
+};
+
+const big = (ary) =>{
+  return filter((n) => n > 100, ary)
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
+
+const  = () =>{
+
+};
