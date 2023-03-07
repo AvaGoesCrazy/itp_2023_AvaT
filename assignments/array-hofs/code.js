@@ -79,7 +79,6 @@ const grades = (ary) =>{
   return map((n) => n["grade"], ary)
 };
 
-//????  i dont get it why does it work but then it doesnt work why it do this ugghhhhhhh
 const pairs = (ary) =>{
   return flatMap((n) => [[n, n]], ary)
 };
