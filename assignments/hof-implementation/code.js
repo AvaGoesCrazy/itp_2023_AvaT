@@ -18,7 +18,6 @@ const map = (fn, ary) => {
   return ary2
 };
 
-// I worked with my table partner on this one, we got it to work but neither of us could figure out why.
 const flatMap = (fn, ary) => {
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
@@ -42,6 +41,8 @@ const every = (pred, ary) => {
   for (let i = 0; i < ary.length; i++){
     if (pred(ary[i])){
       trueCount ++
+    } else{
+      return false
     }
   }
   return trueCount === ary.length
