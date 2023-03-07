@@ -20,7 +20,7 @@ const map = (fn, ary) => {
 
 // I worked with my table partner on this one, we got it to work but neither of us could figure out why.
 const flatMap = (fn, ary) => {
-  let ary2 = []
+  let ary2 = 
   for (let i = 0; i < ary.length; i++){
     ary2[i] = fn(ary[i])
   }
