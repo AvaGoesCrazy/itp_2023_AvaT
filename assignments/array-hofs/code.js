@@ -84,7 +84,7 @@ const pairs = (ary) =>{
 };
 
 const averageGrade = (ary) =>{
-  return ary.reduce((tot, n) => n + tot, 0) / ary.length;
+  return ary.reduce((tot, n) => tot + n, 0) / ary.length;
 };
 
 const flatpairs = (ary) =>{
