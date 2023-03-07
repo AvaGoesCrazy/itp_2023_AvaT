@@ -60,7 +60,7 @@ const some = (pred, ary) => {
 //-------  Actual functions start here: ---------
 
 const evens = (ary) =>{
-  return filter((n) => n % 2 === 0, ary)
+  return ary.filter((n) => n % 2 === 0)
 };
 
 const odds = (ary) =>{
@@ -84,7 +84,7 @@ const pairs = (ary) =>{
 };
 
 const averageGrade = (ary) =>{
-  return reduce((tot, n) => tot + n, 0, ary) / ary.length;
+  return ary.reduce((tot, n) => xxxxx, 0) / ary.length;
 };
 
 const flatpairs = (ary) =>{
