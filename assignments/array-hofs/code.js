@@ -18,9 +18,9 @@ const map = (fn, ary) => {
 
 const flatMap = (fn, ary) => {
   let ary2 = []
-  for (let i = 1; i < ary.length + 1; i++){
-    for (let n = 0; n < fn(i).length; n++){
-      ary2.push(fn(i)[n])
+  for (let i = 0; i < ary.length; i++){
+    for (let j = 0; j < fn(ary[i]).length; j++){
+      ary2.push(fn(ary[i])[j])
     }
   }
   return ary2
@@ -39,6 +39,8 @@ const every = (pred, ary) => {
   for (let i = 0; i < ary.length; i++){
     if (pred(ary[i])){
       trueCount ++
+    } else{
+      return false
     }
   }
   return trueCount === ary.length
@@ -53,6 +55,7 @@ const some = (pred, ary) => {
   }
   return trueCount !== 0
 };
+
 
 //-------  Actual functions start here: ---------
 
