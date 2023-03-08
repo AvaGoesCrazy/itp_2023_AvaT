@@ -17,21 +17,35 @@ const shouty = (strings) => {
 }
 
 const join = (strings, delimiter) => {
-  return strings.reduce((joined, s) => {
-    if (joined === null) {
-      return s;
-    } else {
-      return joined + delimiter + s;
-    }
-  }, null);
+  let answer = initVal
+  for (let i = 0; i < strings.length; i++){
+    answer = fn(answer, strings[i])
+  }
+  return answer
 };
 
-//I skipped ahead
+//I skipped ahead to the rewrite in HOF questions
 
 const strange = (people) => {
-  return people.filter((n) => n.isStrange)
+  return people.filter((n) => n.isStrange);
 };
 
 const birthdays = (students) => {
-  return students.map((n) => n.birthday)
+  return students.map((n) => n.birthday);
+};
+
+const heaviest = (animals) => {
+  return animals.reduce((tot, n) => Math.max(tot , n.weight), null);
+};
+
+const allStudents = (grades) => {
+  return grades.flatMap((n) => n.students);
+};
+
+const allCromulent = (things) => {
+  return things.every((n) => n.isCromulent);
+};
+
+const notAllTerrible = (things) => {
+  return things.some((n) => n.isTerrible);
 };
