@@ -15,3 +15,23 @@ const shouty = (strings) => {
   }
   return answer
 }
+
+const join = (strings, delimiter) => {
+  return strings.reduce((joined, s) => {
+    if (joined === null) {
+      return s;
+    } else {
+      return joined + delimiter + s;
+    }
+  }, null);
+};
+
+//I skipped ahead
+
+const strange = (people) => {
+  return people.filter((n) => n.isStrange)
+};
+
+const birthdays = (students) => {
+  return students.map((n) => n.birthday)
+};
