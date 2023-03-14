@@ -1,4 +1,4 @@
-const evens = (numbers) => {
+const evens = (numbers) => { // correct
   let answer = []
   for (let i = 0; i < numbers.length; i++){
     if (numbers[i] % 2 === 0){
@@ -8,7 +8,7 @@ const evens = (numbers) => {
   return answer
 };
 
-const shouty = (strings) => {
+const shouty = (strings) => { // correct
   let answer = []
   for (let i = 0; i < strings.length; i++){
     answer.push(strings[i].toUpperCase())
@@ -16,7 +16,7 @@ const shouty = (strings) => {
   return answer
 }
 
-const join = (strings, delimiter) => {
+const join = (strings, delimiter) => { // pattern
   let answer = initVal
   for (let i = 0; i < strings.length; i++){
     answer = fn(answer, strings[i])
@@ -26,26 +26,26 @@ const join = (strings, delimiter) => {
 
 //I skipped ahead to the rewrite in HOF questions
 
-const strange = (people) => {
+const strange = (people) => { // correct
   return people.filter((n) => n.isStrange);
 };
 
-const birthdays = (students) => {
+const birthdays = (students) => { // correct
   return students.map((n) => n.birthday);
 };
 
-const heaviest = (animals) => {
+const heaviest = (animals) => { // correct
   return animals.reduce((tot, n) => Math.max(tot , n.weight), null);
 };
 
-const allStudents = (grades) => {
+const allStudents = (grades) => { // correct
   return grades.flatMap((n) => n.students);
 };
 
-const allCromulent = (things) => {
+const allCromulent = (things) => { // almost
   return things.every((n) => n.isCromulent);
 };
 
-const notAllTerrible = (things) => {
+const notAllTerrible = (things) => { // almost
   return things.some((n) => n.isTerrible);
 };
