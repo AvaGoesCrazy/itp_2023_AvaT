@@ -1,5 +1,4 @@
 // TO DO:
-// - figure out how to get keyboard input
 // - figure out how to make things run in real time
 
 const countDown = [
@@ -28,6 +27,8 @@ const snakeHead = [
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
 ];
 
+
+
 const X = (e) => {
   return (e % 10);
 };
@@ -35,20 +36,28 @@ const Y = (e) => {
   return Math.floor(e / 10);
 };
 
-const getDirection = (event) =>{
-  if (event.getKeyCode() == KeyEvent.VK_UP) {
-    return 'up'
+let bufferMove = ''
+
+document.body.onkeydown = (e) => {
+  console.log(e.timeStamp)
+  if (e.key === 'ArrowUp') {
+    console.log('Up!');
+    bufferMove = 'up'
   }
-  if (event.getKeyCode() == KeyEvent.VK_DOWN) {
-    return 'down'
+  if (e.key === 'ArrowDown') {
+    console.log('Down!');
+    bufferMove = 'down'
   }
-  if (event.getKeyCode() == KeyEvent.VK_LEFT) {
-    return 'left'
+  if (e.key === 'ArrowLeft') {
+    console.log('Left!');
+    bufferMove = 'left'
   }
-  if (event.getKeyCode() == KeyEvent.VK_RIGHT) {
-    return 'right'
+  if (e.key === 'ArrowRight') {
+    console.log('Right!');
+    bufferMove = 'right'
   }
 }
+
 
 let turn = 0
 
@@ -57,9 +66,7 @@ let score  = 0
 snakeHead[Y()] [X()] = 'n'
 snakeHead[Y()] [X()] = 'y'
 
-if (event.getKeyCode() == KeyEvent.VK_UP) {
-  console.log('key arrow up ditection woaaah  :)')
-}
+
 
 //const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
 //
