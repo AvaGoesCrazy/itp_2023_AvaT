@@ -20,51 +20,117 @@ const snakeHead = [
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'y', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
 ];
 
+//i think these are gonna be useless unless i can figure out a way to use them
+//const X = (e) => {
+//  return (e % 10);
+//};
+//const Y = (e) => {
+//  return Math.floor(e / 10);
+//};
 
 
-const X = (e) => {
-  return (e % 10);
-};
-const Y = (e) => {
-  return Math.floor(e / 10);
-};
-
-let bufferMove = ''
+let gameStarted = 0
 
 document.body.onkeydown = (e) => {
-  console.log(e.timeStamp)
-  if (e.key === 'ArrowUp') {
-    console.log('Up!');
-    bufferMove = 'up'
+  gameStarted = 1
+  let X = 5
+  let Y = 5
+  
+  let bufferMove = ''
+  
+  let turn = 0
+  
+  let score  = 0
+  
+
+  document.body.onkeydown = (e) => {
+    console.log(Date().substring(22, 24))
+    if (e.key === 'ArrowUp') {
+      console.log('Up!');
+      bufferMove = 'up'
+    }
+    if (e.key === 'ArrowDown') {
+      console.log('Down!');
+      bufferMove = 'down'
+    }
+    if (e.key === 'ArrowLeft') {
+      console.log('Left!');
+      bufferMove = 'left'
+    }
+    if (e.key === 'ArrowRight') {
+      console.log('Right!');
+      bufferMove = 'right'
+    }
   }
-  if (e.key === 'ArrowDown') {
-    console.log('Down!');
-    bufferMove = 'down'
+
+  const addSegment = () => {
+    for (let i = 0; i< countDown.length; i++) {
+      for (let n = 0; n < countDown.length; n++) {
+        if (countDown[i] [n] > 0 ){
+          countDown[i] [n] = countDown[i] [n] + 1
+        }
+      } 
+    }
   }
-  if (e.key === 'ArrowLeft') {
-    console.log('Left!');
-    bufferMove = 'left'
+
+  const removeSegment = () => {
+    for (let i = 0; i< countDown.length; i++) {
+      for (let n = 0; n < countDown.length; n++) {
+        if (countDown[i] [n] > 0 ){
+          countDown[i] [n] = countDown[i] [n] - 1
+        }
+      } 
+    }
   }
-  if (e.key === 'ArrowRight') {
-    console.log('Right!');
-    bufferMove = 'right'
+
+  const safeMove = () => ((Y++ && X++ < 10) && (Y-- && X-- > -1))
+
+  const collision = (dir) => {
+
+  }
+
+  const move = (dir) => {
+    if(dir === 'up' && safeMove()) {
+      snakeHead[Y] [X] = 'n'
+      Y = Y - 1
+      snakeHead[Y] [X] = 'y'
+      removeSegment()
+    }
+    if(dir === 'down' && safeMove()) {
+      snakeHead[Y] [X] = 'n'
+      Y = Y++
+      snakeHead[Y] [X] = 'y'
+      removeSegment()
+    }
+    if(dir === 'left' && safeMove()) {
+      snakeHead[Y] [X] = 'n'
+      X = X - 1
+      snakeHead[Y] [X] = 'y'
+      removeSegment()
+    }
+    if(dir === 'right' && safeMove()) {
+      snakeHead[Y] [X] = 'n'
+      X = X++
+      snakeHead[Y] [X] = 'y'
+      removeSegment()
+    }
+  }
+
+  snakeHead[Y()] [X()] = 'n'
+  snakeHead[Y()] [X()] = 'y'
+
+  //theres no way this works... right???
+  if (Date().substring(22, 24) > Date().substring(22, 24) - 1) {
+    move(bufferMove)
   }
 }
-
-
-let turn = 0
-
-let score  = 0
-
-snakeHead[Y()] [X()] = 'n'
-snakeHead[Y()] [X()] = 'y'
 
 
 
