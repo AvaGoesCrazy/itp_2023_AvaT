@@ -1,5 +1,5 @@
 // TO DO:
-// - figure out how to make things run in real time
+// - Make gui so i can actually see what im doing
 
 const countDown = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -27,45 +27,72 @@ const snakeHead = [
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
 ];
 
-//i think these are gonna be useless unless i can figure out a way to use them
-//const X = (e) => {
-//  return (e % 10);
-//};
-//const Y = (e) => {
-//  return Math.floor(e / 10);
-//};
+const apple = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
 
+const board = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
 
-let gameStarted = 0
+let speed = 750
+
+let gameStarted = false
+
+const grid = document.querySelector('#grid');
+
+for (let i = 0; i < 10; i++) {
+  for (let n = 0; n < 10; n++) {
+    const div = document.createElement('div');
+    div.classList.add('box');
+    board[i] [n] = div
+    grid.append(div);
+  }
+}
 
 document.body.onkeydown = (e) => {
-  gameStarted = 1
+  console.log('Game Start!')
+  gameStarted = true
   let X = 5
   let Y = 5
   
-  let bufferMove = ''
+  let bufferMove = 'up'
   
   let turn = 0
   
-  let score  = 0
+  let score = 0
   
 
   document.body.onkeydown = (e) => {
     console.log(Date().substring(22, 24))
     if (e.key === 'ArrowUp') {
-      console.log('Up!');
       bufferMove = 'up'
     }
     if (e.key === 'ArrowDown') {
-      console.log('Down!');
       bufferMove = 'down'
     }
     if (e.key === 'ArrowLeft') {
-      console.log('Left!');
       bufferMove = 'left'
     }
     if (e.key === 'ArrowRight') {
-      console.log('Right!');
       bufferMove = 'right'
     }
   }
@@ -92,44 +119,51 @@ document.body.onkeydown = (e) => {
 
   const safeMove = () => ((Y++ && X++ < 10) && (Y-- && X-- > -1))
 
-  const collision = (dir) => {
-
+  const movePart1 = () =>{
+    snakeHead[Y] [X] = 'n'
+    countDown[Y] [X] = score
+  }
+  const movePart2 = () =>{
+    snakeHead[Y] [X] = 'y'
+    if (apple[Y] [X] = 1){
+      score ++
+      addSegment()
+    }    
+    removeSegment()
   }
 
   const move = (dir) => {
     if(dir === 'up' && safeMove()) {
-      snakeHead[Y] [X] = 'n'
+      movePart1()
       Y = Y - 1
-      snakeHead[Y] [X] = 'y'
-      removeSegment()
+      movePart2()
     }
     if(dir === 'down' && safeMove()) {
-      snakeHead[Y] [X] = 'n'
+      movePart1()
       Y = Y++
-      snakeHead[Y] [X] = 'y'
-      removeSegment()
+      movePart2()
     }
     if(dir === 'left' && safeMove()) {
-      snakeHead[Y] [X] = 'n'
+      movePart1()
       X = X - 1
-      snakeHead[Y] [X] = 'y'
-      removeSegment()
+      movePart2()
     }
     if(dir === 'right' && safeMove()) {
-      snakeHead[Y] [X] = 'n'
+      movePart1()
       X = X++
-      snakeHead[Y] [X] = 'y'
-      removeSegment()
+      movePart2()
+    }
+    if(!safeMove()) {
+      gameStarted = false
+      console.log('Game Over!')
     }
   }
 
-  snakeHead[Y()] [X()] = 'n'
-  snakeHead[Y()] [X()] = 'y'
+  //const doMove = (dir) => {
+  //  if (gameStarted)
+  //}
 
-  //theres no way this works... right???
-  if (Date().substring(22, 24) > Date().substring(22, 24) - 1) {
-    move(bufferMove)
-  }
+  setInterval(() => move(bufferMove), speed);
 }
 
 
@@ -141,12 +175,12 @@ document.body.onkeydown = (e) => {
 //  element.style.color = rgb(255, 155, 0);
 //};
 //const makeRed = (element) => {
-  element.style.background = rgb(255, 0, 0);
-  element.style.color = rgb(0, 255, 255);
+//  element.style.background = rgb(255, 0, 0);
+//  element.style.color = rgb(0, 255, 255);
 //};
 //const makeGreen = (element) => {
-  element.style.background = rgb(0, 255, 0);
-  element.style.color = rgb(255, 0, 255);
+//  element.style.background = rgb(0, 255, 0);
+//  element.style.color = rgb(255, 0, 255);
 //};
 //
 //const grid = document.querySelector('#grid');
