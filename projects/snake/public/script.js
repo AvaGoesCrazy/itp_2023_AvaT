@@ -1,5 +1,5 @@
 // TO DO:
-// - figure out how to make things run in real time
+// - Make gui so i can actually see what im doing
 
 const countDown = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -20,51 +20,151 @@ const snakeHead = [
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'y', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
   ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
 ];
 
+const apple = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
 
+const board = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
 
-const X = (e) => {
-  return (e % 10);
-};
-const Y = (e) => {
-  return Math.floor(e / 10);
-};
+let speed = 750
 
-let bufferMove = ''
+let gameStarted = false
 
-document.body.onkeydown = (e) => {
-  console.log(e.timeStamp)
-  if (e.key === 'ArrowUp') {
-    console.log('Up!');
-    bufferMove = 'up'
-  }
-  if (e.key === 'ArrowDown') {
-    console.log('Down!');
-    bufferMove = 'down'
-  }
-  if (e.key === 'ArrowLeft') {
-    console.log('Left!');
-    bufferMove = 'left'
-  }
-  if (e.key === 'ArrowRight') {
-    console.log('Right!');
-    bufferMove = 'right'
+const grid = document.querySelector('#grid');
+
+for (let i = 0; i < 10; i++) {
+  for (let n = 0; n < 10; n++) {
+    const div = document.createElement('div');
+    div.classList.add('box');
+    board[i] [n] = div
+    grid.append(div);
   }
 }
 
+document.body.onkeydown = (e) => {
+  console.log('Game Start!')
+  gameStarted = true
+  let X = 5
+  let Y = 5
+  
+  let bufferMove = 'up'
+  
+  let turn = 0
+  
+  let score = 0
+  
 
-let turn = 0
+  document.body.onkeydown = (e) => {
+    console.log(Date().substring(22, 24))
+    if (e.key === 'ArrowUp') {
+      bufferMove = 'up'
+    }
+    if (e.key === 'ArrowDown') {
+      bufferMove = 'down'
+    }
+    if (e.key === 'ArrowLeft') {
+      bufferMove = 'left'
+    }
+    if (e.key === 'ArrowRight') {
+      bufferMove = 'right'
+    }
+  }
 
-let score  = 0
+  const addSegment = () => {
+    for (let i = 0; i< countDown.length; i++) {
+      for (let n = 0; n < countDown.length; n++) {
+        if (countDown[i] [n] > 0 ){
+          countDown[i] [n] = countDown[i] [n] + 1
+        }
+      } 
+    }
+  }
 
-snakeHead[Y()] [X()] = 'n'
-snakeHead[Y()] [X()] = 'y'
+  const removeSegment = () => {
+    for (let i = 0; i< countDown.length; i++) {
+      for (let n = 0; n < countDown.length; n++) {
+        if (countDown[i] [n] > 0 ){
+          countDown[i] [n] = countDown[i] [n] - 1
+        }
+      } 
+    }
+  }
+
+  const safeMove = () => ((Y++ && X++ < 10) && (Y-- && X-- > -1))
+
+  const movePart1 = () =>{
+    snakeHead[Y] [X] = 'n'
+    countDown[Y] [X] = score
+  }
+  const movePart2 = () =>{
+    snakeHead[Y] [X] = 'y'
+    if (apple[Y] [X] = 1){
+      score ++
+      addSegment()
+    }    
+    removeSegment()
+  }
+
+  const move = (dir) => {
+    if(dir === 'up' && safeMove()) {
+      movePart1()
+      Y = Y - 1
+      movePart2()
+    }
+    if(dir === 'down' && safeMove()) {
+      movePart1()
+      Y = Y++
+      movePart2()
+    }
+    if(dir === 'left' && safeMove()) {
+      movePart1()
+      X = X - 1
+      movePart2()
+    }
+    if(dir === 'right' && safeMove()) {
+      movePart1()
+      X = X++
+      movePart2()
+    }
+    if(!safeMove()) {
+      gameStarted = false
+      console.log('Game Over!')
+    }
+  }
+
+  //const doMove = (dir) => {
+  //  if (gameStarted)
+  //}
+
+  setInterval(() => move(bufferMove), speed);
+}
 
 
 
@@ -75,12 +175,12 @@ snakeHead[Y()] [X()] = 'y'
 //  element.style.color = rgb(255, 155, 0);
 //};
 //const makeRed = (element) => {
-  element.style.background = rgb(255, 0, 0);
-  element.style.color = rgb(0, 255, 255);
+//  element.style.background = rgb(255, 0, 0);
+//  element.style.color = rgb(0, 255, 255);
 //};
 //const makeGreen = (element) => {
-  element.style.background = rgb(0, 255, 0);
-  element.style.color = rgb(255, 0, 255);
+//  element.style.background = rgb(0, 255, 0);
+//  element.style.color = rgb(255, 0, 255);
 //};
 //
 //const grid = document.querySelector('#grid');
