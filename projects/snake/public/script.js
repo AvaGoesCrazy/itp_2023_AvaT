@@ -1,6 +1,7 @@
 // TO DO:
 // - Make gui so i can actually see what im doing
 
+
 const countDown = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -53,7 +54,7 @@ const board = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
-let speed = 750
+let speed = 500
 
 let gameStarted = false
 
@@ -68,9 +69,44 @@ for (let i = 0; i < 10; i++) {
   }
 }
 
+const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
+
+const makeRed = (element) => {
+  element.style.background = rgb(255, 0, 0);
+  element.style.color = rgb(0, 255, 255);
+};
+const makeGreen = (element) => {
+  element.style.background = rgb(0, 255, 0);
+  element.style.color = rgb(255, 0, 255);
+};
+const makeBlue = (element) => {
+  element.style.background = rgb(0, 0, 255);
+  element.style.color = rgb(255, 255, 0);
+};
+const makeClear = (element) => {
+  element.style.background = rgb(255, 255, 255);
+  element.style.color = rgb(0, 0, 0);
+};
+
+
+const newApple = () => {
+  let canMakeApple = false
+  while(!canMakeApple) {
+    let randomX = Math.floor(Math.random() * 10)
+    let randomY = Math.floor(Math.random() * 10)
+    if(countDown[randomY] [randomX] === 0 && snakeHead[randomY] [randomX] === 'n') {
+      apple[randomY] [randomX] ++
+      canMakeApple = true
+      makeRed(board[randomY] [randomX])
+    }
+  }
+}
+
 document.body.onkeydown = (e) => {
   console.log('Game Start!')
+
   gameStarted = true
+
   let X = 5
   let Y = 5
   
@@ -80,9 +116,10 @@ document.body.onkeydown = (e) => {
   
   let score = 0
   
+  newApple()
+  makeBlue(board[Y] [X])
 
   document.body.onkeydown = (e) => {
-    console.log(Date().substring(22, 24))
     if (e.key === 'ArrowUp') {
       bufferMove = 'up'
     }
@@ -117,40 +154,60 @@ document.body.onkeydown = (e) => {
     }
   }
 
+  const drawSnakeBody = () => {
+    for (let i = 0; i< countDown.length; i++) {
+      for (let n = 0; n < countDown.length; n++) {
+        if (countDown[i] [n] > 0){
+          makeGreen(board[i] [n])
+        }
+        if (countDown[i] [n] === 0 && snakeHead[i] [n] === 'n' && apple[i] [n] === 0){
+          makeClear(board[i] [n])
+        }
+      } 
+    }
+  }
+
   const safeMove = () => ((Y++ && X++ < 10) && (Y-- && X-- > -1))
 
   const movePart1 = () =>{
     snakeHead[Y] [X] = 'n'
-    countDown[Y] [X] = score
+    makeClear(board[Y] [X])
   }
+
   const movePart2 = () =>{
     snakeHead[Y] [X] = 'y'
+    countDown[Y] [X] = score
+
+    makeBlue (board[Y] [X])
     if (apple[Y] [X] = 1){
+      apple[Y] [X] --
       score ++
+      newApple()
       addSegment()
-    }    
+    }
+    drawSnakeBody()
     removeSegment()
   }
 
   const move = (dir) => {
     if(dir === 'up' && safeMove()) {
       movePart1()
-      Y = Y - 1
+      Y--
       movePart2()
     }
     if(dir === 'down' && safeMove()) {
       movePart1()
-      Y = Y++
+      Y++
       movePart2()
     }
     if(dir === 'left' && safeMove()) {
       movePart1()
-      X = X - 1
+      X--
       movePart2()
     }
     if(dir === 'right' && safeMove()) {
       movePart1()
-      X = X++
+      X++
       movePart2()
     }
     if(!safeMove()) {
@@ -159,12 +216,18 @@ document.body.onkeydown = (e) => {
     }
   }
 
-  //const doMove = (dir) => {
-  //  if (gameStarted)
-  //}
+  const doMove = (dir) => {
+    if (gameStarted) {
+      move(dir)
+      console.log(countDown)
+    }
+  }
 
-  setInterval(() => move(bufferMove), speed);
+  setInterval(() => doMove(bufferMove), speed);
 }
+
+
+
 
 
 
