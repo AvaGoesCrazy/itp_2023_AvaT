@@ -227,3 +227,16 @@ const allCountries = (ary) => {
   }
   return ary2
 };
+
+const allGrownInMoreThanNCountries = (ary, n) => {
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if ((ary[i]).grownIn.length > n){
+      trueCount ++
+    } else{
+      return false
+    }
+  }
+  return trueCount === ary.length
+};
+
