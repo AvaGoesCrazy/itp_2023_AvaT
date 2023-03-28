@@ -240,3 +240,12 @@ const allGrownInMoreThanNCountries = (ary, n) => {
   return trueCount === ary.length
 };
 
+const someMoreThanNColors = (ary, n) => {
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if ((ary[i]).colors.length > n){
+      trueCount ++
+    }
+  }
+  return trueCount !== 0
+};
