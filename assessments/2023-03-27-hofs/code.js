@@ -201,3 +201,11 @@ const tasty = (ary) => {
   }
   return ary2
 };
+
+const names = (ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    ary2.push((ary[i]).name)
+  }
+  return ary2
+};
