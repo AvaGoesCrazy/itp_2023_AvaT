@@ -168,6 +168,6 @@ const isTasty = (fruit) => fruit.tastiness >= 5;
 
 const isInconvenient = (fruit) => fruit.inconvenience >= 5;
 
-const redFruits = (friuts) => {
+const redFruits = (fruits) => {
   filter((n) => n.colors.includes('red'), fruits)
 }
