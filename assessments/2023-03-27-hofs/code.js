@@ -243,7 +243,7 @@ const allGrownInMoreThanNCountries = (ary, n) => {
 const someMoreThanNColors = (ary, n) => {
   let trueCount = 0
   for (let i = 0; i < ary.length; i++){
-    if ((ary[i]).colors.length >= n){
+    if ((ary[i]).colors.length > n){
       trueCount ++
     }
   }
