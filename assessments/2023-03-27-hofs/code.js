@@ -191,3 +191,13 @@ const areAllTasty = (fruits) => {
 const notAllInconvenient = (fruits) => {
   return some((n) => isInconvenient(n), fruits)
 }
+
+const tasty = (ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    if (isTasty(ary[i])){
+      ary2.push(ary[i])
+    }
+  }
+  return ary2
+};
