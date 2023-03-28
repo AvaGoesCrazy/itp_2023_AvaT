@@ -209,3 +209,11 @@ const names = (ary) => {
   }
   return ary2
 };
+
+const averageInconvenience = (ary) => {
+  let lastNum = 0
+  for (let i = 0; i < ary.length; i++){
+    lastNum = lastNum + (ary[i].inconvenience)
+  }
+  return lastNum / ary.length
+};
