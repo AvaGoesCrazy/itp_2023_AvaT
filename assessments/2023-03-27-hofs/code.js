@@ -175,3 +175,7 @@ const redFruits = (fruits) => {
 const weights = (fruits) => {
   return map((n) => n.grams, fruits)
 }
+
+const heviest = (fruits) => {
+  return reduce((n) => Math.max(n.grams), fruits)
+}
