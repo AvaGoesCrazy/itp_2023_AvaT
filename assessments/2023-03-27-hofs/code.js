@@ -217,3 +217,13 @@ const averageInconvenience = (ary) => {
   }
   return lastNum / ary.length
 };
+
+const allCountries = (ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    for (let j = 0; j < ((ary[i]).grownIn).length; j++){
+      ary2.push((ary[i]).grownIn[j])
+    }
+  }
+  return ary2
+};
