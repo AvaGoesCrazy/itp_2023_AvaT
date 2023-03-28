@@ -171,3 +171,7 @@ const isInconvenient = (fruit) => fruit.inconvenience >= 5;
 const redFruits = (fruits) => {
   filter((n) => n.colors.includes('red'), fruits)
 }
+
+const weights = (fruits) => {
+  map((n) => n.grams, fruits)
+}
