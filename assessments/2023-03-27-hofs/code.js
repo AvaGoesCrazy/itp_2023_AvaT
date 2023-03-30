@@ -168,31 +168,31 @@ const isTasty = (fruit) => fruit.tastiness >= 5;
 
 const isInconvenient = (fruit) => fruit.inconvenience >= 5;
 
-const redFruits = (fruits) => {
+const redFruits = (fruits) => { // almost
   return filter((n) => n.colors.includes('red'), fruits)
 }
 
-const weights = (fruits) => {
+const weights = (fruits) => { // almost
   return map((n) => n.grams, fruits)
 }
 
-const heaviest = (fruits) => {
+const heaviest = (fruits) => { // pattern
   return reduce((n) => Math.max(n.grams), fruits)
 }
 
-const allColors = (fruits) => {
+const allColors = (fruits) => { // almost
   return flatMap((n) => n.colors, fruits)
 }
 
-const areAllTasty = (fruits) => {
+const areAllTasty = (fruits) => { // almost
   return every((n) => isTasty(n), fruits)
 }
 
-const notAllInconvenient = (fruits) => {
+const notAllInconvenient = (fruits) => { // pattern
   return some((n) => isInconvenient(n), fruits)
 }
 
-const tasty = (ary) => {
+const tasty = (ary) => { // correct
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
     if (isTasty(ary[i])){
@@ -202,7 +202,7 @@ const tasty = (ary) => {
   return ary2
 };
 
-const names = (ary) => {
+const names = (ary) => { // correct
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
     ary2.push((ary[i]).name)
@@ -210,7 +210,7 @@ const names = (ary) => {
   return ary2
 };
 
-const averageInconvenience = (ary) => {
+const averageInconvenience = (ary) => { // correct
   let lastNum = 0
   for (let i = 0; i < ary.length; i++){
     lastNum = lastNum + (ary[i].inconvenience)
@@ -218,7 +218,7 @@ const averageInconvenience = (ary) => {
   return lastNum / ary.length
 };
 
-const allCountries = (ary) => {
+const allCountries = (ary) => { // correct
   let ary2 = []
   for (let i = 0; i < ary.length; i++){
     for (let j = 0; j < ((ary[i]).grownIn).length; j++){
@@ -228,7 +228,7 @@ const allCountries = (ary) => {
   return ary2
 };
 
-const allGrownInMoreThanNCountries = (ary, n) => {
+const allGrownInMoreThanNCountries = (ary, n) => { // correct
   let trueCount = 0
   for (let i = 0; i < ary.length; i++){
     if ((ary[i]).grownIn.length > n){
@@ -240,7 +240,7 @@ const allGrownInMoreThanNCountries = (ary, n) => {
   return trueCount === ary.length
 };
 
-const someMoreThanNColors = (ary, n) => {
+const someMoreThanNColors = (ary, n) => { // correct
   let trueCount = 0
   for (let i = 0; i < ary.length; i++){
     if ((ary[i]).colors.length > n){
