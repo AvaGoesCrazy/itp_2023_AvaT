@@ -1,3 +1,62 @@
+const filter = (pre, ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    if (pre(ary[i])){
+      ary2.push(ary[i])
+    }
+  }
+  return ary2
+};
+
+const map = (fn, ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    ary2.push(fn(ary[i]))
+  }
+  return ary2
+};
+
+const flatMap = (fn, ary) => {
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    for (let j = 0; j < fn(ary[i]).length; j++){
+      ary2.push(fn(ary[i])[j])
+    }
+  }
+  return ary2
+};
+
+const reduce = (fn, initVal, ary) => {
+  let lastNum = initVal
+  for (let i = 0; i < ary.length; i++){
+    lastNum = fn(lastNum, ary[i])
+  }
+  return lastNum
+};
+
+const every = (pred, ary) => {
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if (pred(ary[i])){
+      trueCount ++
+    } else{
+      return false
+    }
+  }
+  return trueCount === ary.length
+};
+
+const some = (pred, ary) => {
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if (pred(ary[i])){
+      trueCount ++
+    }
+  }
+  return trueCount !== 0
+};
+// Idk why i need to copypaste my HOF implements functions to get it wo work but here they are ^^^
+
 const fruitBowl = [
   {
     name: 'apple',
@@ -108,3 +167,85 @@ const fruitBowl = [
 const isTasty = (fruit) => fruit.tastiness >= 5;
 
 const isInconvenient = (fruit) => fruit.inconvenience >= 5;
+
+const redFruits = (fruits) => { // almost
+  return filter((n) => n.colors.includes('red'), fruits)
+}
+
+const weights = (fruits) => { // almost
+  return map((n) => n.grams, fruits)
+}
+
+const heaviest = (fruits) => { // pattern
+  return reduce((n) => Math.max(n.grams), fruits)
+}
+
+const allColors = (fruits) => { // almost
+  return flatMap((n) => n.colors, fruits)
+}
+
+const areAllTasty = (fruits) => { // almost
+  return every((n) => isTasty(n), fruits)
+}
+
+const notAllInconvenient = (fruits) => { // pattern
+  return some((n) => isInconvenient(n), fruits)
+}
+
+const tasty = (ary) => { // correct
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    if (isTasty(ary[i])){
+      ary2.push(ary[i])
+    }
+  }
+  return ary2
+};
+
+const names = (ary) => { // correct
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    ary2.push((ary[i]).name)
+  }
+  return ary2
+};
+
+const averageInconvenience = (ary) => { // correct
+  let lastNum = 0
+  for (let i = 0; i < ary.length; i++){
+    lastNum = lastNum + (ary[i].inconvenience)
+  }
+  return lastNum / ary.length
+};
+
+const allCountries = (ary) => { // correct
+  let ary2 = []
+  for (let i = 0; i < ary.length; i++){
+    for (let j = 0; j < ((ary[i]).grownIn).length; j++){
+      ary2.push((ary[i]).grownIn[j])
+    }
+  }
+  return ary2
+};
+
+const allGrownInMoreThanNCountries = (ary, n) => { // correct
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if ((ary[i]).grownIn.length > n){
+      trueCount ++
+    } else{
+      return false
+    }
+  }
+  return trueCount === ary.length
+};
+
+const someMoreThanNColors = (ary, n) => { // correct
+  let trueCount = 0
+  for (let i = 0; i < ary.length; i++){
+    if ((ary[i]).colors.length > n){
+      trueCount ++
+    }
+  }
+  return trueCount !== 0
+};
