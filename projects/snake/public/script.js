@@ -1,59 +1,59 @@
 // TO DO:
 // - Make snake lose when coliding with self
 // - Make score counter
-// - let player input directions whenever they want, not just on a timer.
+// - let player input directions whenever they want, not just on a timer. (sorta figured that one out...)
+// - fix body dissapearing for one turn at the begigning of the game
+// - fix colliding with walls resulting in errors instead of a game over
+// - allow replaying of the game without needing to reload the page
+// - add animations (maybe...)
 
 
 const countDown = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 const snakeHead = [
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'y', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
-  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'y', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n'],
+  ['n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n']
 ];
 
 const apple = [
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false]
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false],
+  [false, false, false, false, false, false, false, false, false]
 ];
 
 const board = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 let speed = 500
@@ -62,8 +62,8 @@ let gameStarted = false
 
 const grid = document.querySelector('#grid');
 
-for (let i = 0; i < 10; i++) {
-  for (let n = 0; n < 10; n++) {
+for (let i = 0; i < 9; i++) {
+  for (let n = 0; n < 9; n++) {
     const div = document.createElement('div');
     div.classList.add('box');
     board[i] [n] = div
@@ -74,28 +74,29 @@ for (let i = 0; i < 10; i++) {
 const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
 
 const makeRed = (element) => {
-  element.style.background = rgb(255, 0, 0);
-  element.style.color = rgb(0, 255, 255);
+  element.style.background = rgb(191, 63, 63);
+  element.style.color = rgb(255 - 191, 255 - 63, 255 - 63);
 };
 const makeGreen = (element) => {
-  element.style.background = rgb(0, 255, 0);
-  element.style.color = rgb(255, 0, 255);
+  element.style.background = rgb(63, 127, 191);
+  element.style.color = rgb(255 - 63, 255 - 127, 255 - 191);
 };
 const makeBlue = (element) => {
-  element.style.background = rgb(0, 0, 255);
-  element.style.color = rgb(255, 255, 0);
+  element.style.background = rgb(63, 63, 191);
+  element.style.color = rgb(255 - 63, 255 - 63, 225 - 191);
 };
 const makeClear = (element) => {
-  element.style.background = rgb(255, 255, 255);
-  element.style.color = rgb(0, 0, 0);
+  element.style.background = rgb(63, 191, 63);
+  element.style.color = rgb(255 - 63, 255 - 191, 255 - 63);
+
 };
 
 
 const newApple = () => {
   let canMakeApple = false
   while(!canMakeApple) {
-    let randomX = Math.floor(Math.random() * 10)
-    let randomY = Math.floor(Math.random() * 10)
+    let randomX = Math.floor(Math.random() * 9)
+    let randomY = Math.floor(Math.random() * 9)
     if(countDown[randomY] [randomX] === 0 && snakeHead[randomY] [randomX] === 'n') {
       apple[randomY] [randomX] = true
       canMakeApple = true
@@ -105,14 +106,17 @@ const newApple = () => {
 }
 
 
+makeBlue(board[4] [4])
+makeGreen(board[5] [4])
+
 //Game starts here:
 document.body.onkeydown = (e) => {
   console.log('Game Start!')
 
   gameStarted = true
 
-  let X = 5
-  let Y = 5
+  let X = 4
+  let Y = 4
   
   let bufferMove = 'ArrowUp'
   let previousMove = 'ArrowDown'
@@ -124,13 +128,14 @@ document.body.onkeydown = (e) => {
   let moveDoneThisTurn = false
   
   newApple()
-  makeBlue(board[Y] [X])
 
-  for(let i = 0; i< 10; i++){
-    for(let n = 0; n< 10; n++){
+  for(let i = 0; i< 9; i++){
+    for(let n = 0; n< 9; n++){
       makeClear(board[Y] [X])
     }
   }
+  makeBlue(board[Y] [X])
+  //makeGreen(board[Y+1] [X])
 
   document.body.onkeydown = (e) => {
     bufferMove = e.key
@@ -160,8 +165,8 @@ document.body.onkeydown = (e) => {
   }
 
   const drawSnakeBody = () => {
-    for (let i = 0; i < 10; i++) {
-      for (let n = 0; n < 10; n++) {
+    for (let i = 0; i < 9; i++) {
+      for (let n = 0; n < 9; n++) {
         if (countDown[i] [n] > 0){
           makeGreen(board[i] [n])
         }
@@ -185,14 +190,6 @@ document.body.onkeydown = (e) => {
     if (i === 'ArrowRight'){
       return 'ArrowLeft'
     }
-  }
-
-  const safeMove = () => {(
-    Y++ < 10 && 
-    X++ < 10 && 
-    Y-- > -1 && 
-    X-- > -1
-  ) && countDown[X] [Y] === 0
   }
 
   //const notGoingBack = () => {
@@ -222,29 +219,25 @@ document.body.onkeydown = (e) => {
   }
 
   const move = (dir) => {
-    if(dir === 'ArrowUp' && safeMove()) {
+    if(dir === 'ArrowUp') {
       movePart1()
       Y--
       movePart2()
     }
-    if(dir === 'ArrowDown' && safeMove()) {
+    if(dir === 'ArrowDown') {
       movePart1()
       Y++
       movePart2()
     }
-    if(dir === 'ArrowLeft' && safeMove()) {
+    if(dir === 'ArrowLeft') {
       movePart1()
       X--
       movePart2()
     }
-    if(dir === 'ArrowRight' && safeMove()) {
+    if(dir === 'ArrowRight') {
       movePart1()
       X++
       movePart2()
-    }
-    if(!safeMove()) {
-      gameStarted = false
-      console.log('Game Over!')
     }
   }
 
