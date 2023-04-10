@@ -7,5 +7,5 @@ const factorial = (n) =>{
 }
 
 const triangular = (n) =>{
-  return n + trangular(n - 1)
+  return n + triangular(n - 1)
 }
