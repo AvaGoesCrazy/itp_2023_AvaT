@@ -22,6 +22,6 @@ const fibonacci = (n) =>{
     return 1
   }
   if(n > 1){
-    return fibonacci(n - 1) + fibonacci(n - 1)
+    return fibonacci(n - 2) + fibonacci(n - 1)
   }
 }
