@@ -33,4 +33,9 @@ const gcd = (n1, n2) =>{
   } else{
     return gcd(n2, n1 % n2)
   }
+  //nevermind, it wasnt that bad
+}
+
+const sum = (ary) =>{
+  return sum
 }
