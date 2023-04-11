@@ -37,5 +37,9 @@ const gcd = (n1, n2) =>{
 }
 
 const sum = (ary) =>{
-  return sum
+  return ary[ary.length]
+}
+
+const reverseString = (s) =>{
+  
 }
