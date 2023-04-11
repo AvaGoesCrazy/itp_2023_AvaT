@@ -26,6 +26,11 @@ const fibonacci = (n) =>{
   }
 }
 
-const gcd = (n) =>{
-  
+const gcd = (n1, n2) =>{
+  //owwww this one makes my brain hurrrttt :(
+  if(n2 === 0){
+    return n1
+  } else{
+    return gcd(n2, n1 % n2)
+  }
 }
