@@ -46,7 +46,7 @@ const search = (ary, n) =>{
     return true
   } else{
     ary.slice(ary.length - 1)
-    return search (ary, n)
+    return search(ary, n)
   }
 }
 
