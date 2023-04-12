@@ -42,7 +42,7 @@ const sum = (ary) =>{
 }
 
 const search = (ary, n) =>{
-  if(ary[ary.length] === n){
+  if(ary[ary.length - 1] === n){
     return true
   } else{
     ary.slice[ary.length]
