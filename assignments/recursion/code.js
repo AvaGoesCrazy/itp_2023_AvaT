@@ -37,8 +37,11 @@ const gcd = (n1, n2) =>{
 }
 
 const sum = (ary) =>{
-  ary[0] + ary[0]
-  return sum(ary)
+  if(ary.length === 1){
+    return ary[0]
+  } else {
+    return sum(ary) + ary[ary.length]
+  }
 }
 
 const search = (ary, n) =>{
