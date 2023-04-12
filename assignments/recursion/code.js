@@ -45,8 +45,9 @@ const search = (ary, n) =>{
   if(ary[ary.length - 1] === n){
     return true
   } else{
-    ary.slice(ary.length - 1)
-    return search(ary, n)
+    let ary2 = ary
+    ary2.slice(ary2.length - 1)
+    return search(ary2, n)
   }
 }
 
