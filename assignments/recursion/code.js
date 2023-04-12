@@ -37,8 +37,17 @@ const gcd = (n1, n2) =>{
 }
 
 const sum = (ary) =>{
-  ary.slice(ary.length)
+  ary[] + ary[]
   return sum(ary)
+}
+
+const search = (ary, n) =>{
+  if(ary[ary.length] = n){
+    return true
+  } else{
+    ary.slice[ary.length]
+    return search (ary, n)
+  }
 }
 
 const reverseString = (s) =>{
