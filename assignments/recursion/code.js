@@ -43,11 +43,10 @@ const sum = (ary) =>{
 }
 
 const search = (ary, n) =>{
-  if(ary[ary.length - 1] === n){
+  if(ary[1] === n){
     return true
   } else{
-    ary.slice(ary.length - 1)
-    return search(ary, n)
+    return search(ary.slice(1), n)
   }
 }
 
