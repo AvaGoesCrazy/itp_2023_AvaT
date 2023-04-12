@@ -37,7 +37,7 @@ const gcd = (n1, n2) =>{
 }
 
 const sum = (ary) =>{
-  ary[] + ary[]
+  ary[0] + ary[0]
   return sum(ary)
 }
 
