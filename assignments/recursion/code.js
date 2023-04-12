@@ -38,7 +38,7 @@ const sum = (ary) =>{
   if(ary.length === 1){
     return ary[0]
   } else {
-    return sum(ary) + ary[ary.length]
+    return sum(ary) + ary[ary.length - 1]
   }
 }
 
