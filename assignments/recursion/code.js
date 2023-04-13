@@ -55,5 +55,9 @@ const search = (ary, n) =>{
 }
 
 const reverseString = (s) =>{
-  return reverseString(s.substring(1)) + s[0]
+    if (s.length === 1){
+      return s[0]
+    } else{
+      return reverseString(s.substring(1)) + s[0]
+    }
 }
