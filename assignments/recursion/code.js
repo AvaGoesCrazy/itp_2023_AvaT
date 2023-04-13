@@ -45,8 +45,12 @@ const sum = (ary) =>{
 const search = (ary, n) =>{
   if(ary[0] === n){
     return true
-  } else{
-    return search(ary.slice(1), n)
+  } else{ if(ary.length === 0){
+            return false
+          } else{
+            return search(ary.slice(1), n)
+          }
+    
   }
 }
 
