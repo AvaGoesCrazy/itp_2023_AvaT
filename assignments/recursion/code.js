@@ -71,7 +71,7 @@ const treeMap = (t, f) =>{
 }
 
 const change = (n, ary) =>{
-  if (){
+  if (h){
 
   } else{
 
