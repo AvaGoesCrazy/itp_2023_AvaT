@@ -65,11 +65,9 @@ const reverseString = (s) =>{
 
 
 const treeMap = (t, f) =>{
-  let t2 = {}
   if (isLeaf(t)){
     return f(t)
-  } 
-  if (!isLeaf(t)){
+  } else{
     return {left:treeMap(t.left, f), right:treeMap(t.right, f)}
   }
 }
