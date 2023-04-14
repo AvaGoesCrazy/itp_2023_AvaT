@@ -69,3 +69,11 @@ const treeMap = (t, f) =>{
     return {left:treeMap(t.left, f), right:treeMap(t.right, f)}
   }
 }
+
+const change = (n, ary) =>{
+  if (){
+
+  } else{
+
+  }
+}
