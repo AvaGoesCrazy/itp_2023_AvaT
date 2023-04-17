@@ -14,7 +14,7 @@ const double = (n1, n2) =>{
     return n1 * 2
   } else{ 
     if (n2 === 0){
-    return 0
+    return n1
     } else{
     return double(n1, n2 - 1) * 2
     }
@@ -26,7 +26,7 @@ const triple = (n1, n2) =>{
     return n1 * 3
   } else{ 
     if (n2 === 0){
-    return 0
+    return n1
     } else{
     return double(n1, n2 - 1) * 3
     }
