@@ -38,7 +38,7 @@ const power = (n1, n2) =>{
     return n1 * n1
   } else{ 
     if (n2 === 0){
-    return n1
+    return 1
     } else{
     return power(n1, n2 - 1) * n1
     }
