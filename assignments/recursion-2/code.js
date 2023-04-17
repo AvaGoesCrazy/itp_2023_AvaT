@@ -28,7 +28,7 @@ const triple = (n1, n2) =>{
     if (n2 === 0){
     return n1
     } else{
-    return double(n1, n2 - 1) * 3
+    return triple(n1, n2 - 1) * 3
     }
   }
 }
