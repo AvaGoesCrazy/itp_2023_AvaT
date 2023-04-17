@@ -10,6 +10,6 @@ const double = (n1, n2) =>{
   if (n2 = 1){
     return n1 * 2
   } else{
-    return double(n1, n2 - 1)
+    return double(n1, n2 - 1) * 2
   }
 }
