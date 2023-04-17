@@ -1,3 +1,4 @@
+
 const add = (n1, n2) =>{
   return n1 + n2
 }
@@ -5,20 +6,30 @@ const add = (n1, n2) =>{
 const multiply = (n1, n2) =>{
   return n1 * n2
 }
+//not sure how to make these two recursive
+
 
 const double = (n1, n2) =>{
-  if (n2 = 1){
+  if (n2 === 1){
     return n1 * 2
-  } else{
+  } else{ 
+    if (n2 === 0){
+    return 0
+    } else{
     return double(n1, n2 - 1) * 2
+    }
   }
 }
 
 const triple = (n1, n2) =>{
-  if (n2 = 1){
+  if (n2 === 1){
     return n1 * 3
-  } else{
+  } else{ 
+    if (n2 === 0){
+    return 0
+    } else{
     return double(n1, n2 - 1) * 3
+    }
   }
 }
 
