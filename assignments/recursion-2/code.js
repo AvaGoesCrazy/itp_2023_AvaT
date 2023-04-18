@@ -3,7 +3,7 @@ const add = (n1, n2) =>{
   if (n2 === 1){
     return n1
   } else{
-    1 + add(n1, n2 - 1)
+    return 1 + add(n1, n2 - 1)
   }
 }
 
