@@ -83,10 +83,9 @@ const countXs = (s) =>{
 }
 
 const maximum = (a) =>{
-  if (a === []){
-    return 0
+  if (a.length === 1){
+    return a
   } else{
-    console.log('testing' + a[0] + 'and' + maximum(a.slice(1)))
     if (a[0] > maximum(a.slice(1))){
       return a[0]
     } else{
