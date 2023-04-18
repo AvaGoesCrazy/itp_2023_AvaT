@@ -82,6 +82,7 @@ const countXs = (s) =>{
   }
 }
 
+// also a little scuffed but works
 const maximum = (a) =>{
   if (a.length === 0){
     return -Infinity
@@ -95,4 +96,8 @@ const maximum = (a) =>{
       return maximum(a.slice(1))
     }
   }
+}
+
+const every = (a, f) =>{
+  
 }
