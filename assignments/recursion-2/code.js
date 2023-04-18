@@ -75,7 +75,7 @@ const countXs = (s) =>{
     return 0
   } else{
     if (s[0] === 'x'){
-      return countXs(s.substring(1) + 1)
+      return countXs(s.substring(1)) + 1
     } else{
       return countXs(s.substring(1))
     }
