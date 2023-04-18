@@ -45,7 +45,7 @@ const triple = (n1, n2) =>{
 }
 
 const power = (n1, n2) =>{
-    if (n2 === 1){
+  if (n2 === 1){
     return n1
   } else{ 
     if (n2 === 0){
@@ -54,4 +54,12 @@ const power = (n1, n2) =>{
         return power(n1, n2 - 1) * n1
       }
     }
+}
+
+const deleteXs = (s) =>{
+  if (s[0] === 'x'){
+    return deleteXs(s.substring(1))
+  } else{
+    return deleteXs(s.substring(0))
+  }
 }
