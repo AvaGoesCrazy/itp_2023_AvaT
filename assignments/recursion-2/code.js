@@ -88,6 +88,8 @@ const maximum = (a) =>{
   } else{
     if (a > maximum(a.slice(1))){
       return a
+    } else{
+      return maximum(a.slice(1))
     }
   }
 }
