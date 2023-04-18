@@ -57,6 +57,12 @@ const power = (n1, n2) =>{
 }
 
 const deleteXs = (s) =>{
+  if (s.length = 1 && s[0] === x){
+    return ''
+  }
+  if (s.length = 1 && !s[0] === x){
+    return s[0]
+  }
   if (s[0] === 'x'){
     return deleteXs(s.substring(1))
   } else{
