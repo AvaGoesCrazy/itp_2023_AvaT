@@ -84,7 +84,7 @@ const countXs = (s) =>{
 
 const maximum = (a) =>{
   if (a.length === 1){
-    return a
+    return a[0]
   } else{
     if (a[0] > maximum(a.slice(1))){
       return a[0]
