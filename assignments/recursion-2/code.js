@@ -8,9 +8,12 @@ const add = (n1, n2) =>{
 }
 
 const multiply = (n1, n2) =>{
-  return n1 * n2
+  if (n2 === 0){
+    return n1
+  } else{
+      return n1 + multiply(n1, n2 - 1)
+    }
 }
-//not sure how to make these two recursive
 
 
 const double = (n1, n2) =>{
