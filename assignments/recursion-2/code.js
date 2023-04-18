@@ -83,6 +83,9 @@ const countXs = (s) =>{
 }
 
 const maximum = (a) =>{
+  if (a === []){
+    return -Infinity
+  }
   if (a.length === 1){
     return a[0]
   } else{
