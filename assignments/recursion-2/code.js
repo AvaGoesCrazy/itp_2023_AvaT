@@ -19,7 +19,6 @@ const multiply = (n1, n2) =>{
     }
 }
 
-
 const double = (n1, n2) =>{
   if (n2 === 1){
     return n1 * 2
@@ -56,6 +55,7 @@ const power = (n1, n2) =>{
     }
 }
 
+//this ones kinda scuffed but its reacursive and it works
 const deleteXs = (s) =>{
   if (s.length === 0){
     return ''
@@ -67,5 +67,15 @@ const deleteXs = (s) =>{
     return deleteXs(s.substring(1))
   } else{
     return s[0] + deleteXs(s.substring(1))
+  }
+}
+
+const countXs = (s) =>{
+  if (s === ''){
+    return 0
+  } else{
+    if (s[0] === 'x'){
+      return countXs(s.substring(1) + 1)
+    }
   }
 }
