@@ -6,4 +6,4 @@ const product = (n) =>{
   }
 }
 
-console.log(81 ** 81)
+console.log(81 * 81)
