@@ -60,7 +60,6 @@ const deleteXs = (s) =>{
   if (s.length === 0){
     return ''
   }
-  }
   if (s[0] === 'x'){
     return deleteXs(s.substring(1))
   } else{
