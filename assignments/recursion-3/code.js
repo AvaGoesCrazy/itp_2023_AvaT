@@ -11,7 +11,7 @@ const product = (n) =>{
 }
 
 const sumSquares = (n) =>{
-  if (n === 1){
+  if (n <= 1){
     return n
   } else{
     return (n ** 2) + sumSquares(n - 1)
