@@ -14,6 +14,6 @@ const sumSquares = (n) =>{
   if (n === 1){
     return n
   } else{
-    return n ** sumSquares(n - 1)
+    return (n ** 2) + sumSquares(n - 1)
   }
 }
