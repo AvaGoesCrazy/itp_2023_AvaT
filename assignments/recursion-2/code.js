@@ -57,6 +57,9 @@ const power = (n1, n2) =>{
 
 //this ones kinda scuffed but its reacursive and it works
 const deleteXs = (s) =>{
+  if (s.length === 0){
+    return ''
+  }
   if (s.length === 1 && s[0] !== 'x'){
     return s[0]
   }
