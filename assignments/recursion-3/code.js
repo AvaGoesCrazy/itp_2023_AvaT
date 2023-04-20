@@ -1,6 +1,6 @@
 //ifs and elsifs for easy copypasting:
 
-  if (){
+  if (x){
 
   } else{
 
@@ -8,10 +8,10 @@
 
 //-----
 
-  if (){
+  if (x){
 
   } else{
-    if(){
+    if(x){
 
     } else{
 
