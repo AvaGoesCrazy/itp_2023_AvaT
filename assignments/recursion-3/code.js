@@ -5,3 +5,5 @@ const product = (n) =>{
     return n[0] ** product(n.slice(1))
   }
 }
+
+console.log(81 ** 81 ** 85)
