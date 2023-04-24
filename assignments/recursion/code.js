@@ -35,8 +35,8 @@ const gcd = (n1, n2) =>{
 }
 
 const sum = (ary) =>{
-  if(ary.length === 1){
-    return ary[0]
+  if(ary.length === 0){
+    return 0
   } else {
     return ary[0] + sum(ary.slice(1))
   }
