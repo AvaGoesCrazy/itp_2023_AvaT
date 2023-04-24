@@ -99,10 +99,10 @@ const every = (a, f) =>{
   if(!f(a[0])){
     return false
   } else{
-    if(f(a[0])){
-      return every(a.slice(1), f)
-    } else{
+    if(a.length === 0){
       return true
+    } else{
+      return every(a.slice(1), f)
     }
   }
 }
