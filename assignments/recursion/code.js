@@ -77,7 +77,7 @@ const change = (n, ary) =>{
     if(ary.length === 0){
       return 0
     } else{
-      return (n / ary[0]) + change(n, ary.slice(1))
+      return (n / ary[0]) + change(n, ary.slice(1)) + change(n - 1, ary)
     }
   }
 }
