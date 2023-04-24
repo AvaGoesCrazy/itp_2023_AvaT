@@ -96,6 +96,9 @@ const maximum = (a) =>{
 }
 
 const every = (a, f) =>{
+  if(a.length === 0){
+    return 0
+  }
   if(!f(a[0])){
     return false
   } else{
