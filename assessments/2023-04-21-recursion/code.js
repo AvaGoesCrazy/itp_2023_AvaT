@@ -89,7 +89,7 @@ const toList = (a) =>{
 
 const map = (l, f) =>{
   if (l.rest === null){
-    return null
+    return {first: f(l.first), rest: null}
   } else{
     return {first: f(l.first), rest: map(l.rest, f)}
   }
