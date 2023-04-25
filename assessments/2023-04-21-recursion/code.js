@@ -37,6 +37,28 @@ const maximum = (a) =>{
   }
 }
 
+// uggggh this one really tripped me up last time too.
+const treeMap = (t, f) =>{
+  if(t.left.isLeaf){
+    return f(t.left)
+  } else{
+    return treeMap(t.left, f)
+  }
+  
+}
+
+const sumPrimesBelow = (n) =>{
+  if (n === 1){
+    return n
+  } else{
+    if(isPrime(n)){
+      return n + sumPrimesBelow(n - 1)
+    } else{
+      return sumPrimesBelow(n - 1)
+    }
+  }
+}
+
 ////////////////////////////////////////////////////////////////
 // Functions you will use in your code. No need to touch these
 // or understand these beyond understanding what they do which
