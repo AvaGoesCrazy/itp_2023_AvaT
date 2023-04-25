@@ -11,7 +11,7 @@ const factorial = (n) =>{
 
 const fibonacci = (n) =>{
   if (n < 3){
-    return n
+    return n - 1
   } else{
     return fibonacci(n - 2) + fibonacci(n - 1)
     } 
