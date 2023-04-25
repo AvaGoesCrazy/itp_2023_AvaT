@@ -71,6 +71,14 @@ const nvwls = (s) =>{
   }
 }
 
+const caesar = (s, k) =>{
+  if(s.length === 0){
+    return ''
+  } else{
+    return rotate(s[0], k) + caesar(s.substring(1), k)
+  }
+}
+
 ////////////////////////////////////////////////////////////////
 // Functions you will use in your code. No need to touch these
 // or understand these beyond understanding what they do which
