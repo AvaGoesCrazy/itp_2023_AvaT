@@ -17,6 +17,14 @@ const fibonacci = (n) =>{
     } 
 }
 
+const sumSquares = (n) =>{
+  if(n === 0){
+    return n
+  } else{
+    return (n * n) + sumSquares(n - 1)
+  }
+}
+
 ////////////////////////////////////////////////////////////////
 // Functions you will use in your code. No need to touch these
 // or understand these beyond understanding what they do which
