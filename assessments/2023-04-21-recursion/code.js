@@ -29,10 +29,10 @@ const maximum = (a) =>{
   if(a.length === 0){
     return 0
   } else{
-    if(a[0] > maximum(a.slice)){
+    if(a[0] > maximum(a.slice(1))){
       return a[0]
     } else{
-      return maximum(a.slice)
+      return maximum(a.slice(1))
     }
   }
 }
