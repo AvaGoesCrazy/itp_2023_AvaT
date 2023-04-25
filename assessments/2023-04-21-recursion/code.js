@@ -25,6 +25,18 @@ const sumSquares = (n) =>{
   }
 }
 
+const maximum = (a) =>{
+  if(a.length === 0){
+    return 0
+  } else{
+    if(a[0] > maximum(a.slice)){
+      return a[0]
+    } else{
+      return maximum(a.slice)
+    }
+  }
+}
+
 ////////////////////////////////////////////////////////////////
 // Functions you will use in your code. No need to touch these
 // or understand these beyond understanding what they do which
