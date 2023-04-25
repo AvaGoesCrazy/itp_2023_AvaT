@@ -69,7 +69,9 @@ const nvwls = (s) =>{
        s[0] === 'o' ||
        s[0] === 'u'){
       return ''
-    } else return s[0] + nvwls(s.substring(1))
+    } else {
+      return s[0] + nvwls(s.substring(1))
+      }
   }
 }
 
