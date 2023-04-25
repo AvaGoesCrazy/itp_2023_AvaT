@@ -91,7 +91,7 @@ const map = (l, f) =>{
   if (l.rest === null){
     return null
   } else{
-    return f(l.first) + map(l.rest, f)
+    return {first: f(l.first), rest: map(l.rest, f)}
   }
 }
 
