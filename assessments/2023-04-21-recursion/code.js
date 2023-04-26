@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////
 // Write your code here ...
 
-const factorial = (n) =>{
+const factorial = (n) =>{ // almost
   if (n === 0){
     return n
   } else{
@@ -9,15 +9,15 @@ const factorial = (n) =>{
   }
 }
 
-const fibonacci = (n) =>{
+const fibonacci = (n) =>{ // almost
   if (n < 3){
     return n - 1
   } else{
     return fibonacci(n - 2) + fibonacci(n - 1)
-    } 
+    }
 }
 
-const sumSquares = (n) =>{
+const sumSquares = (n) =>{ // correct
   if(n === 0){
     return n
   } else{
@@ -25,7 +25,7 @@ const sumSquares = (n) =>{
   }
 }
 
-const maximum = (a) =>{
+const maximum = (a) =>{ // correct
   if(a.length === 0){
     return 0
   } else{
@@ -38,16 +38,16 @@ const maximum = (a) =>{
 }
 
 // uggggh this one really tripped me up last time too.
-const treeMap = (t, f) =>{
+const treeMap = (t, f) =>{ // something
   if(t.left.isLeaf){
     return f(t.left)
   } else{
     return treeMap(t.left, f)
   }
-  
+
 }
 
-const sumPrimesBelow = (n) =>{
+const sumPrimesBelow = (n) =>{ // correct
   if (n === 1){
     return n
   } else{
@@ -59,7 +59,7 @@ const sumPrimesBelow = (n) =>{
   }
 }
 
-const nvwls = (s) =>{
+const nvwls = (s) =>{ // correct
   if (s.length === 0){
     return ''
   } else{
@@ -71,7 +71,7 @@ const nvwls = (s) =>{
   }
 }
 
-const caesar = (s, k) =>{
+const caesar = (s, k) =>{ // correct
   if(s.length === 0){
     return ''
   } else{
@@ -79,7 +79,7 @@ const caesar = (s, k) =>{
   }
 }
 
-const toList = (a) =>{
+const toList = (a) =>{ // pattern
   if(a.length = 0){
     return {first: a[0], rest: null}
   } else{
@@ -87,7 +87,7 @@ const toList = (a) =>{
   }
 }
 
-const map = (l, f) =>{
+const map = (l, f) =>{ // almost
   if (l.rest === null){
     return {first: f(l.first), rest: null}
   } else{
