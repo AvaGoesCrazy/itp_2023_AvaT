@@ -64,3 +64,15 @@ const isAscending = (a) =>{
     }
   }
 }
+
+const isDescending = (a) =>{
+  if (a.length === 1){
+    return true
+  } else{
+    if(a[a.length] > a[a.length - 1]){
+      return false
+    } else{
+      return isDescending(a.slice(1))
+    }
+  }
+}
