@@ -79,7 +79,7 @@ const isDescending = (a) =>{
 
 const sumNested = (a) =>{
   if(a[0].isNumber){
-    return a
+    return a[0]
   } else{
     return sumNested(a) + sumNested(a.slice(1))
   }  
