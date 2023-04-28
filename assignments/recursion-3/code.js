@@ -69,10 +69,18 @@ const isDescending = (a) =>{
   if (a.length === 1){
     return true
   } else{
-    if(a[a.length] > a[a.length - 1]){
+    if(a[a.length - 1] > a[a.length - 2]){
       return false
     } else{
       return isDescending(a.slice(1))
     }
   }
+}
+
+const sumNested = (a) =>{
+  if(1){
+
+  } else{
+
+  }  
 }
