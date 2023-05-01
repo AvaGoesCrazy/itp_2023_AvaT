@@ -62,8 +62,8 @@ let gameStarted = false
 
 const grid = document.querySelector('#grid');
 
-for (let i = 0; i < 9; i++) {
-  for (let n = 0; n < 9; n++) {
+for (let i = 0; i < board.length; i++) {
+  for (let n = 0; n < board[0].length; n++) {
     const div = document.createElement('div');
     div.classList.add('box');
     board[i] [n] = div
@@ -105,6 +105,11 @@ const newApple = () => {
   }
 }
 
+for(let i = 0; i< 9; i++){
+  for(let n = 0; n< 9; n++){
+    makeClear(board[i] [n])
+  }
+}
 
 makeBlue(board[4] [4])
 makeGreen(board[5] [4])
@@ -129,11 +134,6 @@ document.body.onkeydown = (e) => {
   
   newApple()
 
-  for(let i = 0; i< 9; i++){
-    for(let n = 0; n< 9; n++){
-      makeClear(board[Y] [X])
-    }
-  }
   makeBlue(board[Y] [X])
   //makeGreen(board[Y+1] [X])
 
