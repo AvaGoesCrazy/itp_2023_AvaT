@@ -82,8 +82,6 @@ const sumNested = (a) =>{
     return a[0]
   } else{ 
     if(!isNumber(a[0])){
-      return sumNested(a[0])
-    } else{
       return sumNested(a[0]) + sumNested(a.slice(1))
     }
   }  
