@@ -98,7 +98,7 @@ const searchNested = (a, n) =>{
     if(a[0] === n){
       return true
     } else{
-      return a.slice(1)
+      return searchNested(a.slice(1), n)
     }
   }
 }
