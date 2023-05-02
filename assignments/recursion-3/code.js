@@ -78,11 +78,15 @@ const isDescending = (a) =>{
 }
 
 const sumNested = (a) =>{
-  if(isNumber(a[0])){
+  if(a.length === 1){
+    return a
+  } else{
+    if(isNumber(a[0])){
     return a[0]
-  } else{ 
+    } else{ 
     if(!isNumber(a[0])){
       return sumNested(a[0]) + sumNested(a.slice(1))
     }
-  }  
+    }  
+  }
 }
