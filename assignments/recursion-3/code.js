@@ -90,3 +90,15 @@ const sumNested = (a) =>{
     }  
   }
 }
+
+const searchNested = (a, n) =>{
+  if (a.length === 0){
+    return false
+  } else{
+    if(a[0] === n){
+      return true
+    } else{
+      return a.slice(1)
+    }
+  }
+}
