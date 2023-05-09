@@ -1,0 +1,6 @@
+#grid {
+    display: grid;
+    width: min(900px, 100vmin);
+    height: min(900px, 100vmin);
+    grid-template-columns: repeat(9, 1fr);
+  }
