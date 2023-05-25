@@ -2,6 +2,7 @@
 //-Finish moves
 //-Code special moves
 //-Make it so it does everything backwards for the black pieces
+//-Finish samePieceThere and oppPieceThere functions
 //-FIgure out out to make it do stuff when you click on a piece
 //-buncha other stuff
 
@@ -11,6 +12,8 @@
 //type: name of piece type
 //color: 0 = black, 1 = white
 //x & y: coords
+
+let bColors = '1010101001010101101010100101010110101010010101011010101001010101'
 
 let pieceList = []
 
@@ -44,10 +47,10 @@ const startPieces = () => {
     makePiece('bishop', i, 5, i * 7)
   }
   for (let i = -1; i < 1; i++) {
-    makePiece('king', i, 3, i * 7)
+    makePiece('queen', i, 4, i * 7)
   }
   for (let i = -1; i < 1; i++) {
-    makePiece('queen', i, 4, i * 7)
+    makePiece('king', i, 3, i * 7)
   }
 }
 
@@ -60,6 +63,30 @@ const samePieceThere = (x, y, typ) => {
 
 const oppPieceThere = (x, y, typ) => {
 
+}
+
+const samePlaneT = (x1, y1, x2, y2) => { return y1 === y2 || x1 === x2 }
+
+
+//not to self, revise SPX to make more efficiant later and to not check out of bounds
+const samePlaneX = (x1, y1, x2, y2) => {
+  let destinX = x2
+  let destinY = y2
+  for (let i = 0; i < 8; i++) {
+    if (x2 - 1 === x1 && y2 - 1 === y1) {
+      return true
+    }
+    destinX = destinX--
+    destinY = destinY--
+  }
+  for (let i = 0; i < 16; i++) {
+    if (x2 - 1 === x1 && y2 - 1 === y1) {
+      return true
+    }
+    destinX = destinX++
+    destinY = destinY++
+  }
+  return false
 }
 
 const pMove = (x1, y1, x2, y2, tM, typ) => {
@@ -79,46 +106,18 @@ const pMove = (x1, y1, x2, y2, tM, typ) => {
 }
 
 const rMove = (x1, y1, x2, y2, typ) => {
-  if (y1 === y2) {
-    if (x1 < x2) {
-      for (let i = 0; i < 32; i++) {
-        if (pieceList[i].x > x1 && pieceList[i].x < x2) {
-          return false
-        }
-      }
-    }
-    if (x1 > x2) {
-      for (let i = 0; i < 32; i++) {
-        if (pieceList[i].x < x1 && pieceList[i].x > x2) {
-          return false
-        }
-      }
-    }
+  if (samePlaneT(x1, y1, x2, y2) && !samePieceThere(x2, y2, typ)) {
+    return true
+  } else {
+    return false
   }
-  if (x1 === x2) {
-    if (y1 < y2) {
-      for (let i = 0; i < 32; i++) {
-        if (pieceList[i].x > y1 && pieceList[i].x < y2) {
-          return false
-        }
-      }
-    }
-    if (y1 > y2) {
-      for (let i = 0; i < 32; i++) {
-        if (pieceList[i].x < y1 && pieceList[i].x > y2) {
-          return false
-        }
-      }
-    }
-  }
-  return true
 }
 
 const kMove = (x1, y1, x2, y2, typ) => {
   if (samePieceThere(x2, y2, typ)) {
     return false
   }
-  if (x2 - 1 === x1 && y2 - 3 === y1 || // theres probably a more efficant way to do this part but whatever, it should work
+  if (x2 - 1 === x1 && y2 - 3 === y1 || // theres probably a more efficant way to do this part but whatever. it should work. for now.
     x2 + 1 === x1 && y2 - 3 === y1 ||
     x2 - 1 === x1 && y2 + 3 === y1 ||
     x2 + 1 === x1 && y2 + 3 === y1 ||
@@ -133,38 +132,51 @@ const kMove = (x1, y1, x2, y2, typ) => {
 }
 
 const bMove = (x1, y1, x2, y2, typ) => {
-  if (y1 < y2 && x1 < x2) {//⠠
-
+  if (samePlaneX(x1, y1, x2, y2) && !samePieceThere(x2, y2, typ)) {
+    return true
+  } else {
+    return false
   }
-  if (y1 > y2 && x1 < x2) {//⠈
+}
 
+const qMove = (x1, y1, x2, y2, typ) => {
+  if ((samePlaneX(x1, y1, x2, y2) || samePlaneT(x1, y1, x2, y2) && !samePieceThere(x2, y2, typ))) {
+    return true
+  } else {
+    return false
   }
-  if (y1 < y2 && x1 > x2) {//⠄
+}
 
-  }
-  if (y1 > y2 && x1 > x2) {//⠁
-
+const kingMove = (x1, y1, x2, y2, timesMoved, typ) => {
+  for (let x = 0; x < 3; x++) {
+    for (let y = 0; y < 3; y++) {
+      if (y1 - 1 + y === y2 && x1 - 1 + x == x2 && !samePieceThere(x2, y2, typ)) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 
 const legalMove = (x1, y1, x2, y2, timesMoved, typ) => {
   if (typ = 'pawn') {
-    return pMove(x1, y1, x2, y2, timesMoved)
+    return pMove(x1, y1, x2, y2, timesMoved, typ)
   }
   if (typ = 'rook') {
-    return rMove(x1, y1, x2, y2, typ)
+    return rMove(x1, y1, x2, y2, timesMoved, typ)
   }
   if (typ = 'knight') {
     return kMove(x1, y1, x2, y2, typ)
   }
   if (typ = 'bishop') {
-
-  }
-  if (typ = 'king') {
-
+    return bMove(x1, y1, x2, y2, typ)
   }
   if (typ = 'queen') {
-
+    return qMove(x1, y1, x2, y2, typ)
+  }
+  if (typ = 'king') {
+    return kingMove(x1, y1, x2, y2, timesMoved, typ)
   }
 }
 
